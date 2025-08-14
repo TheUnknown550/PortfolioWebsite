@@ -22,9 +22,13 @@ const categories = [
   { value: "award", label: "Awards", icon: "🏆" },
   { value: "achievement", label: "Achievements", icon: "🥇" },
   { value: "project", label: "Projects", icon: "🚀" },
+  { value: "competition", label: "Competitions", icon: "🏅" },
+  { value: "workshop", label: "Workshops", icon: "🎯" },
+  { value: "mentorship", label: "Mentorship", icon: "🤝" },
+  { value: "work", label: "Work Experience", icon: "💼" },
   { value: "volunteer", label: "Volunteer", icon: "👥" },
   { value: "skill", label: "Skills", icon: "🛠️" },
-  { value: "experience", label: "Experience", icon: "💼" }
+  { value: "experience", label: "Experience", icon: "�" }
 ];
 
 const getCategoryInfo = (cat: string) => 
@@ -36,6 +40,10 @@ const categoryColor = (cat: string, theme: string) => {
     award: theme === "dark" ? "bg-yellow-600/20 text-yellow-300 border-yellow-600/30" : "bg-yellow-100 text-yellow-700 border-yellow-200",
     achievement: theme === "dark" ? "bg-green-600/20 text-green-300 border-green-600/30" : "bg-green-100 text-green-700 border-green-200",
     project: theme === "dark" ? "bg-purple-600/20 text-purple-300 border-purple-600/30" : "bg-purple-100 text-purple-700 border-purple-200",
+    competition: theme === "dark" ? "bg-orange-600/20 text-orange-300 border-orange-600/30" : "bg-orange-100 text-orange-700 border-orange-200",
+    workshop: theme === "dark" ? "bg-cyan-600/20 text-cyan-300 border-cyan-600/30" : "bg-cyan-100 text-cyan-700 border-cyan-200",
+    mentorship: theme === "dark" ? "bg-emerald-600/20 text-emerald-300 border-emerald-600/30" : "bg-emerald-100 text-emerald-700 border-emerald-200",
+    work: theme === "dark" ? "bg-slate-600/20 text-slate-300 border-slate-600/30" : "bg-slate-100 text-slate-700 border-slate-200",
     volunteer: theme === "dark" ? "bg-pink-600/20 text-pink-300 border-pink-600/30" : "bg-pink-100 text-pink-700 border-pink-200",
     skill: theme === "dark" ? "bg-indigo-600/20 text-indigo-300 border-indigo-600/30" : "bg-indigo-100 text-indigo-700 border-indigo-200",
     experience: theme === "dark" ? "bg-teal-600/20 text-teal-300 border-teal-600/30" : "bg-teal-100 text-teal-700 border-teal-200"
@@ -61,7 +69,35 @@ const Roadmap: React.FC<RoadmapProps> = ({ theme = "light" }) => {
       .catch(() => setLoading(false));
   }, []);
 
-  const filtered = events.filter(e => selected.includes(e.category));
+  // Helper function to parse dates and sort chronologically (most recent first)
+  const sortEventsByDate = (events: RoadmapEvent[]) => {
+    return events.sort((a, b) => {
+      // Parse dates - handle various formats like "2023", "March 2023", "2023-03", etc.
+      const parseDate = (dateStr: string): Date => {
+        // Try different date parsing approaches
+        if (/^\d{4}$/.test(dateStr)) {
+          // Just year: "2023"
+          return new Date(parseInt(dateStr), 11, 31); // December 31st of that year
+        } else if (/^\d{4}-\d{2}$/.test(dateStr)) {
+          // Year-month: "2023-03"
+          const [year, month] = dateStr.split('-');
+          return new Date(parseInt(year), parseInt(month) - 1, 31);
+        } else {
+          // Try to parse as regular date
+          const date = new Date(dateStr);
+          return isNaN(date.getTime()) ? new Date(0) : date;
+        }
+      };
+
+      const dateA = parseDate(a.date);
+      const dateB = parseDate(b.date);
+      
+      // Sort in descending order (most recent first)
+      return dateB.getTime() - dateA.getTime();
+    });
+  };
+
+  const filtered = sortEventsByDate(events.filter(e => selected.includes(e.category)));
 
   return (
     <div className={`min-h-screen transition-colors duration-300 relative overflow-hidden ${
@@ -197,7 +233,7 @@ const Roadmap: React.FC<RoadmapProps> = ({ theme = "light" }) => {
                   </p>
                 </div>
               ) : (
-                <div className="space-y-8 lg:space-y-12">
+                <div className="space-y-8 lg:space-y-12 relative">
                   {/* Timeline Line */}
                   <div className={`absolute left-4 lg:left-8 top-0 bottom-0 w-0.5 ${
                     theme === "dark" 
@@ -295,6 +331,7 @@ const Roadmap: React.FC<RoadmapProps> = ({ theme = "light" }) => {
         <ReactModal
           isOpen={modalOpen}
           onRequestClose={() => setModalOpen(false)}
+          appElement={document.getElementById('root') || undefined}
           className={`fixed inset-4 lg:inset-20 rounded-2xl p-6 lg:p-8 overflow-auto ${
             theme === "dark"
               ? "bg-gray-900 border border-gray-700"
