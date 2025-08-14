@@ -63,7 +63,7 @@ const Roadmap: React.FC<RoadmapProps> = ({ theme = "light" }) => {
   const [modalEvent, setModalEvent] = useState<RoadmapEvent | null>(null);
 
   useEffect(() => {
-    fetch("/src/data.json")
+  fetch("/data.json")
       .then(res => res.json())
       .then(data => setEvents(data.roadmap));
   }, []);
