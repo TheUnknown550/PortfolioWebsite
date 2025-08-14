@@ -142,6 +142,9 @@ const App: React.FC = () => {
               animation: fadeInSlideUp 0.7s cubic-bezier(.4,1.4,.6,1) both;
             }
           `}</style>
+        <footer className="w-full text-center text-xs text-gray-400 py-4 mt-8">
+          &copy; {new Date().getFullYear()} mattcosh.com. All rights reserved.
+        </footer>
         </main>
       </div>
     </Router>
