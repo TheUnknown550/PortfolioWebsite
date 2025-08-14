@@ -1,6 +1,5 @@
 
 import React, { useEffect, useState } from "react";
-import ContactModal from "./ContactModal";
 import Section from "./components/Section";
 import Badge from "./components/Badge";
 import ProfilePhoto from "./components/ProfilePhoto";

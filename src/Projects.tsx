@@ -1,10 +1,5 @@
 import React, { useEffect, useState } from "react";
 import Badge from "./components/Badge";
-// Accent color for project cards
-const accent = {
-  light: "bg-sky-400",
-  dark: "bg-sky-700"
-};
 
 interface Project {
   title: string;

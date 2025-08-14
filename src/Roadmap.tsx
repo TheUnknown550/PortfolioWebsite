@@ -11,7 +11,6 @@ const modalStyles = {
 };
 
 import React, { useEffect, useState } from "react";
-import Timeline from "./components/Timeline";
 import Badge from "./components/Badge";
 
 
@@ -27,7 +26,7 @@ const categories = [
 ];
 
 // Helper to get label for unknown categories
-const getCategoryLabel = (cat) => {
+const getCategoryLabel = (cat: string) => {
   const found = categories.find(c => c.value === cat);
   if (found) return found.label;
   // Fallback: Capitalize first letter
