@@ -5,20 +5,20 @@
     "education": [
       {
         "institution": "Chiang Mai University",
-        "program": "Faculty of Engineering, Information System and Networking Engineering(ISNE) 3rd year Undergraduate",
+        "program": "Faculty of Engineering, Information System and Networking Engineering (ISNE) 3rd year Undergraduate",
         "year": 2025,
         "gpa": 3.83
       },
       {
         "institution": "Prince Royal’s College",
-        "program": "Gifted Computer Plus Program(GC+)",
+        "program": "Gifted Computer Plus Program (GC+)",
         "year": 2023,
         "gpa": 3.80
       }
     ],
     "skills": {
       "hard": [
-        "Python", "C/C++/C#", "Java", "JavaScript", "AI Development", "Basic Neural Networks", "Image Processing (YOLO, Media Pipe)", "Recurrent Neural Networks", "Robotics & IoT", "Raspberry Pi", "Home Assistant", "Arduino", "REV Control HUB", "EV3 Hub", "Web / App Development", "Unity", "React", "JavaScript", "Database Management", "SQL", "Laravels", "Database Design", "2D/3D Design", "Solidworks", "Blender", "Networking & Cabling", "Video Editing", "Presentation & Pitching"
+        "Coding/Programming", "Python", "C/C++/C#", "Java", "JavaScript", "AI Development", "Basic Neural Networks", "Image Processing (YOLO, Media Pipe)", "Recurrent Neural Networks", "Robotics & IoT", "Raspberry Pi", "Home Assistant", "Arduino", "REV Control HUB", "EV3 Hub", "Web/App Development", "Unity", "React", "Database Management", "SQL", "Laravels", "Database Design", "2D/3D Design", "Solidworks", "Blender", "Networking & Cabling", "Video Editing", "Presentation & Pitching"
       ],
       "soft": [
         "Project Management", "Leadership", "Problem Solving", "Business Analysis", "Product Analysis", "Presentation Skills"
@@ -27,148 +27,123 @@
     },
     "honors": [
       {
-        "title": "Global Award Winner Intel AI Global Impact Festival",
+        "title": "Intel ® AI Global Impact Festival – Global Award Winner",
         "year": 2022,
-        "link": "https://intel.com/ai-global-impact-festival",
-        "eventDescription": "[Mock] This is a global AI competition hosted by Intel, bringing together students and professionals to showcase impactful AI projects.",
-        "myExperience": "[Mock] I presented my project, networked with global experts, and gained valuable feedback. The event inspired me to pursue further research.",
-        "images": [
-          "/public/honors/intel.png",
-          "/public/honors/intel2.jpg",
-          "/public/honors/intel3.jpg"
-        ]
+        "link": "https://www.intc.com/news-events/press-releases/detail/1575/intel-announces-ai-global-impact-festival-grand-prize",
+        "eventDescription": "Annual festival by Intel that spotlights AI-powered student innovations aimed at real-world impact.",
+        "myExperience": "As part of the 13–17 age category, I developed the CS-M Tool, an AI solution that won the Global Award. This journey involved ideation, rigorous model testing, presenting to Intel judges, and refining my pitch under mentorship. It sharpened my skills in AI prototyping, technical communication, and global competition readiness.",
+        "images": []
       },
       {
-        "title": "World Runner-up in Microsoft Imagine Cup World Championship",
+        "title": "Microsoft Imagine Cup 2023 – World Runner-up",
         "year": 2023,
-        "link": "https://imaginecup.microsoft.com/",
-        "eventDescription": "[Mock] Microsoft Imagine Cup is a global student tech competition focused on innovation and entrepreneurship.",
-        "myExperience": "[Mock] I worked with a diverse team, learned about pitching, and developed a real-world solution. The event was a great learning experience.",
-        "images": [
-          "/public/honors/imaginecup.png",
-          "/public/honors/imaginecup2.jpg"
-        ]
+        "link": "https://techcommunity.microsoft.com/blog/studentdeveloperblog/celebrating-the-innovators-of-tomorrow-announcing-the-top-3-teams-of-the-2023-im/3784110",
+        "eventDescription": "A global student tech competition hosted by Microsoft, showcasing projects with social or environmental impact.",
+        "myExperience": "As the core developer of CS-M Tool, I led software architecture and UI design. Our team placed 2nd globally, and we received mentoring from Microsoft mentors and executives. I honed team coordination, UX/UI problem solving, and exposure to enterprise mentorship.",
+        "images": []
       },
       {
-        "title": "World Finalist in International Science and Engineering Fair (ISEF)",
+        "title": "Regeneron ISEF 2023 – World Finalist",
         "year": 2023,
-        "link": "https://www.societyforscience.org/isef/",
-        "eventDescription": "[Mock] ISEF is the world’s largest international science fair for high school students, featuring projects from all disciplines.",
-        "myExperience": "[Mock] I met students from many countries, exchanged ideas, and presented my research to a global audience.",
-        "images": [
-          "/public/honors/isef.png",
-          "/public/honors/isef2.jpg"
-        ]
+        "link": "https://www.societyforscience.org/isef/regeneron-isef-2023/",
+        "eventDescription": "The world’s premier high school science and engineering fair, with ~1,600 global finalists competing in Dallas, Texas.",
+        "myExperience": "I presented original research and competed among top global students. The experience reinforced advanced experimental design, scientific presentation, and peer review under pressure.",
+        "images": []
       },
       {
-        "title": "Winner of Thailand ICT Awards: TICTA",
+        "title": "Thailand Young Scientist Festival (TYSF) 2022 – Gold Medalist",
         "year": 2022,
-        "link": "https://www.ticta.org/",
-        "eventDescription": "[Mock] Thailand ICT Awards (TICTA) celebrates innovation in information and communication technology across the country.",
-        "myExperience": "[Mock] Our team collaborated on a tech solution, presented to judges, and learned about the Thai tech ecosystem.",
-        "images": [
-          "/public/honors/ticta.png",
-          "/public/honors/ticta2.jpg"
-        ]
+        "link": "https://www.nstda.or.th/en/news/news-years-2022/congratulations-to-thai-students-winning-awards-at-regeneron-isef-2022.html",
+        "eventDescription": "Organized by NSTDA and the Science Society of Thailand, TYSF celebrates student scientific research at a national level.",
+        "myExperience": "My gold-winning project involved in-depth scientific inquiry, data analysis, and poster presentation. It strengthened my research methodology, statistical analysis, and public outreach skills.",
+        "images": []
       },
       {
-        "title": "Gold Medalist in Thailand Young Scientist Festival: TYSF",
+        "title": "Thailand ICT Awards (TICTA) 2022 – Winner",
         "year": 2022,
-        "link": "https://www.nstda.or.th/th/news/tysf",
-        "eventDescription": "[Mock] TYSF is a national science festival in Thailand for young scientists.",
-        "myExperience": "[Mock] I presented my project and learned from other young scientists.",
-        "images": [
-          "/public/honors/tysf.png",
-          "/public/honors/tysf2.jpg"
-        ]
+        "link": "https://www.nationthailand.com/business/corporate/40019728",
+        "eventDescription": "Thailand’s top digital-technology awards recognizing innovation in software, hardware, and ICT services.",
+        "myExperience": "Our project won a national ICT award (possibly in a student category). I handled end-to-end development—from requirement gathering to deployment—deepening my experience in product-market fit, technical delivery, and industry standards adherence.",
+        "images": []
       },
       {
-        "title": "First Place in Prime Minister’s Science Project Award in Applied Science",
+        "title": "Prime Minister’s Science Project Award 2022 – First Place (Applied Science) & Best Communication Awards",
         "year": 2022,
-        "link": "https://nstda.or.th/th/news/pm-award",
-        "eventDescription": "[Mock] Prime Minister’s Science Project Award recognizes outstanding science projects in Thailand.",
-        "myExperience": "[Mock] Our project won first place and I gained experience in scientific communication.",
-        "images": [
-          "/public/honors/pmaward.png",
-          "/public/honors/pmaward2.jpg"
-        ]
+        "eventDescription": "A prestigious Thai national science competition recognizing outstanding scientific projects and communication prowess.",
+        "myExperience": "I received dual recognition for technical merits and outstanding communication, refining my ability to articulate complex science clearly and compellingly.",
+        "images": []
       },
       {
-        "title": "Best Communication Awards in Prime Minister’s Science Project Award",
+        "title": "FIRST Tech Challenge (FTC) 2022 – Best Engineering Design (Team Medusa)",
         "year": 2022,
-        "link": "https://nstda.or.th/th/news/pm-award",
-        "eventDescription": "[Mock] Prime Minister’s Science Project Award recognizes outstanding science projects in Thailand.",
-        "myExperience": "[Mock] We received the Best Communication Award for our project presentation.",
-        "images": [
-          "/public/honors/pmaward.png",
-          "/public/honors/pmaward2.jpg"
-        ]
+        "eventDescription": "FTC is a global robotics competition for high school students, with regions leading up to world finals.",
+        "myExperience": "As lead engineer and programmer, I designed mechanical systems, developed control logic, and led iterative prototyping. Winning “Best Engineering Design” recognized my technical leadership and CAD, mechatronic integration, and agile development skills.",
+        "images": []
       },
       {
-        "title": "Best Engineering Design Awards in FIRST Tech Challenge",
-        "year": 2022,
-        "link": "https://www.firstinspires.org/robotics/ftc",
-        "eventDescription": "[Mock] FIRST Tech Challenge is a robotics competition for students.",
-        "myExperience": "[Mock] I led the engineering design and learned about robotics teamwork.",
-        "images": [
-          "/public/honors/ftc.png",
-          "/public/honors/ftc2.jpg"
-        ]
+        "title": "FIRST Tech Challenge (FTC) 2023 – World Championship Competitor (Team Astraeus)",
+        "year": 2023,
+        "eventDescription": "Continuation of FTC into the 2023 “PowerPlay” season, culminating in the World Championship in Houston, Texas.",
+        "myExperience": "Leading systems development and optimization, I directed strategy sessions, mechanical build, and software implementation. Competing globally fostered greater engineering under pressure, collaborative problem-solving, and exposure to high-stakes team coordination.",
+        "images": []
       },
       {
-        "title": "National Finalist in INTERLINK Thailand Cabling Contest #12",
+        "title": "INTERLINK Cabling Contest #12 [July 10, 2024] – National Finalist",
         "year": 2024,
-        "link": "https://www.interlink.com/contest",
-        "eventDescription": "[Mock] INTERLINK Thailand Cabling Contest is a national cabling competition.",
-        "myExperience": "[Mock] I was a national finalist and improved my technical skills.",
-        "images": [
-          "/public/honors/interlink.png",
-          "/public/honors/interlink2.jpg"
-        ]
+        "link": "https://interlink.co.th/news/detail/470",
+        "eventDescription": "A nationwide competition in Thailand assessing expert-level network cabling skills and design, awarding the Royal Trophy.",
+        "myExperience": "I was among top national finalists in technical cabling, showcasing proficiency in network design, precision installation, and standard compliance within a rigorous time-constrained environment.",
+        "images": []
       }
     ],
     "projects": [
       {
-        "title": "Cardiac Self-Monitoring Tool(CS-M Tool)",
-        "years": "2022 - 2024",
+        "title": "Cardiac Self-Monitoring Tool (CS-M Tool)",
+        "years": "2021",
         "description": "A project that set out to solve the world’s number 1 cause of death, heart disease. With an innovative recording device paired with a React Native-based application and a Neural Network AI capable of detecting heart sound abnormalities. With this solution, we made heart disease detection and screening accessible anywhere, improving early detection and treatment. This project gained recognition and awards from Intel, Microsoft, and ISEF.",
-        "skills": ["Python", "AI Development", "Basic Neural Networks", "Image Processing (YOLO, Media Pipe)", "Recurrent Neural Networks", "React Native"]
+  "skills": ["Coding/Programming", "Python", "C/C++/C#","Signal Processing", "JavaScript", "AI Development", "Basic Neural Networks", "Recurrent Neural Networks", "Web/App Development", "React", "2D/3D Design", "Solidworks", "Video Editing", "Presentation & Pitching", "Project Management", "Leadership", "Problem Solving", "Business Analysis", "Product Analysis", "Presentation Skills", "Thai", "English"]
       },
       {
         "title": "Physical Therapy with Motion Tracking (I-THANKe)",
-        "years": "2021 – 2022",
+        "years": "2021",
         "description": "A project focused on making physical therapy accessible to all through an innovative approach. I-THANKe leverages a Unity-based application integrated with a Neural Network AI to detect correct therapy posture and movement. To enhance patient engagement and retention, the platform incorporates gamification elements and securely manages patient data for therapists, enabling effective physical therapy anytime, anywhere.",
-        "skills": ["Unity", "AI Development", "Basic Neural Networks", "C#"]
+  "skills": ["Unity", "AI Development", "Basic Neural Networks", "C#"]
       },
       {
-        "title": "FIRST Tech Challenge: FTC, Team Medusa & Astraeus",
-        "years": "2022 & 2023",
-        "description": "Participated in the FIRST Tech Challenge (FTC) robotics competition for two years as the main engineer and developer for teams Medusa and Astraeus. Focused on designing, building, and testing robots to achieve optimal performance in solving each year’s specific tasks. Leading the development process to create efficient, innovative designs that maximize the robot’s capabilities in the competitive arena.",
-        "skills": ["Robotics & IoT", "REV Control HUB", "EV3 Hub", "C/C++/C#"]
+        "title": "FIRST Tech Challenge: FTC, Team Medusa",
+        "years": "2022",
+        "description": "Served as the lead engineer and programmer, responsible for designing and implementing the robot’s mechanical systems and control software. Worked on translating game objectives into effective technical solutions, ensuring the robot was reliable and competitive throughout the season. Gained experience in rapid prototyping, iterative testing, and integrating hardware with software to meet complex design challenges.",
+  "skills": ["Robotics & IoT", "REV Control HUB", "EV3 Hub", "C/C++/C#"]
+      },
+      {
+        "title": "FIRST Tech Challenge: FTC, Team Astraeus",
+        "years": "2023",
+        "description": "Took on the role of primary builder and systems developer, driving the design of innovative mechanisms tailored to that year’s challenge. Focused on optimizing performance through mechanical precision, strategic design choices, and collaboration with teammates on coding and troubleshooting. Helped the team develop a robot that balanced consistency with creativity, strengthening leadership and cross-team communication skills.",
+  "skills": ["Robotics & IoT", "REV Control HUB", "EV3 Hub", "C/C++/C#"]
       },
       {
         "title": "Workshop on AI Driven Innovations in INDIA",
         "years": "2025",
         "description": "Attended an international workshop hosted in India featuring former and current senior professionals from major tech companies, such as Apple, Samsung, Nvidia, Google, Microsoft, and Meta. Gained insights into cutting-edge AI advancements and practical applications across industries.",
-        "skills": ["AI Development"]
+  "skills": ["AI Development", "Industry Insights"]
       },
       {
         "title": "Summer Internship at TLIC – IoT & Project Management Intern",
         "years": "2025",
         "description": "Gained hands-on experience in IoT system design and installation, contributing to real-world implementation projects. Also developed insights into project management workflows, including planning, coordination, and on-site execution.",
-        "skills": ["Robotics & IoT", "Project Management"]
+  "skills": ["Robotics & IoT", "Project Management", "Raspberry Pi", "Home Assistant", "Python", "Project Management"]
       },
       {
         "title": "Intel® AI Global Impact Festival Mentorship Program",
         "years": "2022",
         "description": "Selected for a global mentorship program as part of the Intel® AI Global Impact Festival, featuring masterclasses from AI and industry experts. Learned about AI applications, business strategy, and technical evaluation methods. Enhanced understanding of model testing, real-world deployment, and innovation in AI.",
-        "skills": ["AI Development"]
+  "skills": ["AI Development"]
       },
       {
         "title": "Microsoft Imagine Cup World Championship Mentorship Program",
         "years": "2023",
         "description": "Selected for a global mentorship program as part of the Imagine Cup World Championship. Focused on business development, pitching strategies, and product-market fit with guidance from experienced entrepreneurs and Microsoft experts. Gained practical knowledge in turning tech ideas into scalable business solutions.",
-        "skills": ["Business Analysis", "Presentation Skills"]
+  "skills": ["Business Analysis", "Presentation Skills"]
       },
       {
         "title": "Teacher’s Assistant (TA)",
@@ -180,46 +155,130 @@
   },
   "roadmap": [
     {
-      "title": "Started University",
+      "title": "Physical Therapy with Motion Tracking (I-THANKe)",
+      "date": "2021-09-01",
+      "category": "project",
+  "skills": ["Unity", "AI Development", "Basic Neural Networks", "C#"],
+      "experience": "Developed a Unity-based application with AI for physical therapy, integrating gamification and secure patient data management."
+    },
+    {
+      "title": "Intel ® AI Global Impact Festival – Global Award Winner",
+      "date": "2022-09-21",
+      "category": "award",
+  "skills": ["AI Development", "Basic Neural Networks", "Presentation Skills", "Python"],
+      "experience": "Developed the CS-M Tool, won the Global Award, and refined my pitch and technical communication under mentorship."
+    },
+    {
+      "title": "Thailand Young Scientist Festival (TYSF) 2022 – Gold Medalist",
+      "date": "2022-05-15",
+      "category": "award",
+  "skills": ["Presentation Skills", "Data Analysis", "Python"],
+      "experience": "Won gold for a scientific project, strengthening research methodology and public outreach skills."
+    },
+    {
+      "title": "Thailand ICT Awards (TICTA) 2022 – Winner",
+      "date": "2022-09-04",
+      "category": "award",
+  "skills": ["Product Analysis", "Technical Delivery", "AI Development"],
+      "experience": "Handled end-to-end development for a national ICT award-winning project."
+    },
+    {
+      "title": "Prime Minister’s Science Project Award 2022 – First Place (Applied Science) & Best Communication Awards",
+      "date": "2022-08-01",
+      "category": "award",
+  "skills": ["Presentation Skills", "Scientific Communication"],
+      "experience": "Received dual recognition for technical merits and outstanding communication."
+    },
+    {
+      "title": "FIRST Tech Challenge (FTC) 2022 – Best Engineering Design (Team Medusa)",
+      "date": "2022-11-10",
+      "category": "competition",
+  "skills": ["Robotics & IoT", "REV Control HUB", "EV3 Hub", "CAD"],
+      "experience": "Led engineering and programming, winning Best Engineering Design for technical leadership and integration."
+    },
+    {
+      "title": "FIRST Tech Challenge: FTC, Team Medusa",
+      "date": "2022-12-01",
+      "category": "project",
+  "skills": ["Robotics & IoT", "REV Control HUB", "EV3 Hub", "C/C++/C#"],
+      "experience": "Lead engineer and programmer, responsible for robot design and control software."
+    },
+    {
+      "title": "Regeneron ISEF 2023 – World Finalist",
+      "date": "2023-05-19",
+      "category": "award",
+  "skills": ["Presentation Skills", "Experimental Design", "Scientific Presentation", "Peer Review"],
+      "experience": "Presented original research and competed among top global students."
+    },
+    {
+      "title": "FIRST Tech Challenge: FTC, Team Astraeus",
+      "date": "2023-04-01",
+      "category": "project",
+  "skills": ["Robotics & IoT", "REV Control HUB", "EV3 Hub", "C/C++/C#"],
+      "experience": "Primary builder and systems developer, driving design and performance optimization."
+    },
+    {
+      "title": "FIRST Tech Challenge (FTC) 2023 – World Championship Competitor (Team Astraeus)",
+      "date": "2023-04-25",
+      "category": "competition",
+  "skills": ["Project Management", "Leadership", "Problem Solving", "Presentation Skills"],
+      "experience": "Led systems development and optimization, competing at the world championship in Houston, Texas."
+    },
+    {
+      "title": "Microsoft Imagine Cup 2023 – World Runner-up",
+      "date": "2023-07-01",
+      "category": "award",
+  "skills": ["Python", "AI Development", "Basic Neural Networks", "Recurrent Neural Networks", "Signal Processing", "Recurrent Neural Networks", "React Native"],
+      "experience": "Led software architecture and UI design for CS-M Tool, placing 2nd globally."
+    },
+    {
+      "title": "Microsoft Imagine Cup World Championship Mentorship Program",
+      "date": "2023-07-15",
+      "category": "mentorship",
+      "skills": ["Business Analysis", "Presentation Skills", "Project Management", "Leadership", "Problem Solving", "Coding/Programming", "Python", "C/C++/C#", "JavaScript", "AI Development", "Basic Neural Networks", "Recurrent Neural Networks", "Web/App Development", "React", "Video Editing", "Product Analysis", "Thai", "English"],
+      "experience": "Focused on business development and pitching strategies with Microsoft mentors."
+    },
+    {
+      "title": "Started University at Chiang Mai University",
       "date": "2023-08-01",
       "category": "education",
-      "skills": ["Python", "Java", "Database Management", "Networking & Cabling"],
-      "experience": "Settling into university life, making new friends, and learning the basics of engineering."
+      "skills": ["Coding/Programming", "Python", "C/C++/C#", "Java", "JavaScript", "AI Development", "Web/App Development", "React", "Database Management", "SQL", "Laravels", "Database Design", "2D/3D Design", "Solidworks", "Blender", "Networking & Cabling", "Presentation & Pitching", "Project Management", "Leadership", "Problem Solving", "Presentation Skills", "Thai", "English"],
+      "experience": "Began undergraduate studies in ISNE at CMU."
     },
     {
-      "title": "Won Intel AI Global Impact Festival",
-      "date": "2022-09-15",
-      "category": "awards",
-      "skills": ["AI Development", "Basic Neural Networks"],
-      "experience": "An amazing opportunity to present my project on a global stage and connect with innovators from around the world."
+      "title": "Cardiac Self-Monitoring Tool (CS-M Tool)",
+      "date": "2022-01-01",
+      "category": "project",
+      "skills": ["Coding/Programming", "Python", "C/C++/C#","Signal Processing", "JavaScript", "AI Development", "Basic Neural Networks", "Recurrent Neural Networks", "Web/App Development", "React", "2D/3D Design", "Solidworks", "Video Editing", "Presentation & Pitching", "Project Management", "Leadership", "Problem Solving", "Business Analysis", "Product Analysis", "Presentation Skills", "Thai", "English"],  
+      "experience": "Developed a device and app for heart disease detection, recognized by Intel, Microsoft, and ISEF."
     },
     {
-      "title": "FIRST Tech Challenge",
-      "date": "2022-11-10",
-      "category": "sports",
-      "skills": ["Robotics & IoT", "REV Control HUB", "EV3 Hub"],
-      "experience": "Worked with a fantastic team to design, build, and compete with our robot. Learned a lot about teamwork and engineering under pressure."
+      "title": "INTERLINK Cabling Contest #12 – National Finalist",
+      "date": "2024-07-10",
+      "category": "competition",
+  "skills": ["Networking & Cabling", "Technical Skills", "Standard Compliance"],
+      "experience": "Finalist in a national cabling competition, demonstrating expert-level skills."
     },
     {
-      "title": "ISEF World Finalist",
-      "date": "2023-05-20",
-      "category": "awards",
-      "skills": ["AI Development", "Presentation Skills"],
-      "experience": "Represented my country at ISEF and met some of the brightest young scientists from around the globe."
-    },
-    {
-      "title": "Internship at TLIC",
-      "date": "2025-06-01",
-      "category": "work",
-      "skills": ["Robotics & IoT", "Project Management"],
-      "experience": "Gained hands-on experience in IoT system design and project management during my summer internship."
-    },
-    {
-      "title": "Teaching Assistant (TA) for Introduction to Programming",
+      "title": "Calculus & Algorithm Teacher’s Assistant (TA)",
       "date": "2024-09-01",
       "category": "work",
-      "skills": ["Python", "Teaching", "Mentoring"],
-      "experience": "Assisted students in understanding programming concepts, graded assignments, and held office hours to support learning."
+  "skills": ["Python", "C/C++/C#", "Leadership", "Mentoring"],
+      "experience": "TA for Calculus II and Computer Algorithm Lab, supporting students and developing communication skills."
+    },
+    {
+      "title": "Summer Internship at TLIC – IoT & Project Management Intern",
+      "date": "2025-06-01",
+      "category": "work",
+  "skills": ["Robotics & IoT", "Project Management", "Raspberry Pi", "Home Assistant", "Python", "Project Management"],
+      "experience": "Hands-on experience in IoT system design, installation, and project management."
+    },
+    {
+      "title": "Workshop on AI Driven Innovations in INDIA",
+      "date": "2025-07-01",
+      "category": "workshop",
+  "skills": ["AI Development", "Industry Insights", "Basic Neural Networks", "Recurrent Neural Networks", "Image Processing (YOLO, Media Pipe)"],
+      "experience": "Attended an international workshop with tech leaders, learning about AI advancements and applications."
     }
   ]
 }

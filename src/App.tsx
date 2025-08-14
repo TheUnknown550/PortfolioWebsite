@@ -73,7 +73,7 @@ const App: React.FC = () => {
               theme === "dark"
                 ? "text-sky-300 hover:text-sky-100 font-medium"
                 : "text-sky-600 hover:text-sky-800 font-medium"
-            }>Projects</Link>
+            }>Projects & Experience</Link>
             <Link to="/honors" className={
               theme === "dark"
                 ? "text-sky-300 hover:text-sky-100 font-medium"

@@ -14,12 +14,25 @@ import React, { useEffect, useState } from "react";
 import Timeline from "./components/Timeline";
 import Badge from "./components/Badge";
 
+
+// Expanded categories to match all possible roadmap categories in data.json
 const categories = [
   { label: "Education", value: "education", color: "bg-emerald-100 text-emerald-700", darkColor: "bg-emerald-900 text-emerald-200" },
-  { label: "Awards", value: "awards", color: "bg-yellow-100 text-yellow-700", darkColor: "bg-yellow-900 text-yellow-200" },
-  { label: "Projects", value: "projects", color: "bg-sky-100 text-sky-700", darkColor: "bg-sky-900 text-sky-200" },
+  { label: "Award", value: "award", color: "bg-yellow-100 text-yellow-700", darkColor: "bg-yellow-900 text-yellow-200" },
+  { label: "Competition", value: "competition", color: "bg-pink-100 text-pink-700", darkColor: "bg-pink-900 text-pink-200" },
+  { label: "Project", value: "project", color: "bg-sky-100 text-sky-700", darkColor: "bg-sky-900 text-sky-200" },
+  { label: "Mentorship", value: "mentorship", color: "bg-purple-100 text-purple-700", darkColor: "bg-purple-900 text-purple-200" },
+  { label: "Workshop", value: "workshop", color: "bg-indigo-100 text-indigo-700", darkColor: "bg-indigo-900 text-indigo-200" },
   { label: "Work Experience", value: "work", color: "bg-orange-100 text-orange-700", darkColor: "bg-orange-900 text-orange-200" }
 ];
+
+// Helper to get label for unknown categories
+const getCategoryLabel = (cat) => {
+  const found = categories.find(c => c.value === cat);
+  if (found) return found.label;
+  // Fallback: Capitalize first letter
+  return cat.charAt(0).toUpperCase() + cat.slice(1);
+};
 
 const categoryColor = (cat: string, theme: string) => {
   const found = categories.find(c => c.value === cat);
@@ -157,7 +170,7 @@ const Roadmap: React.FC<RoadmapProps> = ({ theme = "light" }) => {
                   }></div>
                   <div className={"font-semibold flex items-center gap-2 mb-1"}>
                     <span className={"px-2 py-1 rounded-full text-xs font-semibold shadow-sm " + categoryColor(event.category, theme)}>
-                      {categories.find(c => c.value === event.category)?.label || event.category}
+                      {getCategoryLabel(event.category)}
                     </span>
                     <span className={theme === "dark" ? "text-sky-200" : "text-sky-700"}>{event.title}</span>
                   </div>
@@ -187,7 +200,7 @@ const Roadmap: React.FC<RoadmapProps> = ({ theme = "light" }) => {
             <div>
               <div className="flex items-center gap-2 mb-2">
                 <span className={"px-2 py-1 rounded-full text-xs font-semibold shadow-sm " + categoryColor(modalEvent.category, theme)}>
-                  {categories.find(c => c.value === modalEvent.category)?.label || modalEvent.category}
+                  {getCategoryLabel(modalEvent.category)}
                 </span>
                 <span className={theme === "dark" ? "text-sky-200 font-bold text-lg" : "text-sky-700 font-bold text-lg"}>{modalEvent.title}</span>
               </div>
