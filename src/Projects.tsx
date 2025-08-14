@@ -20,7 +20,7 @@ interface ProjectsProps {
 const Projects: React.FC<ProjectsProps> = ({ theme }) => {
   const [projects, setProjects] = useState<Project[]>([]);
   const [showSkills, setShowSkills] = useState(true);
-  const [sortBy, setSortBy] = useState<'date' | 'title' | 'importance'>('date');
+  const [sortBy, setSortBy] = useState<'date' | 'title' | 'importance'>('importance');
   const [reverse, setReverse] = useState(false);
 
   // For importance, use the order in the JSON file (default)
