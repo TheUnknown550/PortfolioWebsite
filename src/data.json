@@ -32,7 +32,12 @@
         "link": "https://www.intc.com/news-events/press-releases/detail/1575/intel-announces-ai-global-impact-festival-grand-prize",
         "eventDescription": "Annual festival by Intel that spotlights AI-powered student innovations aimed at real-world impact.",
         "myExperience": "As part of the 13–17 age category, I developed the CS-M Tool, an AI solution that won the Global Award. This journey involved ideation, rigorous model testing, presenting to Intel judges, and refining my pitch under mentorship. It sharpened my skills in AI prototyping, technical communication, and global competition readiness.",
-        "images": []
+        "images": [
+          "/Intel/Intel Headquaters.jpg",
+          "/Intel/Intel Booth.jpg",
+          "/Intel/Intel Computer Ceramony.jpg",
+          "/Intel/Intel Innovation.jpg"
+        ]
       },
       {
         "title": "Microsoft Imagine Cup 2023 – World Runner-up",
@@ -40,7 +45,13 @@
         "link": "https://techcommunity.microsoft.com/blog/studentdeveloperblog/celebrating-the-innovators-of-tomorrow-announcing-the-top-3-teams-of-the-2023-im/3784110",
         "eventDescription": "A global student tech competition hosted by Microsoft, showcasing projects with social or environmental impact.",
         "myExperience": "As the core developer of CS-M Tool, I led software architecture and UI design. Our team placed 2nd globally, and we received mentoring from Microsoft mentors and executives. I honed team coordination, UX/UI problem solving, and exposure to enterprise mentorship.",
-        "images": []
+        "images": [
+          "/ImagineCup/114066.jpg",
+          "/ImagineCup/ImagineCup.jpg",
+          "/ImagineCup/ImagineCup1.jpg",
+          "/ImagineCup/ImagineCup2.png",
+          "/ImagineCup/ImagineCup3.png"
+        ]
       },
       {
         "title": "Regeneron ISEF 2023 – World Finalist",
@@ -48,30 +59,55 @@
         "link": "https://www.societyforscience.org/isef/regeneron-isef-2023/",
         "eventDescription": "The world’s premier high school science and engineering fair, with ~1,600 global finalists competing in Dallas, Texas.",
         "myExperience": "I presented original research and competed among top global students. The experience reinforced advanced experimental design, scientific presentation, and peer review under pressure.",
-        "images": []
+        "images": [
+          "/ISEF/ISEF4.png",
+          "/ISEF/ISEF3.jpg",
+          "/ISEF/ISEF.jpg",
+          "/ISEF/ISEF1.jpg",
+          "/ISEF/114066.jpg",
+          "/ISEF/114067.jpg",
+          "/ISEF/114068.jpg",
+          "/ISEF/114069.jpg",
+          "/ISEF/114073.jpg",
+          "/ISEF/114074.jpg",
+          "/ISEF/114076.jpg",
+          "/ISEF/114077.jpg"
+        ]
       },
       {
         "title": "Thailand Young Scientist Festival (TYSF) 2022 – Gold Medalist",
         "year": 2022,
-        "link": "https://www.nstda.or.th/en/news/news-years-2022/congratulations-to-thai-students-winning-awards-at-regeneron-isef-2022.html",
         "eventDescription": "Organized by NSTDA and the Science Society of Thailand, TYSF celebrates student scientific research at a national level.",
         "myExperience": "My gold-winning project involved in-depth scientific inquiry, data analysis, and poster presentation. It strengthened my research methodology, statistical analysis, and public outreach skills.",
-        "images": []
+        "images": [
+                "/TYSF/TYSF4.png",
+                "/TYSF/TYSF.jpg",
+                "/TYSF/TYSF1.jpg",
+                "/TYSF/TYSF2.jpg",
+                "/TYSF/TYSF3.jpg"
+        ]
       },
       {
         "title": "Thailand ICT Awards (TICTA) 2022 – Winner",
         "year": 2022,
-        "link": "https://www.nationthailand.com/business/corporate/40019728",
         "eventDescription": "Thailand’s top digital-technology awards recognizing innovation in software, hardware, and ICT services.",
         "myExperience": "Our project won a national ICT award (possibly in a student category). I handled end-to-end development—from requirement gathering to deployment—deepening my experience in product-market fit, technical delivery, and industry standards adherence.",
-        "images": []
+        "images": [
+          "/TICTA/Ticta.jpg",
+          "/TICTA/Ticta 2.jpg",
+          "/TICTA/Ticta Microsoft.jpg"
+        ]
       },
       {
         "title": "Prime Minister’s Science Project Award 2022 – First Place (Applied Science) & Best Communication Awards",
         "year": 2022,
         "eventDescription": "A prestigious Thai national science competition recognizing outstanding scientific projects and communication prowess.",
         "myExperience": "I received dual recognition for technical merits and outstanding communication, refining my ability to articulate complex science clearly and compellingly.",
-        "images": [],
+        "images": [
+          "/PMAward/PM Award.jpg",
+          "/PMAward/PMAward.webp",
+          "/PMAward/PMAward2.jpg"
+        ],
         "link": "https://www.facebook.com/watch/?v=5448753708542852"
       },
       {
@@ -79,14 +115,18 @@
         "year": 2022,
         "eventDescription": "FTC is a global robotics competition for high school students, with regions leading up to world finals.",
         "myExperience": "As lead engineer and programmer, I designed mechanical systems, developed control logic, and led iterative prototyping. Winning “Best Engineering Design” recognized my technical leadership and CAD, mechatronic integration, and agile development skills.",
-        "images": []
+        "images": [
+          "/FTC2022/FTC.png"
+        ]
       },
       {
         "title": "FIRST Tech Challenge (FTC) 2023 – World Championship Competitor (Team Astraeus)",
         "year": 2023,
         "eventDescription": "Continuation of FTC into the 2023 “PowerPlay” season, culminating in the World Championship in Houston, Texas.",
         "myExperience": "Leading systems development and optimization, I directed strategy sessions, mechanical build, and software implementation. Competing globally fostered greater engineering under pressure, collaborative problem-solving, and exposure to high-stakes team coordination.",
-        "images": []
+        "images": [
+          "/FTC2023/FTC.png"
+        ]
       },
       {
         "title": "INTERLINK Cabling Contest #12 [July 10, 2024] – National Finalist",
@@ -94,7 +134,12 @@
         "link": "https://interlink.co.th/news/detail/470",
         "eventDescription": "A nationwide competition in Thailand assessing expert-level network cabling skills and design, awarding the Royal Trophy.",
         "myExperience": "I was among top national finalists in technical cabling, showcasing proficiency in network design, precision installation, and standard compliance within a rigorous time-constrained environment.",
-        "images": []
+        "images": [
+          "/INTERLINK/cabling.jpg",
+          "/INTERLINK/Cabling 1.jpg",
+          "/INTERLINK/Cabling 2.jpg",
+          "/INTERLINK/Cabling 3.jpg"
+        ]
       }
     ],
     "projects": [
