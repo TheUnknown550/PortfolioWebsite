@@ -1,0 +1,127 @@
+{
+  "profile": {
+    "name": "Matt Tanthai Cosh",
+    "bio": "A determined and ambitious undergraduate, majoring in Information Systems and Networking Engineering (ISNE) at Chiang Mai University (CMU) with a strong foundation in engineering and technology, and a track record in innovative projects and competitions. I wish to apply my skills professionally, honing them, while continuing to grow and make a positive difference in the world.",
+    "education": [
+      {
+        "institution": "Chiang Mai University",
+        "program": "Faculty of Engineering, Information System and Networking Engineering(ISNE) 2nd year Undergraduate",
+        "year": 2024,
+        "gpa": 3.83
+      },
+      {
+        "institution": "Prince Royal’s College",
+        "program": "Gifted Computer Plus Program(GC+)",
+        "year": 2023,
+        "gpa": 3.80
+      }
+    ],
+    "skills": {
+      "hard": [
+        "Python", "C/C++/C#", "Java", "JavaScript", "AI Development", "Basic Neural Networks", "Image Processing (YOLO, Media Pipe)", "Recurrent Neural Networks", "Robotics & IoT", "Raspberry Pi", "Home Assistant", "Arduino", "REV Control HUB", "EV3 Hub", "Web / App Development", "Unity", "React", "JavaScript", "Database Management", "SQL", "Laravels", "Database Design", "2D/3D Design", "Solidworks", "Blender", "Networking & Cabling", "Video Editing", "Presentation & Pitching"
+      ],
+      "soft": [
+        "Project Management", "Leadership", "Problem Solving", "Business Analysis", "Product Analysis", "Presentation Skills"
+      ],
+      "languages": ["Thai", "English"]
+    },
+    "honors": [
+      "Global Award Winner Intel AI Global Impact Festival [2022]",
+      "World Runner-up in Microsoft Imagine Cup World Championship [2023]",
+      "World Finalist in International Science and Engineering Fair (ISEF)  [2023]",
+      "Winner of Thailand ICT Awards: TICTA [2022]",
+      "Gold Medalist in Thailand Young Scientist Festival: TYSF [2022]",
+      "First Place in Prime Minister’s Science Project Award in Applied Science [2022]",
+      "Best Communication Awards in Prime Minister’s Science Project Award [2022]",
+      "Best Engineering Design Awards in FIRST Tech Challenge [2022]",
+      "National Finalist in INTERLINK Thailand Cabling Contest #12 [2024]"
+    ],
+    "projects": [
+      {
+        "title": "Cardiac Self-Monitoring Tool(CS-M Tool)",
+        "years": "2022 - 2024",
+        "description": "A project that set out to solve the world’s number 1 cause of death, heart disease. With an innovative recording device paired with a React Native-based application and a Neural Network AI capable of detecting heart sound abnormalities. With this solution, we made heart disease detection and screening accessible anywhere, improving early detection and treatment. This project gained recognition and awards from Intel, Microsoft, and ISEF.",
+        "skills": ["Python", "AI Development", "Basic Neural Networks", "Image Processing (YOLO, Media Pipe)", "Recurrent Neural Networks", "React Native"]
+      },
+      {
+        "title": "Physical Therapy with Motion Tracking (I-THANKe)",
+        "years": "2021 – 2022",
+        "description": "A project focused on making physical therapy accessible to all through an innovative approach. I-THANKe leverages a Unity-based application integrated with a Neural Network AI to detect correct therapy posture and movement. To enhance patient engagement and retention, the platform incorporates gamification elements and securely manages patient data for therapists, enabling effective physical therapy anytime, anywhere.",
+        "skills": ["Unity", "AI Development", "Basic Neural Networks", "C#"]
+      },
+      {
+        "title": "FIRST Tech Challenge: FTC, Team Medusa & Astraeus",
+        "years": "2022 & 2023",
+        "description": "Participated in the FIRST Tech Challenge (FTC) robotics competition for two years as the main engineer and developer for teams Medusa and Astraeus. Focused on designing, building, and testing robots to achieve optimal performance in solving each year’s specific tasks. Leading the development process to create efficient, innovative designs that maximize the robot’s capabilities in the competitive arena.",
+        "skills": ["Robotics & IoT", "REV Control HUB", "EV3 Hub", "C/C++/C#"]
+      },
+      {
+        "title": "Workshop on AI Driven Innovations in INDIA",
+        "years": "2025",
+        "description": "Attended an international workshop hosted in India featuring former and current senior professionals from major tech companies, such as Apple, Samsung, Nvidia, Google, Microsoft, and Meta. Gained insights into cutting-edge AI advancements and practical applications across industries.",
+        "skills": ["AI Development"]
+      },
+      {
+        "title": "Summer Internship at TLIC – IoT & Project Management Intern",
+        "years": "2025",
+        "description": "Gained hands-on experience in IoT system design and installation, contributing to real-world implementation projects. Also developed insights into project management workflows, including planning, coordination, and on-site execution.",
+        "skills": ["Robotics & IoT", "Project Management"]
+      },
+      {
+        "title": "Intel® AI Global Impact Festival Mentorship Program",
+        "years": "2022",
+        "description": "Selected for a global mentorship program as part of the Intel® AI Global Impact Festival, featuring masterclasses from AI and industry experts. Learned about AI applications, business strategy, and technical evaluation methods. Enhanced understanding of model testing, real-world deployment, and innovation in AI.",
+        "skills": ["AI Development"]
+      },
+      {
+        "title": "Microsoft Imagine Cup World Championship Mentorship Program",
+        "years": "2023",
+        "description": "Selected for a global mentorship program as part of the Imagine Cup World Championship. Focused on business development, pitching strategies, and product-market fit with guidance from experienced entrepreneurs and Microsoft experts. Gained practical knowledge in turning tech ideas into scalable business solutions.",
+        "skills": ["Business Analysis", "Presentation Skills"]
+      },
+      {
+        "title": "Teacher’s Assistant (TA)",
+        "years": "2024-2025",
+        "description": "Worked as a Teacher Assistant for Calculus II and Computer Algorithm Lab, providing support to students in solving problems, understanding complex concepts, debugging code, and developing algorithm designs. Gained valuable experience in communication, teamwork, mentorship, and leadership.",
+        "skills": ["Python", "C/C++/C#", "Leadership"]
+      }
+    ]
+  },
+  "roadmap": [
+    {
+      "title": "Started University",
+      "date": "2023-08-01",
+      "category": "education",
+      "skills": ["Python", "Java", "Database Management", "Networking & Cabling"],
+      "experience": "Settling into university life, making new friends, and learning the basics of engineering."
+    },
+    {
+      "title": "Won Intel AI Global Impact Festival",
+      "date": "2022-09-15",
+      "category": "awards",
+      "skills": ["AI Development", "Basic Neural Networks"],
+      "experience": "An amazing opportunity to present my project on a global stage and connect with innovators from around the world."
+    },
+    {
+      "title": "FIRST Tech Challenge",
+      "date": "2022-11-10",
+      "category": "sports",
+      "skills": ["Robotics & IoT", "REV Control HUB", "EV3 Hub"],
+      "experience": "Worked with a fantastic team to design, build, and compete with our robot. Learned a lot about teamwork and engineering under pressure."
+    },
+    {
+      "title": "ISEF World Finalist",
+      "date": "2023-05-20",
+      "category": "awards",
+      "skills": ["AI Development", "Presentation Skills"],
+      "experience": "Represented my country at ISEF and met some of the brightest young scientists from around the globe."
+    },
+    {
+      "title": "Internship at TLIC",
+      "date": "2025-06-01",
+      "category": "projects",
+      "skills": ["Robotics & IoT", "Project Management"],
+      "experience": "Gained hands-on experience in IoT system design and project management during my summer internship."
+    }
+  ]
+}
