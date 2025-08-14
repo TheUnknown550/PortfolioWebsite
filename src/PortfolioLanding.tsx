@@ -1,6 +1,8 @@
 
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useNavigate } from "react-router-dom";
+import ReactModal from "react-modal";
 import Section from "./components/Section";
 import Badge from "./components/Badge";
 import ProfilePhoto from "./components/ProfilePhoto";
@@ -18,6 +20,9 @@ interface Honor {
   year: number;
   link?: string;
   image?: string;
+  images?: string[];
+  eventDescription?: string;
+  myExperience?: string;
 }
 
 interface ProfileData {
@@ -34,16 +39,23 @@ interface PortfolioLandingProps {
 }
 
 const PortfolioLanding: React.FC<PortfolioLandingProps> = ({ theme = "light" }) => {
+  const navigate = useNavigate();
   const [profile, setProfile] = useState<ProfileData | null>(null);
   const [activeSkillTab, setActiveSkillTab] = useState(0);
   const [typedText, setTypedText] = useState("");
   const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
+  
+  // Modal state for honors
+  const [modalOpen, setModalOpen] = useState(false);
+  const [modalHonor, setModalHonor] = useState<Honor | null>(null);
+  const [modalImgIdx, setModalImgIdx] = useState(0);
 
   const roles = [
-    "DevOps Engineer 🚀",
-    "Cloud Architect ☁️", 
-    "Infrastructure Expert 🏗️",
-    "Automation Specialist 🤖"
+    "AI Developer 🤖",
+    "Engineering Student & Innovator 🚀", 
+    "Full-Stack Developer 💻",
+    "Tech Entrepreneur 🚀",
+    "IoT Developer 📡"
   ];
 
   // Typewriter effect
@@ -234,7 +246,12 @@ const PortfolioLanding: React.FC<PortfolioLandingProps> = ({ theme = "light" }) 
                   transition={{ delay: 0.9 }}
                   className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
                 >
-                  <Button variant="primary" theme={theme} className="group relative overflow-hidden">
+                  <Button 
+                    variant="primary" 
+                    theme={theme} 
+                    className="group relative overflow-hidden"
+                    onClick={() => navigate('/projects')}
+                  >
                     <span className="relative z-10">View My Work</span>
                     <motion.div
                       className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"
@@ -243,7 +260,14 @@ const PortfolioLanding: React.FC<PortfolioLandingProps> = ({ theme = "light" }) 
                       transition={{ duration: 0.6 }}
                     />
                   </Button>
-                  <Button variant="outline" theme={theme}>
+                  <Button 
+                    variant="outline" 
+                    theme={theme}
+                    onClick={() => {
+                      // For now, show an alert - we can add CV file later
+                      alert("CV download will be available soon! For now, please contact me directly.");
+                    }}
+                  >
                     Download CV 📄
                   </Button>
                 </motion.div>
@@ -288,7 +312,7 @@ const PortfolioLanding: React.FC<PortfolioLandingProps> = ({ theme = "light" }) 
                   </div>
 
                   {/* Floating Skills */}
-                  {["DevOps", "Cloud", "K8s", "Docker"].map((skill, index) => (
+                  {["AI/ML", "React", "Python", "IoT"].map((skill, index) => (
                     <motion.div
                       key={skill}
                       className={`absolute ${
@@ -532,49 +556,63 @@ const PortfolioLanding: React.FC<PortfolioLandingProps> = ({ theme = "light" }) 
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.2 }}
-                  className={`p-6 rounded-xl transition-all duration-300 hover:scale-105 ${
+                  className={`p-6 rounded-xl transition-all duration-300 hover:scale-105 cursor-pointer ${
                     theme === "dark"
                       ? "bg-gray-800/50 border border-gray-700 hover:border-yellow-500/50"
                       : "bg-white border border-gray-200 hover:border-yellow-300 shadow-sm hover:shadow-md"
                   }`}
+                  onClick={() => {
+                    setModalHonor(honor);
+                    setModalImgIdx(0);
+                    setModalOpen(true);
+                  }}
                 >
                   <div className="flex items-start gap-4">
-                    {honor.image && (
+                    {honor.images && honor.images.length > 0 && (
                       <img 
-                        src={honor.image} 
+                        src={honor.images[0]} 
                         alt={honor.title} 
-                        className="w-12 h-12 object-contain rounded-lg" 
+                        className="w-12 h-12 object-cover rounded-lg" 
                       />
                     )}
                     <div className="flex-1">
-                      {honor.link ? (
-                        <a 
-                          href={honor.link} 
-                          target="_blank" 
-                          rel="noopener noreferrer"
-                          className={`font-semibold hover:underline ${
-                            theme === "dark" ? "text-yellow-300" : "text-yellow-600"
-                          }`}
-                        >
-                          {honor.title}
-                        </a>
-                      ) : (
-                        <div className={`font-semibold ${
-                          theme === "dark" ? "text-yellow-300" : "text-yellow-600"
-                        }`}>
-                          {honor.title}
-                        </div>
-                      )}
+                      <div className={`font-semibold ${
+                        theme === "dark" ? "text-yellow-300" : "text-yellow-600"
+                      }`}>
+                        {honor.title}
+                      </div>
                       <div className={`text-sm ${
                         theme === "dark" ? "text-gray-400" : "text-gray-500"
                       }`}>
                         {honor.year}
+                      </div>
+                      <div className={`text-xs mt-2 ${
+                        theme === "dark" ? "text-gray-500" : "text-gray-600"
+                      }`}>
+                        Click to view details
                       </div>
                     </div>
                   </div>
                 </motion.div>
               ))}
             </div>
+            
+            {/* View All Awards Button */}
+            <motion.div 
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              className="text-center mt-8"
+            >
+              <Button
+                variant="outline"
+                theme={theme}
+                onClick={() => navigate('/honors-awards')}
+                className="px-6 py-3"
+              >
+                View All Awards 🏆
+              </Button>
+            </motion.div>
           </div>
         </Section>
 
@@ -601,16 +639,150 @@ const PortfolioLanding: React.FC<PortfolioLandingProps> = ({ theme = "light" }) 
               Ready to transform your ideas into scalable, robust solutions? Let's discuss your next project.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="primary" theme={theme} className="text-lg px-8 py-4">
+              <Button 
+                variant="primary" 
+                theme={theme} 
+                className="text-lg px-8 py-4"
+                onClick={() => {
+                  const contactSection = document.querySelector('#contact');
+                  if (contactSection) {
+                    contactSection.scrollIntoView({ behavior: 'smooth' });
+                  } else {
+                    // If no contact section, we can open a contact modal or navigate
+                    alert("Contact form coming soon! Please email me directly for now.");
+                  }
+                }}
+              >
                 Get In Touch 📧
               </Button>
-              <Button variant="outline" theme={theme} className="text-lg px-8 py-4">
+              <Button 
+                variant="outline" 
+                theme={theme} 
+                className="text-lg px-8 py-4"
+                onClick={() => navigate('/projects')}
+              >
                 View All Projects 🚀
               </Button>
             </div>
           </motion.div>
         </Section>
       </div>
+
+      {/* Honor Modal */}
+      <ReactModal
+        isOpen={modalOpen}
+        onRequestClose={() => setModalOpen(false)}
+        className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-br from-purple-900/90 to-blue-900/90 backdrop-blur-lg border border-purple-500/30 rounded-2xl p-8 max-w-6xl w-full mx-4 max-h-[90vh] overflow-y-auto scrollbar-thin scrollbar-thumb-purple-500/30 scrollbar-track-transparent"
+        overlayClassName="fixed inset-0 bg-black/70 backdrop-blur-sm z-50"
+        appElement={document.getElementById('root') || undefined}
+      >
+        {modalHonor && (
+          <div className="text-white">
+            {/* Header */}
+            <div className="flex justify-between items-start mb-6">
+              <h2 className="text-3xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+                {modalHonor.title}
+              </h2>
+              <button
+                onClick={() => setModalOpen(false)}
+                className="text-gray-400 hover:text-white transition-colors text-2xl p-2"
+              >
+                ×
+              </button>
+            </div>
+
+            {/* Content Grid: Images Left, Text Right */}
+            <div className="grid lg:grid-cols-2 gap-8">
+              {/* Left Column - Images */}
+              {modalHonor.images && modalHonor.images.length > 0 && (
+                <div className="space-y-4">
+                  <div className="relative">
+                    <img
+                      src={modalHonor.images[modalImgIdx]}
+                      alt={`${modalHonor.title} - Image ${modalImgIdx + 1}`}
+                      className="w-full h-80 object-cover rounded-lg"
+                    />
+                    {modalHonor.images.length > 1 && (
+                      <>
+                        <button
+                          onClick={() => setModalImgIdx(Math.max(0, modalImgIdx - 1))}
+                          className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black/70 transition-colors"
+                          disabled={modalImgIdx === 0}
+                        >
+                          ←
+                        </button>
+                        <button
+                          onClick={() => setModalImgIdx(Math.min(modalHonor.images!.length - 1, modalImgIdx + 1))}
+                          className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black/70 transition-colors"
+                          disabled={modalImgIdx === modalHonor.images.length - 1}
+                        >
+                          →
+                        </button>
+                      </>
+                    )}
+                  </div>
+                  {modalHonor.images.length > 1 && (
+                    <div className="flex justify-center space-x-2">
+                      {modalHonor.images.map((_, idx) => (
+                        <button
+                          key={idx}
+                          onClick={() => setModalImgIdx(idx)}
+                          className={`w-3 h-3 rounded-full transition-colors ${
+                            idx === modalImgIdx ? 'bg-purple-400' : 'bg-gray-600'
+                          }`}
+                        />
+                      ))}
+                    </div>
+                  )}
+                </div>
+              )}
+
+              {/* Right Column - Text Content */}
+              <div className="space-y-6">
+                {/* Event Description */}
+                {modalHonor.eventDescription && (
+                  <div>
+                    <h3 className="text-xl font-semibold mb-3 text-purple-300">Event Description</h3>
+                    <p className="text-gray-300 leading-relaxed">{modalHonor.eventDescription}</p>
+                  </div>
+                )}
+
+                {/* My Experience */}
+                {modalHonor.myExperience && (
+                  <div>
+                    <h3 className="text-xl font-semibold mb-3 text-blue-300">My Experience</h3>
+                    <p className="text-gray-300 leading-relaxed">{modalHonor.myExperience}</p>
+                  </div>
+                )}
+
+                {/* Year Badge */}
+                <div className="flex items-center space-x-2">
+                  <span className="bg-purple-600/30 text-purple-300 px-3 py-1 rounded-full text-sm font-medium">
+                    {modalHonor.year}
+                  </span>
+                </div>
+
+                {/* Link */}
+                {modalHonor.link && (
+                  <div className="pt-4 border-t border-purple-500/30">
+                    <a
+                      href={modalHonor.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center space-x-2 text-purple-400 hover:text-purple-300 transition-colors"
+                    >
+                      <span>Learn More</span>
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                      </svg>
+                    </a>
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+        )}
+      </ReactModal>
     </div>
   );
 };
