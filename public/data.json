@@ -177,7 +177,7 @@
         "title": "Summer Internship at TLIC – IoT & Project Management Intern",
         "years": "2025",
         "description": "Gained hands-on experience in IoT system design and installation, contributing to real-world implementation projects. Also developed insights into project management workflows, including planning, coordination, and on-site execution.",
-  "skills": ["Robotics & IoT", "Project Management", "Raspberry Pi", "Home Assistant", "Python", "Project Management"]
+  "skills": ["Robotics & IoT", "Project Management", "Raspberry Pi", "Home Assistant", "Python"]
       },
       {
         "title": "Intel® AI Global Impact Festival Mentorship Program",
@@ -316,7 +316,7 @@
       "title": "Summer Internship at TLIC – IoT & Project Management Intern",
       "date": "2025-06-01",
       "category": "work",
-  "skills": ["Robotics & IoT", "Project Management", "Raspberry Pi", "Home Assistant", "Python", "Project Management"],
+  "skills": ["Robotics & IoT", "Project Management", "Raspberry Pi", "Home Assistant", "Python"],
       "experience": "Hands-on experience in IoT system design, installation, and project management."
     },
     {

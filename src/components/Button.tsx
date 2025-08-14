@@ -70,8 +70,8 @@ const Button: React.FC<ButtonProps> = ({
       dark: 'bg-green-600 hover:bg-green-700 text-white border border-green-600 hover:border-green-700 focus-visible:ring-green-400'
     },
     outline: {
-      light: 'bg-transparent hover:bg-sky-50 text-sky-600 border border-sky-200 hover:border-sky-300 focus-visible:ring-sky-300',
-      dark: 'bg-transparent hover:bg-sky-900/20 text-sky-400 border border-sky-700 hover:border-sky-600 focus-visible:ring-sky-500'
+      light: 'bg-white/80 hover:bg-sky-50 text-sky-600 border border-sky-200 hover:border-sky-300 focus-visible:ring-sky-300 backdrop-blur-sm',
+      dark: 'bg-gray-900/80 hover:bg-sky-900/20 text-sky-400 border border-sky-700 hover:border-sky-600 focus-visible:ring-sky-500 backdrop-blur-sm'
     },
     icon: {
       light: 'bg-transparent hover:bg-gray-100 text-gray-600 border border-transparent hover:border-gray-200 focus-visible:ring-gray-300 p-2',

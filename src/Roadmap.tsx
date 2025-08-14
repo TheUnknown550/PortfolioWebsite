@@ -224,7 +224,7 @@ const Roadmap: React.FC<RoadmapProps> = ({ theme = "light" }) => {
                     <div className="mt-2 flex flex-wrap items-center gap-2">
                       <span className="text-xs text-gray-400 mr-2">Hard Skills:</span>
                       {event.skills.map((skill: string, i: number) => (
-                        <Badge key={i} color={theme === "dark" ? "bg-sky-900 text-sky-200" : "bg-sky-100 text-sky-700"}>{skill}</Badge>
+                        <Badge key={`${event.title}-${skill}-${i}`} color={theme === "dark" ? "bg-sky-900 text-sky-200" : "bg-sky-100 text-sky-700"}>{skill}</Badge>
                       ))}
                     </div>
                   )}
@@ -254,7 +254,7 @@ const Roadmap: React.FC<RoadmapProps> = ({ theme = "light" }) => {
                 <div className="mb-2 flex flex-wrap items-center gap-2">
                   <span className="text-xs text-gray-400 mr-2">Hard Skills:</span>
                   {modalEvent.skills.map((skill: string, i: number) => (
-                    <Badge key={i} color={theme === "dark" ? "bg-sky-900 text-sky-200" : "bg-sky-100 text-sky-700"}>{skill}</Badge>
+                    <Badge key={`modal-${modalEvent.title}-${skill}-${i}`} color={theme === "dark" ? "bg-sky-900 text-sky-200" : "bg-sky-100 text-sky-700"}>{skill}</Badge>
                   ))}
                 </div>
               )}

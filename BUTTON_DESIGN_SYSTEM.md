@@ -115,12 +115,30 @@ All button variants automatically adapt to light/dark themes:
 
 ### ✅ Completed Updates
 - [x] Contact Me floating button (App.tsx)
-- [x] Theme toggle button (ThemeToggle.tsx)
+- [x] **Enhanced Theme toggle button** (ThemeToggle.tsx) - **NEW**: Now includes animations, better visibility, tooltips
 - [x] Sort reverse toggle (Projects.tsx, HonorsAwards.tsx)
 - [x] Image navigation arrows (HonorsAwards.tsx)
 - [x] Modal close buttons (ContactModal.tsx, HonorsAwards.tsx, Roadmap.tsx)
 - [x] Mobile navigation hamburger (MobileNav.tsx)
 - [x] Zoom modal controls (HonorsAwards.tsx)
+
+### 🎨 Enhanced Theme Toggle Features
+The theme toggle has been significantly enhanced with:
+- **Visibility Improvements**:
+  - Larger, more prominent design with gradient backgrounds
+  - Enhanced shadows and hover effects
+  - Better contrast and color differentiation
+- **Animations**:
+  - Smooth icon transitions with rotation and scaling
+  - Floating animation for subtle movement
+  - Initial attention-grabbing pulse animation (5 seconds on load)
+  - Icon bounce animations
+  - Hover glow effects
+- **User Experience**:
+  - Tooltips showing "Switch to [theme] mode"
+  - Improved accessibility with better ARIA labels
+  - Visual feedback with emoji indicators (☀️/🌙)
+  - Smooth theme transitions with cubic-bezier easing
 
 ### 📝 Design Principles
 1. **Consistency**: All buttons follow the same visual patterns
