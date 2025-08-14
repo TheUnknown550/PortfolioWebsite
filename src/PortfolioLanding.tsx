@@ -607,7 +607,7 @@ const PortfolioLanding: React.FC<PortfolioLandingProps> = ({ theme = "light" }) 
               <Button
                 variant="outline"
                 theme={theme}
-                onClick={() => navigate('/honors-awards')}
+                onClick={() => navigate('/honors')}
                 className="px-6 py-3"
               >
                 View All Awards 🏆
