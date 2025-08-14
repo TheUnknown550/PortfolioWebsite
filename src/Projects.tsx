@@ -14,6 +14,7 @@ interface ProjectsProps {
 
 const Projects: React.FC<ProjectsProps> = ({ theme }) => {
   const [projects, setProjects] = useState<Project[]>([]);
+  const [loading, setLoading] = useState(true);
   const [showSkills, setShowSkills] = useState(true);
   const [sortBy, setSortBy] = useState<'date' | 'title' | 'importance'>('importance');
   const [reverse, setReverse] = useState(false);
@@ -22,12 +23,14 @@ const Projects: React.FC<ProjectsProps> = ({ theme }) => {
   const [originalOrder, setOriginalOrder] = useState<Project[]>([]);
 
   useEffect(() => {
+    setLoading(true);
     fetch("/data.json")
       .then(res => res.json())
       .then(data => {
         setProjects(data.profile.projects);
         setOriginalOrder(data.profile.projects);
-      });
+      })
+      .finally(() => setLoading(false));
   }, []);
 
   function parseYearRange(years?: string) {
@@ -125,29 +128,54 @@ const Projects: React.FC<ProjectsProps> = ({ theme }) => {
         </label>
       </div>
       <div className="w-full space-y-8">
-        {sortedProjects.map((proj, idx) => (
-          <div
-            key={idx}
-            className={
-              (theme === "dark"
-                ? "bg-gray-800/90 border-l-8 border-sky-700"
-                : "bg-white/90 border-l-8 border-sky-400") +
-              " rounded-xl p-6 shadow-xl flex flex-col gap-2 relative group transition-transform duration-300 hover:scale-[1.025] animate-fadeInSlideUp"
-            }
-            style={{ animationDelay: `${idx * 80}ms` }}
-          >
-            <div className="flex flex-col md:flex-row md:justify-between md:items-center mb-1">
-              <h3 className={theme === "dark" ? "text-lg font-bold text-sky-200" : "text-lg font-bold text-sky-700"}>{proj.title}</h3>
-              <span className="text-xs text-gray-400 font-mono">{proj.years}</span>
-            </div>
-            <p className={theme === "dark" ? "mb-2 text-gray-200 text-sm" : "mb-2 text-gray-700 text-sm"}>{proj.description}</p>
-            {showSkills && proj.skills && (
-              <div className="flex flex-wrap gap-2 mt-2">
-                {proj.skills.map(skill => <Badge key={skill}>{skill}</Badge>)}
+        {loading ? (
+          Array.from({ length: 4 }).map((_, idx) => (
+            <div
+              key={idx}
+              className={
+                (theme === "dark"
+                  ? "bg-gray-800/90 border-l-8 border-sky-700"
+                  : "bg-white/90 border-l-8 border-sky-400") +
+                " rounded-xl p-6 shadow-xl flex flex-col gap-2 animate-pulse"
+              }
+            >
+              <div className="flex flex-col md:flex-row md:justify-between md:items-center mb-1">
+                <div className={theme === "dark" ? "bg-sky-900 h-6 w-40 mb-2 rounded" : "bg-sky-200 h-6 w-40 mb-2 rounded"}></div>
+                <div className="bg-gray-300 dark:bg-gray-600 h-4 w-20 rounded" />
               </div>
-            )}
-          </div>
-        ))}
+              <div className={theme === "dark" ? "bg-gray-700 h-4 w-full mb-2 rounded" : "bg-gray-200 h-4 w-full mb-2 rounded"}></div>
+              <div className="flex flex-wrap gap-2 mt-2">
+                {Array.from({ length: 3 }).map((_, i) => (
+                  <div key={i} className={theme === "dark" ? "bg-sky-900 h-5 w-16 rounded" : "bg-sky-200 h-5 w-16 rounded"}></div>
+                ))}
+              </div>
+            </div>
+          ))
+        ) : (
+          sortedProjects.map((proj, idx) => (
+            <div
+              key={idx}
+              className={
+                (theme === "dark"
+                  ? "bg-gray-800/90 border-l-8 border-sky-700"
+                  : "bg-white/90 border-l-8 border-sky-400") +
+                " rounded-xl p-6 shadow-xl flex flex-col gap-2 relative group transition-transform duration-300 hover:scale-[1.025] animate-fadeInSlideUp"
+              }
+              style={{ animationDelay: `${idx * 80}ms` }}
+            >
+              <div className="flex flex-col md:flex-row md:justify-between md:items-center mb-1">
+                <h3 className={theme === "dark" ? "text-lg font-bold text-sky-200" : "text-lg font-bold text-sky-700"}>{proj.title}</h3>
+                <span className="text-xs text-gray-400 font-mono">{proj.years}</span>
+              </div>
+              <p className={theme === "dark" ? "mb-2 text-gray-200 text-sm" : "mb-2 text-gray-700 text-sm"}>{proj.description}</p>
+              {showSkills && proj.skills && (
+                <div className="flex flex-wrap gap-2 mt-2">
+                  {proj.skills.map(skill => <Badge key={skill}>{skill}</Badge>)}
+                </div>
+              )}
+            </div>
+          ))
+        )}
       </div>
     </div>
     {/* Card fade/slide animation */}

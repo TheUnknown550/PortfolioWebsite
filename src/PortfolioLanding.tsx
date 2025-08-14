@@ -40,7 +40,98 @@ const PortfolioLanding: React.FC<PortfolioLandingProps> = ({ theme = "light" }) 
       .then((data) => setProfile(data.profile));
   }, []);
   if (!profile) {
-    return <div className="flex justify-center items-center min-h-screen">Loading...</div>;
+    // Animated loading skeletons for hero and main content
+    return (
+      <div className={
+        theme === "dark"
+          ? "flex flex-col items-center justify-center bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700 min-h-screen px-4 sm:px-6"
+          : "flex flex-col items-center justify-center bg-gradient-to-br from-blue-50 via-white to-blue-100 min-h-screen px-4 sm:px-6"
+      }>
+        {/* HERO SKELETON */}
+        <div className="w-full max-w-3xl flex flex-col items-center gap-8 py-12 animate-fadeInSlideUp">
+          <div className="flex flex-col sm:flex-row items-center gap-8 w-full">
+            <div className="mb-4 sm:mb-0 w-32 h-32 rounded-full bg-gray-300 dark:bg-gray-700 animate-pulse" />
+            <div className="flex flex-col items-center sm:items-start w-full">
+              <div className="h-8 w-48 rounded bg-gray-200 dark:bg-gray-800 mb-2 animate-pulse" />
+              <div className="h-5 w-64 rounded bg-gray-200 dark:bg-gray-800 mb-4 animate-pulse" />
+              <div className="flex flex-wrap gap-2 justify-center sm:justify-start mb-4">
+                {[...Array(4)].map((_, i) => (
+                  <span key={i} className="h-6 w-16 rounded bg-sky-100 dark:bg-sky-900 animate-pulse" />
+                ))}
+                {[...Array(2)].map((_, i) => (
+                  <span key={"lang-"+i} className="h-6 w-14 rounded bg-green-50 dark:bg-green-900 animate-pulse" />
+                ))}
+              </div>
+              <span className="inline-block px-6 py-2 bg-sky-100 dark:bg-sky-900 rounded-full animate-pulse w-40 h-10" />
+            </div>
+          </div>
+        </div>
+        {/* MAIN CONTENT SKELETON */}
+        <div className={
+          theme === "dark"
+            ? "max-w-3xl w-full bg-gray-900/90 rounded-2xl shadow-xl p-8 border border-gray-700 mx-auto mt-8 animate-fadeInSlideUp"
+            : "max-w-3xl w-full bg-white/90 rounded-2xl shadow-xl p-8 border border-blue-100 mx-auto mt-8 animate-fadeInSlideUp"
+        }>
+          {/* Education skeleton */}
+          <div className="mb-8">
+            <div className="h-6 w-32 rounded bg-gray-200 dark:bg-gray-800 mb-4 animate-pulse" />
+            {[...Array(2)].map((_, i) => (
+              <div key={i} className="mb-2">
+                <div className="h-5 w-40 rounded bg-sky-100 dark:bg-sky-900 mb-1 animate-pulse" />
+                <div className="h-4 w-56 rounded bg-gray-200 dark:bg-gray-800 mb-1 animate-pulse" />
+                <div className="h-3 w-32 rounded bg-gray-100 dark:bg-gray-700 animate-pulse" />
+              </div>
+            ))}
+          </div>
+          {/* Skills skeleton */}
+          <div className="mb-8">
+            <div className="h-6 w-24 rounded bg-gray-200 dark:bg-gray-800 mb-2 animate-pulse" />
+            <div className="flex gap-2 mb-2">
+              {[...Array(5)].map((_, i) => (
+                <span key={i} className="h-6 w-16 rounded bg-sky-100 dark:bg-sky-900 animate-pulse" />
+              ))}
+            </div>
+            <div className="h-6 w-24 rounded bg-gray-200 dark:bg-gray-800 mb-2 animate-pulse" />
+            <div className="flex gap-2 mb-2">
+              {[...Array(3)].map((_, i) => (
+                <span key={i} className="h-6 w-16 rounded bg-blue-50 dark:bg-blue-900 animate-pulse" />
+              ))}
+            </div>
+            <div className="h-6 w-24 rounded bg-gray-200 dark:bg-gray-800 mb-2 animate-pulse" />
+            <div className="flex gap-2">
+              {[...Array(2)].map((_, i) => (
+                <span key={i} className="h-6 w-14 rounded bg-green-50 dark:bg-green-900 animate-pulse" />
+              ))}
+            </div>
+          </div>
+          {/* Honors skeleton */}
+          <div className="mb-8">
+            <div className="h-6 w-40 rounded bg-gray-200 dark:bg-gray-800 mb-4 animate-pulse" />
+            {[...Array(2)].map((_, i) => (
+              <div key={i} className="flex items-center gap-3 mb-2">
+                <span className="w-8 h-8 rounded bg-gray-200 dark:bg-gray-700 animate-pulse" />
+                <span className="h-5 w-48 rounded bg-gray-100 dark:bg-gray-800 animate-pulse" />
+              </div>
+            ))}
+          </div>
+          {/* Projects skeleton */}
+          <div>
+            <div className="h-6 w-56 rounded bg-gray-200 dark:bg-gray-800 mb-4 animate-pulse" />
+            {[...Array(2)].map((_, i) => (
+              <div key={i} className="mb-4">
+                <div className="h-5 w-40 rounded bg-sky-100 dark:bg-sky-900 mb-1 animate-pulse" />
+                <div className="h-4 w-64 rounded bg-gray-200 dark:bg-gray-800 mb-1 animate-pulse" />
+                <div className="flex gap-2 mt-2">
+                  {[...Array(3)].map((_, j) => (
+                    <span key={j} className="h-6 w-16 rounded bg-sky-100 dark:bg-sky-900 animate-pulse" />
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    );
   }
   return (
     <div className={

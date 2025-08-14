@@ -70,6 +70,50 @@ const Roadmap: React.FC<RoadmapProps> = ({ theme = "light" }) => {
 
   const filtered = events.filter(e => selected.includes(e.category));
 
+  // Loading skeletons for roadmap
+  if (!events || events.length === 0) {
+    return (
+      <div className={
+        theme === "dark"
+          ? "min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700 px-4 sm:px-6 flex flex-col items-center justify-center"
+          : "min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-100 px-4 sm:px-6 flex flex-col items-center justify-center"
+      }>
+        <div className={
+          (theme === "dark"
+            ? "max-w-6xl w-full mx-auto bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700/90 rounded-3xl shadow-2xl p-6 md:p-12 border border-gray-700 "
+            : "max-w-6xl w-full mx-auto bg-gradient-to-br from-white via-blue-50 to-blue-100/80 rounded-3xl shadow-2xl p-6 md:p-12 border border-blue-100 ") +
+          " relative"
+        }>
+          <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-4 gap-2 sm:gap-4 z-20 relative">
+            <div className="h-8 w-48 rounded bg-gray-200 dark:bg-gray-800 animate-pulse mb-2" />
+            <div className="h-6 w-32 rounded bg-gray-200 dark:bg-gray-800 animate-pulse" />
+          </div>
+          <div className="flex flex-wrap gap-2 sm:gap-4 mb-4">
+            {categories.map((cat, i) => (
+              <span key={i} className="h-8 w-28 rounded-lg bg-gray-100 dark:bg-gray-800 animate-pulse" />
+            ))}
+          </div>
+          <div className="relative min-h-[40rem] max-h-[60rem] overflow-y-auto space-y-10 px-2 md:px-8 pb-8 z-10 pt-32 md:pt-0">
+            {/* Timeline vertical line skeleton */}
+            <div className="hidden md:block absolute left-8 top-0 h-full w-1 z-0 bg-gradient-to-b from-sky-200 via-blue-100 to-sky-200/60 dark:from-sky-900 dark:via-gray-700 dark:to-sky-900/60" style={{ borderRadius: '0.5rem' }}></div>
+            {[...Array(4)].map((_, idx) => (
+              <div key={idx} className="relative pl-12 py-6 rounded-xl shadow z-10 w-full mb-4">
+                <div className="absolute left-4 top-8 w-4 h-4 rounded-full bg-sky-200 dark:bg-sky-900 animate-pulse" />
+                <div className="h-6 w-32 rounded bg-gray-200 dark:bg-gray-800 mb-2 animate-pulse" />
+                <div className="h-4 w-24 rounded bg-gray-100 dark:bg-gray-700 mb-2 animate-pulse" />
+                <div className="flex gap-2 mt-2">
+                  {[...Array(3)].map((_, j) => (
+                    <span key={j} className="h-6 w-16 rounded bg-sky-100 dark:bg-sky-900 animate-pulse" />
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className={
       theme === "dark"
