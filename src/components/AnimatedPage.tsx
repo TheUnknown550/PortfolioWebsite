@@ -13,24 +13,24 @@ const pageVariants = {
     scale: 0.98,
     filter: "blur(8px)",
   },
-  in: {
+  animate: {
     opacity: 1,
     y: 0,
     scale: 1,
     filter: "blur(0px)",
     transition: {
       duration: 0.5,
-      ease: [0.4, 0, 0.2, 1],
+      ease: [0.4, 0, 0.2, 1] as const,
     },
   },
-  out: {
+  exit: {
     opacity: 0,
     y: -40,
     scale: 0.98,
     filter: "blur(8px)",
     transition: {
       duration: 0.35,
-      ease: [0.4, 0, 0.2, 1],
+      ease: [0.4, 0, 0.2, 1] as const,
     },
   },
 };
@@ -41,8 +41,8 @@ const AnimatedPage: React.FC<AnimatedPageProps> = ({ children }) => {
       <motion.div
         key={typeof window !== 'undefined' ? window.location.pathname : 'page'}
         initial="initial"
-        animate="in"
-        exit="out"
+        animate="animate"
+        exit="exit"
         variants={pageVariants}
         className="min-h-[60vh]"
       >

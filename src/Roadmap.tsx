@@ -89,7 +89,7 @@ const Roadmap: React.FC<RoadmapProps> = ({ theme = "light" }) => {
             <div className="h-6 w-32 rounded bg-gray-200 dark:bg-gray-800 animate-pulse" />
           </div>
           <div className="flex flex-wrap gap-2 sm:gap-4 mb-4">
-            {categories.map((cat, i) => (
+            {categories.map((_, i) => (
               <span key={i} className="h-8 w-28 rounded-lg bg-gray-100 dark:bg-gray-800 animate-pulse" />
             ))}
           </div>

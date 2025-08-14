@@ -22,14 +22,34 @@ const HonorsAwards: React.FC<HonorsAwardsProps> = ({ theme }) => {
   const [modalHonor, setModalHonor] = useState<Honor | null>(null);
   const [modalImgIdx, setModalImgIdx] = useState(0);
   const [zoomOpen, setZoomOpen] = useState(false);
+  
+  // Sorting state
+  const [sortBy, setSortBy] = useState<'year' | 'title' | 'importance'>('importance');
+  const [reverse, setReverse] = useState(false);
+  const [originalOrder, setOriginalOrder] = useState<Honor[]>([]);
 
   useEffect(() => {
     setLoading(true);
     fetch("/data.json")
       .then(res => res.json())
-      .then(data => setHonors(data.profile.honors))
+      .then(data => {
+        setHonors(data.profile.honors);
+        setOriginalOrder(data.profile.honors);
+      })
       .finally(() => setLoading(false));
   }, []);
+
+  // Sorting logic
+  let sortedHonors = [...honors];
+  if (sortBy === 'year') {
+    sortedHonors.sort((a, b) => b.year - a.year);
+  } else if (sortBy === 'title') {
+    sortedHonors.sort((a, b) => a.title.localeCompare(b.title));
+  } else if (sortBy === 'importance') {
+    // Use the original order from JSON
+    sortedHonors = [...originalOrder];
+  }
+  if (reverse) sortedHonors.reverse();
 
     return (
       <div className={
@@ -39,7 +59,49 @@ const HonorsAwards: React.FC<HonorsAwardsProps> = ({ theme }) => {
         " min-h-[60vh] py-10 px-2 sm:px-6 flex flex-col items-center justify-center w-full"
       }>
         <div className="max-w-3xl w-full mx-auto">
-          <h2 className={theme === "dark" ? "text-3xl font-bold text-sky-300 drop-shadow mb-8" : "text-3xl font-bold text-sky-700 drop-shadow mb-8"}>Honors & Awards</h2>
+          <div className="flex flex-col md:flex-row md:justify-between md:items-center mb-8 gap-4">
+            <h2 className={theme === "dark" ? "text-3xl font-bold text-sky-300 drop-shadow" : "text-3xl font-bold text-sky-700 drop-shadow"}>Honors & Awards</h2>
+            <div className="flex flex-row gap-3 items-center">
+              <div className={
+                (theme === "dark"
+                  ? "bg-gray-800 border border-sky-700"
+                  : "bg-white border border-sky-300") +
+                " rounded-xl px-4 py-2 flex flex-row items-center gap-3 shadow-md transition-all duration-300"
+              }>
+                <span className={theme === "dark" ? "text-sky-300 font-semibold" : "text-sky-700 font-semibold"}>
+                  <svg className="inline w-5 h-5 mr-1 -mt-1" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M3 7h18M3 12h18M3 17h18" /></svg>
+                  Sort:
+                </span>
+                <select
+                  className={
+                    (theme === "dark"
+                      ? "bg-gray-900 text-sky-200 border-sky-700"
+                      : "bg-blue-50 text-sky-700 border-sky-300") +
+                    " rounded px-2 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-sky-400 border"
+                  }
+                  value={sortBy}
+                  onChange={e => setSortBy(e.target.value as 'year' | 'title' | 'importance')}
+                >
+                  <option value="year">Year (Newest)</option>
+                  <option value="title">Title (A-Z)</option>
+                  <option value="importance">Default</option>
+                </select>
+                <button
+                  className={
+                    "ml-2 px-2 py-1 rounded-full border flex items-center transition-all duration-200 " +
+                    (reverse
+                      ? (theme === "dark" ? "bg-sky-700 text-white border-sky-700" : "bg-sky-400 text-white border-sky-400")
+                      : (theme === "dark" ? "bg-gray-700 text-gray-200 border-gray-700" : "bg-gray-200 text-gray-700 border-gray-200"))
+                  }
+                  onClick={() => setReverse(r => !r)}
+                  title="Reverse order"
+                >
+                  <svg className={"w-4 h-4 mr-1 transition-transform duration-200 " + (reverse ? "rotate-180" : "")} fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" /></svg>
+                  {reverse ? 'Reverse' : 'Normal'}
+                </button>
+              </div>
+            </div>
+          </div>
           <div className="w-full flex flex-col gap-6">
             {loading ? (
               Array.from({ length: 4 }).map((_, idx) => (
@@ -62,7 +124,7 @@ const HonorsAwards: React.FC<HonorsAwardsProps> = ({ theme }) => {
                 </div>
               ))
             ) : (
-              honors.map((honor, idx) => (
+              sortedHonors.map((honor, idx) => (
                 <button
                   key={idx}
                   onClick={() => { setModalHonor(honor); setModalOpen(true); setModalImgIdx(0); }}
@@ -296,8 +358,6 @@ const HonorsAwards: React.FC<HonorsAwardsProps> = ({ theme }) => {
           </div>
         )}
       </ReactModal>
-// Add state for zoom modal
-const [zoomOpen, setZoomOpen] = useState(false);
     </div>
   );
 };
