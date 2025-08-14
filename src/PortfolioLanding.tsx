@@ -1,5 +1,6 @@
 
 import React, { useEffect, useState } from "react";
+import ContactModal from "./ContactModal";
 import Section from "./components/Section";
 import Badge from "./components/Badge";
 import ProfilePhoto from "./components/ProfilePhoto";
@@ -34,6 +35,7 @@ interface PortfolioLandingProps {
 
 const PortfolioLanding: React.FC<PortfolioLandingProps> = ({ theme = "light" }) => {
   const [profile, setProfile] = useState<ProfileData | null>(null);
+  const [contactOpen, setContactOpen] = useState(false);
 
   useEffect(() => {
     fetch("/src/data.json")
@@ -46,11 +48,41 @@ const PortfolioLanding: React.FC<PortfolioLandingProps> = ({ theme = "light" }) 
   }
 
   return (
-    <div className={
+  <div className={
       theme === "dark"
         ? "flex flex-col items-center justify-center bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700 min-h-screen px-4 sm:px-6"
         : "flex flex-col items-center justify-center bg-gradient-to-br from-blue-50 via-white to-blue-100 min-h-screen px-4 sm:px-6"
     }>
+      <style>{`
+        @keyframes bounce-few {
+          0%, 100% { transform: translateY(0); }
+          20% { transform: translateY(-20%); }
+          40% { transform: translateY(0); }
+          60% { transform: translateY(-10%); }
+          80% { transform: translateY(0); }
+        }
+      `}</style>
+      {/* Script to trigger bounce every 2.5 minutes, 3 times */}
+      <script dangerouslySetInnerHTML={{__html: `
+        (function bounceContactBtn() {
+          let count = 0;
+          function bounce() {
+            const btn = document.getElementById('contact-bounce-btn');
+            if (btn) {
+              btn.style.animation = 'bounce-few 1s 1';
+              setTimeout(() => { btn.style.animation = ''; }, 1100);
+            }
+            count++;
+            if (count < 3) setTimeout(bounce, 2000);
+          }
+          setInterval(() => {
+            count = 0;
+            bounce();
+          }, 150000); // 2.5 minutes
+        })();
+      `}} />
+      <ContactModal isOpen={contactOpen} onClose={() => setContactOpen(false)} theme={theme} />
+
       <div className={
         theme === "dark"
               ? "max-w-2xl w-full bg-gray-900/90 rounded-2xl shadow-xl p-8 mb-8 flex flex-col items-center gap-4 sm:flex-row sm:items-center border border-gray-700"

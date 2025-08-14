@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import AnimatedLink from "./AnimatedLink";
 import ThemeToggle from "./ThemeToggle";
 
 interface MobileNavProps {
@@ -16,7 +16,6 @@ const navLinks = [
 
 const MobileNav: React.FC<MobileNavProps> = ({ theme, toggleTheme }) => {
   const [open, setOpen] = useState(false);
-  const location = useLocation();
 
   return (
     <div className="md:hidden relative">
@@ -37,7 +36,7 @@ const MobileNav: React.FC<MobileNavProps> = ({ theme, toggleTheme }) => {
           " absolute right-0 mt-2 w-48 rounded-xl shadow-lg border z-50 flex flex-col"
         }>
           {navLinks.map(link => (
-            <Link
+            <AnimatedLink
               key={link.to}
               to={link.to}
               onClick={() => setOpen(false)}
@@ -49,7 +48,7 @@ const MobileNav: React.FC<MobileNavProps> = ({ theme, toggleTheme }) => {
               }
             >
               {link.label}
-            </Link>
+            </AnimatedLink>
           ))}
           <div className="px-6 py-3 border-t border-gray-200 dark:border-gray-700 flex justify-center">
             <ThemeToggle theme={theme} toggleTheme={toggleTheme} />

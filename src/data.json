@@ -30,55 +30,101 @@
         "title": "Global Award Winner Intel AI Global Impact Festival",
         "year": 2022,
         "link": "https://intel.com/ai-global-impact-festival",
-        "image": "/public/honors/intel.png"
+        "eventDescription": "[Mock] This is a global AI competition hosted by Intel, bringing together students and professionals to showcase impactful AI projects.",
+        "myExperience": "[Mock] I presented my project, networked with global experts, and gained valuable feedback. The event inspired me to pursue further research.",
+        "images": [
+          "/public/honors/intel.png",
+          "/public/honors/intel2.jpg",
+          "/public/honors/intel3.jpg"
+        ]
       },
       {
         "title": "World Runner-up in Microsoft Imagine Cup World Championship",
         "year": 2023,
         "link": "https://imaginecup.microsoft.com/",
-        "image": "/public/honors/imaginecup.png"
+        "eventDescription": "[Mock] Microsoft Imagine Cup is a global student tech competition focused on innovation and entrepreneurship.",
+        "myExperience": "[Mock] I worked with a diverse team, learned about pitching, and developed a real-world solution. The event was a great learning experience.",
+        "images": [
+          "/public/honors/imaginecup.png",
+          "/public/honors/imaginecup2.jpg"
+        ]
       },
       {
         "title": "World Finalist in International Science and Engineering Fair (ISEF)",
         "year": 2023,
         "link": "https://www.societyforscience.org/isef/",
-        "image": "/public/honors/isef.png"
+        "eventDescription": "[Mock] ISEF is the world’s largest international science fair for high school students, featuring projects from all disciplines.",
+        "myExperience": "[Mock] I met students from many countries, exchanged ideas, and presented my research to a global audience.",
+        "images": [
+          "/public/honors/isef.png",
+          "/public/honors/isef2.jpg"
+        ]
       },
       {
         "title": "Winner of Thailand ICT Awards: TICTA",
         "year": 2022,
         "link": "https://www.ticta.org/",
-        "image": "/public/honors/ticta.png"
+        "eventDescription": "[Mock] Thailand ICT Awards (TICTA) celebrates innovation in information and communication technology across the country.",
+        "myExperience": "[Mock] Our team collaborated on a tech solution, presented to judges, and learned about the Thai tech ecosystem.",
+        "images": [
+          "/public/honors/ticta.png",
+          "/public/honors/ticta2.jpg"
+        ]
       },
       {
         "title": "Gold Medalist in Thailand Young Scientist Festival: TYSF",
         "year": 2022,
         "link": "https://www.nstda.or.th/th/news/tysf",
-        "image": "/public/honors/tysf.png"
+        "eventDescription": "[Mock] TYSF is a national science festival in Thailand for young scientists.",
+        "myExperience": "[Mock] I presented my project and learned from other young scientists.",
+        "images": [
+          "/public/honors/tysf.png",
+          "/public/honors/tysf2.jpg"
+        ]
       },
       {
         "title": "First Place in Prime Minister’s Science Project Award in Applied Science",
         "year": 2022,
         "link": "https://nstda.or.th/th/news/pm-award",
-        "image": "/public/honors/pmaward.png"
+        "eventDescription": "[Mock] Prime Minister’s Science Project Award recognizes outstanding science projects in Thailand.",
+        "myExperience": "[Mock] Our project won first place and I gained experience in scientific communication.",
+        "images": [
+          "/public/honors/pmaward.png",
+          "/public/honors/pmaward2.jpg"
+        ]
       },
       {
         "title": "Best Communication Awards in Prime Minister’s Science Project Award",
         "year": 2022,
         "link": "https://nstda.or.th/th/news/pm-award",
-        "image": "/public/honors/pmaward.png"
+        "eventDescription": "[Mock] Prime Minister’s Science Project Award recognizes outstanding science projects in Thailand.",
+        "myExperience": "[Mock] We received the Best Communication Award for our project presentation.",
+        "images": [
+          "/public/honors/pmaward.png",
+          "/public/honors/pmaward2.jpg"
+        ]
       },
       {
         "title": "Best Engineering Design Awards in FIRST Tech Challenge",
         "year": 2022,
         "link": "https://www.firstinspires.org/robotics/ftc",
-        "image": "/public/honors/ftc.png"
+        "eventDescription": "[Mock] FIRST Tech Challenge is a robotics competition for students.",
+        "myExperience": "[Mock] I led the engineering design and learned about robotics teamwork.",
+        "images": [
+          "/public/honors/ftc.png",
+          "/public/honors/ftc2.jpg"
+        ]
       },
       {
         "title": "National Finalist in INTERLINK Thailand Cabling Contest #12",
         "year": 2024,
         "link": "https://www.interlink.com/contest",
-        "image": "/public/honors/interlink.png"
+        "eventDescription": "[Mock] INTERLINK Thailand Cabling Contest is a national cabling competition.",
+        "myExperience": "[Mock] I was a national finalist and improved my technical skills.",
+        "images": [
+          "/public/honors/interlink.png",
+          "/public/honors/interlink2.jpg"
+        ]
       }
     ],
     "projects": [
@@ -164,9 +210,16 @@
     {
       "title": "Internship at TLIC",
       "date": "2025-06-01",
-      "category": "projects",
+      "category": "work",
       "skills": ["Robotics & IoT", "Project Management"],
       "experience": "Gained hands-on experience in IoT system design and project management during my summer internship."
+    },
+    {
+      "title": "Teaching Assistant (TA) for Introduction to Programming",
+      "date": "2024-09-01",
+      "category": "work",
+      "skills": ["Python", "Teaching", "Mentoring"],
+      "experience": "Assisted students in understanding programming concepts, graded assignments, and held office hours to support learning."
     }
   ]
 }

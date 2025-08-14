@@ -17,8 +17,8 @@ import Badge from "./components/Badge";
 const categories = [
   { label: "Education", value: "education", color: "bg-emerald-100 text-emerald-700", darkColor: "bg-emerald-900 text-emerald-200" },
   { label: "Awards", value: "awards", color: "bg-yellow-100 text-yellow-700", darkColor: "bg-yellow-900 text-yellow-200" },
-  { label: "Sports", value: "sports", color: "bg-pink-100 text-pink-700", darkColor: "bg-pink-900 text-pink-200" },
-  { label: "Projects", value: "projects", color: "bg-sky-100 text-sky-700", darkColor: "bg-sky-900 text-sky-200" }
+  { label: "Projects", value: "projects", color: "bg-sky-100 text-sky-700", darkColor: "bg-sky-900 text-sky-200" },
+  { label: "Work Experience", value: "work", color: "bg-orange-100 text-orange-700", darkColor: "bg-orange-900 text-orange-200" }
 ];
 
 const categoryColor = (cat: string, theme: string) => {
