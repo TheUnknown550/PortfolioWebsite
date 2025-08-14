@@ -35,78 +35,54 @@ interface PortfolioLandingProps {
 
 const PortfolioLanding: React.FC<PortfolioLandingProps> = ({ theme = "light" }) => {
   const [profile, setProfile] = useState<ProfileData | null>(null);
-  const [contactOpen, setContactOpen] = useState(false);
-
   useEffect(() => {
     fetch("/src/data.json")
       .then((res) => res.json())
       .then((data) => setProfile(data.profile));
   }, []);
-
   if (!profile) {
     return <div className="flex justify-center items-center min-h-screen">Loading...</div>;
   }
-
   return (
-  <div className={
+    <div className={
       theme === "dark"
         ? "flex flex-col items-center justify-center bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700 min-h-screen px-4 sm:px-6"
         : "flex flex-col items-center justify-center bg-gradient-to-br from-blue-50 via-white to-blue-100 min-h-screen px-4 sm:px-6"
     }>
-      <style>{`
-        @keyframes bounce-few {
-          0%, 100% { transform: translateY(0); }
-          20% { transform: translateY(-20%); }
-          40% { transform: translateY(0); }
-          60% { transform: translateY(-10%); }
-          80% { transform: translateY(0); }
-        }
-      `}</style>
-      {/* Script to trigger bounce every 2.5 minutes, 3 times */}
-      <script dangerouslySetInnerHTML={{__html: `
-        (function bounceContactBtn() {
-          let count = 0;
-          function bounce() {
-            const btn = document.getElementById('contact-bounce-btn');
-            if (btn) {
-              btn.style.animation = 'bounce-few 1s 1';
-              setTimeout(() => { btn.style.animation = ''; }, 1100);
-            }
-            count++;
-            if (count < 3) setTimeout(bounce, 2000);
-          }
-          setInterval(() => {
-            count = 0;
-            bounce();
-          }, 150000); // 2.5 minutes
-        })();
-      `}} />
-      <ContactModal isOpen={contactOpen} onClose={() => setContactOpen(false)} theme={theme} />
-
-      <div className={
-        theme === "dark"
-              ? "max-w-2xl w-full bg-gray-900/90 rounded-2xl shadow-xl p-8 mb-8 flex flex-col items-center gap-4 sm:flex-row sm:items-center border border-gray-700"
-          : "max-w-2xl w-full bg-white/90 rounded-2xl shadow-xl p-8 mb-8 flex flex-col items-center gap-4 sm:flex-row sm:items-center border border-blue-100"
-      }>
-        <ProfilePhoto src="/profile.png" alt={profile.name} className="mb-4 sm:mb-0" />
-        <div className="flex flex-col items-center sm:items-start w-full">
-          <h1 className={
-            theme === "dark"
-              ? "text-3xl font-bold mb-2 text-sky-300 drop-shadow text-center sm:text-left"
-              : "text-3xl font-bold mb-2 text-sky-700 drop-shadow text-center sm:text-left"
-          }>{profile.name}</h1>
-          <p className={theme === "dark" ? "mb-4 text-gray-200 text-center sm:text-left" : "mb-4 text-gray-600 text-center sm:text-left"}>{profile.bio}</p>
-          <a href="/roadmap" className={
-            theme === "dark"
-              ? "inline-block px-4 py-2 bg-sky-700 text-white rounded hover:bg-sky-800 transition shadow"
-              : "inline-block px-4 py-2 bg-sky-400 text-white rounded hover:bg-sky-500 transition shadow"
-          }>View My Roadmap</a>
+      {/* HERO SECTION */}
+      <div className="w-full max-w-3xl flex flex-col items-center gap-8 py-12 animate-fadeInSlideUp">
+        <div className="flex flex-col sm:flex-row items-center gap-8 w-full">
+          <ProfilePhoto src="/profile.png" alt={profile.name} className="mb-4 sm:mb-0 shadow-2xl border-4 border-sky-400 dark:border-sky-700" />
+          <div className="flex flex-col items-center sm:items-start w-full">
+            <h1 className={
+              theme === "dark"
+                ? "text-4xl font-extrabold mb-2 text-sky-300 drop-shadow text-center sm:text-left"
+                : "text-4xl font-extrabold mb-2 text-sky-700 drop-shadow text-center sm:text-left"
+            }>{profile.name}</h1>
+            <p className={theme === "dark" ? "mb-4 text-lg text-gray-200 text-center sm:text-left" : "mb-4 text-lg text-gray-600 text-center sm:text-left"}>
+              {profile.bio}
+            </p>
+            <div className="flex flex-wrap gap-2 justify-center sm:justify-start mb-4">
+              {profile.skills.hard.slice(0, 4).map((skill, i) => (
+                <Badge key={i} color={theme === "dark" ? "bg-sky-900 text-sky-200" : "bg-sky-100 text-sky-700"}>{skill}</Badge>
+              ))}
+              {profile.skills.languages.map((lang, i) => (
+                <Badge key={"lang-"+i} color={theme === "dark" ? "bg-green-900 text-green-200" : "bg-green-50 text-green-600"}>{lang}</Badge>
+              ))}
+            </div>
+            <a href="/projects" className={
+              theme === "dark"
+                ? "inline-block px-6 py-2 bg-sky-700 text-white rounded-full hover:bg-sky-800 transition shadow-lg text-lg font-semibold"
+                : "inline-block px-6 py-2 bg-sky-400 text-white rounded-full hover:bg-sky-500 transition shadow-lg text-lg font-semibold"
+            }>View My Projects</a>
+          </div>
         </div>
       </div>
+      {/* MAIN CONTENT */}
       <div className={
         theme === "dark"
-          ? "max-w-2xl w-full bg-gray-900/90 rounded-2xl shadow-xl p-8 border border-gray-700 mx-auto"
-          : "max-w-2xl w-full bg-white/90 rounded-2xl shadow-xl p-8 border border-blue-100 mx-auto"
+          ? "max-w-3xl w-full bg-gray-900/90 rounded-2xl shadow-xl p-8 border border-gray-700 mx-auto mt-8 animate-fadeInSlideUp"
+          : "max-w-3xl w-full bg-white/90 rounded-2xl shadow-xl p-8 border border-blue-100 mx-auto mt-8 animate-fadeInSlideUp"
       }>
         <Section title="Education">
           {profile.education.map((edu, i) => (
