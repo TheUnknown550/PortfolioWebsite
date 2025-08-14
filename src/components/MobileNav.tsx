@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import AnimatedLink from "./AnimatedLink";
 import ThemeToggle from "./ThemeToggle";
+import Button from "./Button";
 
 interface MobileNavProps {
   theme: "light" | "dark";
@@ -19,15 +20,16 @@ const MobileNav: React.FC<MobileNavProps> = ({ theme, toggleTheme }) => {
 
   return (
     <div className="md:hidden relative">
-      <button
-        className="p-2 rounded focus:outline-none focus:ring-2 focus:ring-sky-400"
+      <Button
+        variant="icon"
+        theme={theme}
         onClick={() => setOpen(o => !o)}
         aria-label="Open navigation menu"
       >
         <span className="block w-6 h-0.5 bg-current mb-1"></span>
         <span className="block w-6 h-0.5 bg-current mb-1"></span>
         <span className="block w-6 h-0.5 bg-current"></span>
-      </button>
+      </Button>
       {open && (
         <div className={
           (theme === "dark"

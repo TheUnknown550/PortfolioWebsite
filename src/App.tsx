@@ -8,6 +8,7 @@ import ThemeToggle from "./components/ThemeToggle";
 import MobileNav from "./components/MobileNav";
 import AnimatedPage from "./components/AnimatedPage";
 import ContactModal from "./ContactModal";
+import Button from "./components/Button";
 
 const App: React.FC = () => {
   const [theme, setTheme] = useState<"light" | "dark">(() => {
@@ -98,9 +99,12 @@ const App: React.FC = () => {
           <MobileNav theme={theme} toggleTheme={toggleTheme} />
         </nav>
         {/* Floating Contact Me button (global, fixed on all pages) */}
-        <button
+        <Button
           onClick={() => setContactOpen(true)}
-          className="fixed bottom-8 right-8 z-40 bg-sky-500 hover:bg-sky-600 text-white font-bold py-3 px-6 rounded-full shadow-lg focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-300"
+          variant="primary"
+          size="lg"
+          theme={theme}
+          className="fixed bottom-8 right-8 z-40 rounded-full shadow-lg"
           aria-label="Open contact options"
           tabIndex={0}
           style={{
@@ -120,7 +124,7 @@ const App: React.FC = () => {
           id="contact-bounce-btn"
         >
           Contact Me
-        </button>
+        </Button>
         <ContactModal isOpen={contactOpen} onClose={() => setContactOpen(false)} theme={theme} />
         {/* Custom bounce animation injected below */}
         <style>{`

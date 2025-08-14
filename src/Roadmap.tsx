@@ -1,4 +1,5 @@
 import ReactModal from "react-modal";
+import Button from "./components/Button";
 // Modal styles for center popup
 const modalStyles = {
   overlay: { backgroundColor: "rgba(0,0,0,0.3)", zIndex: 50 },
@@ -273,10 +274,16 @@ const Roadmap: React.FC<RoadmapProps> = ({ theme = "light" }) => {
                   View Related Video / Article
                 </a>
               )}
-              <button
-                className={"mt-2 px-4 py-2 rounded bg-sky-500 text-white hover:bg-sky-600 transition w-full"}
+              <Button
+                variant="primary"
+                size="md"
+                theme={theme}
                 onClick={() => setModalOpen(false)}
-              >Close</button>
+                fullWidth
+                className="mt-2"
+              >
+                Close
+              </Button>
             </div>
           ) : null}
 

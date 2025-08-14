@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "./components/Button";
 
 interface ContactModalProps {
   isOpen: boolean;
@@ -28,13 +29,15 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose, theme = "l
         tabIndex={0}
         aria-label="Contact options"
       >
-        <button
+        <Button
+          variant="icon"
+          theme={theme}
           onClick={onClose}
-          className="absolute top-3 right-3 text-2xl font-bold text-gray-400 hover:text-sky-500 focus:outline-none"
+          className="absolute top-3 right-3 text-2xl font-bold text-gray-400 hover:text-sky-500"
           aria-label="Close contact modal"
         >
           ×
-        </button>
+        </Button>
         <h2 id="contact-modal-title" className="text-2xl font-bold mb-4 text-center">Contact Me</h2>
         <div className="space-y-4">
           <div className="flex items-center gap-3">

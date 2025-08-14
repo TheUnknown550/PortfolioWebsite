@@ -1,6 +1,7 @@
 
 import React, { useEffect, useState } from "react";
 import ReactModal from "react-modal";
+import Button from "./components/Button";
 
 interface Honor {
   title: string;
@@ -86,19 +87,22 @@ const HonorsAwards: React.FC<HonorsAwardsProps> = ({ theme }) => {
                   <option value="title">Title (A-Z)</option>
                   <option value="importance">Default</option>
                 </select>
-                <button
-                  className={
-                    "ml-2 px-2 py-1 rounded-full border flex items-center transition-all duration-200 " +
-                    (reverse
-                      ? (theme === "dark" ? "bg-sky-700 text-white border-sky-700" : "bg-sky-400 text-white border-sky-400")
-                      : (theme === "dark" ? "bg-gray-700 text-gray-200 border-gray-700" : "bg-gray-200 text-gray-700 border-gray-200"))
-                  }
+                <Button
+                  variant="toggle"
+                  size="sm"
+                  theme={theme}
+                  isActive={reverse}
                   onClick={() => setReverse(r => !r)}
                   title="Reverse order"
+                  className="ml-2 rounded-full"
+                  leftIcon={
+                    <svg className={"w-4 h-4 transition-transform duration-200 " + (reverse ? "rotate-180" : "")} fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                    </svg>
+                  }
                 >
-                  <svg className={"w-4 h-4 mr-1 transition-transform duration-200 " + (reverse ? "rotate-180" : "")} fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" /></svg>
                   {reverse ? 'Reverse' : 'Normal'}
-                </button>
+                </Button>
               </div>
             </div>
           </div>
@@ -201,15 +205,19 @@ const HonorsAwards: React.FC<HonorsAwardsProps> = ({ theme }) => {
               {modalHonor.images && modalHonor.images.length > 0 && (
                 <>
                   <div className="relative w-full flex justify-center items-center" style={{ minHeight: 280 }}>
-                    <button
+                    <Button
+                      variant="icon"
+                      theme={theme}
                       onClick={e => { e.stopPropagation(); setModalImgIdx(idx => (idx - 1 + modalHonor.images!.length) % modalHonor.images!.length); }}
-                      className="absolute left-0 top-1/2 -translate-y-1/2 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 rounded-full p-2 shadow focus:outline-none"
+                      className="absolute left-0 top-1/2 -translate-y-1/2 rounded-full shadow"
                       style={{ zIndex: 2 }}
                       aria-label="Previous image"
                       disabled={modalHonor.images.length < 2}
                     >
-                      <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" /></svg>
-                    </button>
+                      <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+                      </svg>
+                    </Button>
                     <img
                       id="gallery-modal-img"
                       src={modalHonor.images[modalImgIdx]}
@@ -233,15 +241,19 @@ const HonorsAwards: React.FC<HonorsAwardsProps> = ({ theme }) => {
                     <span className="absolute bottom-2 right-2 bg-black/60 text-white text-xs px-2 py-1 rounded shadow">
                       {modalImgIdx + 1} / {modalHonor.images.length}
                     </span>
-                    <button
+                    <Button
+                      variant="icon"
+                      theme={theme}
                       onClick={e => { e.stopPropagation(); setModalImgIdx(idx => (idx + 1) % modalHonor.images!.length); }}
-                      className="absolute right-0 top-1/2 -translate-y-1/2 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 rounded-full p-2 shadow focus:outline-none"
+                      className="absolute right-0 top-1/2 -translate-y-1/2 rounded-full shadow"
                       style={{ zIndex: 2 }}
                       aria-label="Next image"
                       disabled={modalHonor.images.length < 2}
                     >
-                      <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" /></svg>
-                    </button>
+                      <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                      </svg>
+                    </Button>
                   </div>
                   {/* Thumbnails row */}
                   <div className="flex gap-2 mt-4 justify-center w-full flex-wrap">
@@ -284,21 +296,25 @@ const HonorsAwards: React.FC<HonorsAwardsProps> = ({ theme }) => {
                 }><b>My experience:</b> {modalHonor.myExperience}</p>
               )}
               {modalHonor.link && (
-                <a
-                  href={modalHonor.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block px-4 py-2 bg-sky-500 text-white rounded hover:bg-sky-600 transition mb-2"
+                <Button
+                  variant="primary"
+                  size="md"
+                  theme={theme}
+                  className="mb-2"
+                  onClick={() => window.open(modalHonor.link, '_blank', 'noopener,noreferrer')}
                 >
                   {modalHonor.link.includes('facebook.com/watch') ? 'Watch Event Video' : 'Visit Event Website'}
-                </a>
+                </Button>
               )}
-              <button
+              <Button
+                variant="secondary"
+                size="md"
+                theme={theme}
                 onClick={() => setModalOpen(false)}
-                className="mt-2 px-4 py-2 rounded bg-gray-300 hover:bg-gray-400 text-gray-800 dark:bg-gray-700 dark:hover:bg-gray-600 dark:text-gray-100"
+                className="mt-2"
               >
                 Close
-              </button>
+              </Button>
             </div>
             {/* Zoomed lightbox modal */}
             {typeof window !== 'undefined' && window.document && modalHonor.images && modalHonor.images.length > 0 && (
@@ -326,29 +342,36 @@ const HonorsAwards: React.FC<HonorsAwardsProps> = ({ theme }) => {
                       style={{ transition: 'opacity 0.3s, transform 0.3s' }}
                     />
                     <div className="flex gap-4 mt-4">
-                      <button
+                      <Button
+                        variant="icon"
+                        theme={theme}
                         onClick={() => setModalImgIdx(idx => (idx - 1 + modalHonor.images!.length) % modalHonor.images!.length)}
-                        className="px-4 py-2 bg-gray-200 dark:bg-gray-700 rounded-full text-lg font-bold hover:bg-gray-300 dark:hover:bg-gray-600"
+                        className="rounded-full text-lg font-bold"
                         aria-label="Previous image"
                         disabled={modalHonor.images.length < 2}
                       >
                         &#8592;
-                      </button>
-                      <button
+                      </Button>
+                      <Button
+                        variant="primary"
+                        size="md"
+                        theme={theme}
                         onClick={() => setZoomOpen(false)}
-                        className="px-4 py-2 bg-sky-500 text-white rounded-full text-lg font-bold hover:bg-sky-600"
+                        className="rounded-full text-lg font-bold"
                         aria-label="Close zoom"
                       >
                         Close
-                      </button>
-                      <button
+                      </Button>
+                      <Button
+                        variant="icon"
+                        theme={theme}
                         onClick={() => setModalImgIdx(idx => (idx + 1) % modalHonor.images!.length)}
-                        className="px-4 py-2 bg-gray-200 dark:bg-gray-700 rounded-full text-lg font-bold hover:bg-gray-300 dark:hover:bg-gray-600"
+                        className="rounded-full text-lg font-bold"
                         aria-label="Next image"
                         disabled={modalHonor.images.length < 2}
                       >
                         &#8594;
-                      </button>
+                      </Button>
                     </div>
                     <span className="mt-2 text-white text-xs bg-black/60 px-2 py-1 rounded">{modalImgIdx + 1} / {modalHonor.images.length}</span>
                   </div>

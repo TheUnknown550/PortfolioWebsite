@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Badge from "./components/Badge";
+import Button from "./components/Button";
 
 interface Project {
   title: string;
@@ -86,19 +87,22 @@ const Projects: React.FC<ProjectsProps> = ({ theme }) => {
               <option value="title">Title (A-Z)</option>
               <option value="importance">Default</option>
             </select>
-            <button
-              className={
-                "ml-2 px-2 py-1 rounded-full border flex items-center transition-all duration-200 " +
-                (reverse
-                  ? (theme === "dark" ? "bg-sky-700 text-white border-sky-700" : "bg-sky-400 text-white border-sky-400")
-                  : (theme === "dark" ? "bg-gray-700 text-gray-200 border-gray-700" : "bg-gray-200 text-gray-700 border-gray-200"))
-              }
+            <Button
+              variant="toggle"
+              size="sm"
+              theme={theme}
+              isActive={reverse}
               onClick={() => setReverse(r => !r)}
               title="Reverse order"
+              className="ml-2 rounded-full"
+              leftIcon={
+                <svg className={"w-4 h-4 transition-transform duration-200 " + (reverse ? "rotate-180" : "")} fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                </svg>
+              }
             >
-              <svg className={"w-4 h-4 mr-1 transition-transform duration-200 " + (reverse ? "rotate-180" : "")} fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" /></svg>
               {reverse ? 'Reverse' : 'Normal'}
-            </button>
+            </Button>
           </div>
         </div>
         <label className="flex items-center gap-3 cursor-pointer select-none self-end md:self-auto">
