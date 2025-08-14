@@ -35,7 +35,7 @@ interface PortfolioLandingProps {
 const PortfolioLanding: React.FC<PortfolioLandingProps> = ({ theme = "light" }) => {
   const [profile, setProfile] = useState<ProfileData | null>(null);
   useEffect(() => {
-    fetch("/src/data.json")
+  fetch("/data.json")
       .then((res) => res.json())
       .then((data) => setProfile(data.profile));
   }, []);
