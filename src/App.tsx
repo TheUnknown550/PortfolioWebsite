@@ -57,11 +57,19 @@ const App: React.FC = () => {
             ? "bg-gray-900/90 shadow-md py-4 px-4 sm:px-8 flex justify-between items-center sticky top-0 z-10 border-b border-gray-700"
             : "bg-white/90 shadow-md py-4 px-4 sm:px-8 flex justify-between items-center sticky top-0 z-10 border-b border-blue-100"
         }>
-          <Link to="/" className={
-            theme === "dark"
-              ? "text-2xl font-bold text-sky-300 tracking-tight drop-shadow"
-              : "text-2xl font-bold text-sky-600 tracking-tight drop-shadow"
-          }>mattcosh.com</Link>
+          <div className="flex items-center space-x-3">
+            <img
+              src={"/profile.png"}
+              alt="Profile"
+              className="w-12 h-12 rounded-full border-2 border-sky-400 shadow-md object-cover bg-white"
+              style={{ backgroundColor: theme === "dark" ? '#1e293b' : '#fff' }}
+            />
+            <Link to="/" className={
+              theme === "dark"
+                ? "text-3xl font-extrabold text-sky-300 tracking-tight drop-shadow"
+                : "text-3xl font-extrabold text-sky-600 tracking-tight drop-shadow"
+            }>mattcosh.com</Link>
+          </div>
           {/* Desktop nav */}
           <div className="hidden md:flex items-center space-x-4">
             <Link to="/" className={
