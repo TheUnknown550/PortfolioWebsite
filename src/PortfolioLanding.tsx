@@ -11,12 +11,19 @@ interface Project {
   skills?: string[];
 }
 
+interface Honor {
+  title: string;
+  year: number;
+  link?: string;
+  image?: string;
+}
+
 interface ProfileData {
   name: string;
   bio: string;
   education: { institution: string; program: string; year: number; gpa: number }[];
   skills: { hard: string[]; soft: string[]; languages: string[] };
-  honors: string[];
+  honors: Honor[];
   projects: Project[];
 }
 
@@ -41,8 +48,8 @@ const PortfolioLanding: React.FC<PortfolioLandingProps> = ({ theme = "light" }) 
   return (
     <div className={
       theme === "dark"
-        ? "flex flex-col items-center justify-center bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700 p-4 min-h-screen"
-        : "flex flex-col items-center justify-center bg-gradient-to-br from-blue-50 via-white to-blue-100 p-4 min-h-screen"
+        ? "flex flex-col items-center justify-center bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700 min-h-screen px-4 sm:px-6"
+        : "flex flex-col items-center justify-center bg-gradient-to-br from-blue-50 via-white to-blue-100 min-h-screen px-4 sm:px-6"
     }>
       <div className={
         theme === "dark"
@@ -66,8 +73,8 @@ const PortfolioLanding: React.FC<PortfolioLandingProps> = ({ theme = "light" }) 
       </div>
       <div className={
         theme === "dark"
-          ? "max-w-2xl w-full bg-gray-900/90 rounded-2xl shadow-xl p-8 border border-gray-700"
-          : "max-w-2xl w-full bg-white/90 rounded-2xl shadow-xl p-8 border border-blue-100"
+          ? "max-w-2xl w-full bg-gray-900/90 rounded-2xl shadow-xl p-8 border border-gray-700 mx-auto"
+          : "max-w-2xl w-full bg-white/90 rounded-2xl shadow-xl p-8 border border-blue-100 mx-auto"
       }>
         <Section title="Education">
           {profile.education.map((edu, i) => (
@@ -99,9 +106,20 @@ const PortfolioLanding: React.FC<PortfolioLandingProps> = ({ theme = "light" }) 
           </div>
         </Section>
         <Section title="Honors & Awards">
-          <ul className={theme === "dark" ? "list-disc ml-6 text-gray-200" : "list-disc ml-6 text-gray-600"}>
+          <ul className={theme === "dark" ? "list-none text-gray-200" : "list-none text-gray-600"}>
             {profile.honors.map((honor, i) => (
-              <li key={i}>{honor}</li>
+              <li key={i} className="flex items-center gap-3 mb-2">
+                {honor.image && (
+                  <img src={honor.image} alt={honor.title} className="w-8 h-8 object-contain rounded" />
+                )}
+                {honor.link ? (
+                  <a href={honor.link} target="_blank" rel="noopener noreferrer" className={theme === "dark" ? "text-sky-300 hover:underline" : "text-sky-700 hover:underline"}>
+                    {honor.title} <span className="text-xs text-gray-400">[{honor.year}]</span>
+                  </a>
+                ) : (
+                  <span>{honor.title} <span className="text-xs text-gray-400">[{honor.year}]</span></span>
+                )}
+              </li>
             ))}
           </ul>
         </Section>

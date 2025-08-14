@@ -60,16 +60,16 @@ const Roadmap: React.FC<RoadmapProps> = ({ theme = "light" }) => {
   return (
     <div className={
       theme === "dark"
-        ? "min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700 p-4"
-        : "min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-100 p-4"
+        ? "min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700 px-4 sm:px-6 flex flex-col items-center justify-center"
+        : "min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-100 px-4 sm:px-6 flex flex-col items-center justify-center"
     }>
       <div className={
         (theme === "dark"
-          ? "max-w-6xl mx-auto bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700/90 rounded-3xl shadow-2xl p-12 border border-gray-700 "
-          : "max-w-6xl mx-auto bg-gradient-to-br from-white via-blue-50 to-blue-100/80 rounded-3xl shadow-2xl p-12 border border-blue-100 ") +
+          ? "max-w-6xl w-full mx-auto bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700/90 rounded-3xl shadow-2xl p-6 md:p-12 border border-gray-700 "
+          : "max-w-6xl w-full mx-auto bg-gradient-to-br from-white via-blue-50 to-blue-100/80 rounded-3xl shadow-2xl p-6 md:p-12 border border-blue-100 ") +
         " relative"
       }>
-  <div className="flex flex-col md:flex-row md:justify-between md:items-center mb-8 gap-4 z-20 relative">
+  <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-4 gap-2 sm:gap-4 z-20 relative">
           <h2 className={
             theme === "dark"
               ? "text-2xl font-bold text-sky-300"
@@ -102,7 +102,7 @@ const Roadmap: React.FC<RoadmapProps> = ({ theme = "light" }) => {
             </span>
           </label>
         </div>
-  <div className="flex flex-wrap gap-4 mb-8">
+  <div className="flex flex-wrap gap-2 sm:gap-4 mb-4">
     {categories.map(cat => (
       <label
         key={cat.value}

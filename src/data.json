@@ -26,15 +26,60 @@
       "languages": ["Thai", "English"]
     },
     "honors": [
-      "Global Award Winner Intel AI Global Impact Festival [2022]",
-      "World Runner-up in Microsoft Imagine Cup World Championship [2023]",
-      "World Finalist in International Science and Engineering Fair (ISEF)  [2023]",
-      "Winner of Thailand ICT Awards: TICTA [2022]",
-      "Gold Medalist in Thailand Young Scientist Festival: TYSF [2022]",
-      "First Place in Prime Minister’s Science Project Award in Applied Science [2022]",
-      "Best Communication Awards in Prime Minister’s Science Project Award [2022]",
-      "Best Engineering Design Awards in FIRST Tech Challenge [2022]",
-      "National Finalist in INTERLINK Thailand Cabling Contest #12 [2024]"
+      {
+        "title": "Global Award Winner Intel AI Global Impact Festival",
+        "year": 2022,
+        "link": "https://intel.com/ai-global-impact-festival",
+        "image": "/public/honors/intel.png"
+      },
+      {
+        "title": "World Runner-up in Microsoft Imagine Cup World Championship",
+        "year": 2023,
+        "link": "https://imaginecup.microsoft.com/",
+        "image": "/public/honors/imaginecup.png"
+      },
+      {
+        "title": "World Finalist in International Science and Engineering Fair (ISEF)",
+        "year": 2023,
+        "link": "https://www.societyforscience.org/isef/",
+        "image": "/public/honors/isef.png"
+      },
+      {
+        "title": "Winner of Thailand ICT Awards: TICTA",
+        "year": 2022,
+        "link": "https://www.ticta.org/",
+        "image": "/public/honors/ticta.png"
+      },
+      {
+        "title": "Gold Medalist in Thailand Young Scientist Festival: TYSF",
+        "year": 2022,
+        "link": "https://www.nstda.or.th/th/news/tysf",
+        "image": "/public/honors/tysf.png"
+      },
+      {
+        "title": "First Place in Prime Minister’s Science Project Award in Applied Science",
+        "year": 2022,
+        "link": "https://nstda.or.th/th/news/pm-award",
+        "image": "/public/honors/pmaward.png"
+      },
+      {
+        "title": "Best Communication Awards in Prime Minister’s Science Project Award",
+        "year": 2022,
+        "link": "https://nstda.or.th/th/news/pm-award",
+        "image": "/public/honors/pmaward.png"
+      },
+      {
+        "title": "Best Engineering Design Awards in FIRST Tech Challenge",
+        "year": 2022,
+        "link": "https://www.firstinspires.org/robotics/ftc",
+        "image": "/public/honors/ftc.png"
+      },
+      {
+        "title": "National Finalist in INTERLINK Thailand Cabling Contest #12",
+        "year": 2024,
+        "link": "https://www.interlink.com/contest",
+        "image": "/public/honors/interlink.png"
+      }
     ],
     "projects": [
       {
