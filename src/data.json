@@ -71,7 +71,8 @@
         "year": 2022,
         "eventDescription": "A prestigious Thai national science competition recognizing outstanding scientific projects and communication prowess.",
         "myExperience": "I received dual recognition for technical merits and outstanding communication, refining my ability to articulate complex science clearly and compellingly.",
-        "images": []
+        "images": [],
+        "link": "https://www.facebook.com/watch/?v=5448753708542852"
       },
       {
         "title": "FIRST Tech Challenge (FTC) 2022 – Best Engineering Design (Team Medusa)",
@@ -183,11 +184,11 @@
       "experience": "Handled end-to-end development for a national ICT award-winning project."
     },
     {
-      "title": "Prime Minister’s Science Project Award 2022 – First Place (Applied Science) & Best Communication Awards",
-      "date": "2022-08-01",
-      "category": "award",
+  "title": "Prime Minister’s Science Project Award 2022 – First Place (Applied Science) & Best Communication Awards",
+  "date": "2022-08-01",
+  "category": "award",
   "skills": ["Presentation Skills", "Scientific Communication"],
-      "experience": "Received dual recognition for technical merits and outstanding communication."
+  "experience": "Received dual recognition for technical merits and outstanding communication."
     },
     {
       "title": "FIRST Tech Challenge (FTC) 2022 – Best Engineering Design (Team Medusa)",

@@ -47,6 +47,7 @@ interface RoadmapEvent {
   skills?: string[];
   description?: string;
   experience?: string;
+  link?: string;
 }
 
 
@@ -219,8 +220,18 @@ const Roadmap: React.FC<RoadmapProps> = ({ theme = "light" }) => {
               {modalEvent.experience && (
                 <div className={theme === "dark" ? "text-gray-300 italic" : "text-gray-600 italic"}>{modalEvent.experience}</div>
               )}
+              {modalEvent.link && (
+                <a
+                  href={modalEvent.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block mt-4 mb-2 px-4 py-2 rounded bg-blue-600 text-white text-center font-semibold hover:bg-blue-700 transition"
+                >
+                  View Related Video / Article
+                </a>
+              )}
               <button
-                className={"mt-6 px-4 py-2 rounded bg-sky-500 text-white hover:bg-sky-600 transition w-full"}
+                className={"mt-2 px-4 py-2 rounded bg-sky-500 text-white hover:bg-sky-600 transition w-full"}
                 onClick={() => setModalOpen(false)}
               >Close</button>
             </div>

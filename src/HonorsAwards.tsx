@@ -141,7 +141,7 @@ const HonorsAwards: React.FC<HonorsAwardsProps> = ({ theme }) => {
                   rel="noopener noreferrer"
                   className="inline-block px-4 py-2 bg-sky-500 text-white rounded hover:bg-sky-600 transition mb-2"
                 >
-                  Visit Event Website
+                  {modalHonor.link.includes('facebook.com/watch') ? 'Watch Event Video' : 'Visit Event Website'}
                 </a>
               )}
               <button
