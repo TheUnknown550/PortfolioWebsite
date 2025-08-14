@@ -22,7 +22,7 @@ const HonorsAwards: React.FC<HonorsAwardsProps> = ({ theme }) => {
   const [modalImgIdx, setModalImgIdx] = useState(0);
 
   useEffect(() => {
-    fetch("/src/data.json")
+    fetch("/data.json")
       .then(res => res.json())
       .then(data => setHonors(data.profile.honors));
   }, []);

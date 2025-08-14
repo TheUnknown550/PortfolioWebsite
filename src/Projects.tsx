@@ -22,7 +22,7 @@ const Projects: React.FC<ProjectsProps> = ({ theme }) => {
   const [originalOrder, setOriginalOrder] = useState<Project[]>([]);
 
   useEffect(() => {
-    fetch("/src/data.json")
+    fetch("/data.json")
       .then(res => res.json())
       .then(data => {
         setProjects(data.profile.projects);
