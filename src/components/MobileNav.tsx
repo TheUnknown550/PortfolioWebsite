@@ -59,7 +59,7 @@ const MobileNav: React.FC<MobileNavProps> = ({ theme }) => {
         <>
           {/* Backdrop */}
           <div 
-            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40"
+            className="fixed inset-0 bg-black/60 backdrop-blur-md z-40"
             onClick={() => setOpen(false)}
           />
           
@@ -68,16 +68,16 @@ const MobileNav: React.FC<MobileNavProps> = ({ theme }) => {
             fixed top-0 right-0 h-full w-80 max-w-[85vw] z-50
             transform transition-transform duration-300 ease-out
             ${theme === "dark" 
-              ? "bg-gray-900/95 border-l border-gray-700" 
-              : "bg-white/95 border-l border-blue-200"
+              ? "bg-gray-900 border-l border-gray-700" 
+              : "bg-white border-l border-blue-200"
             }
-            shadow-2xl backdrop-blur-xl
+            shadow-2xl
           `}>
             {/* Header */}
             <div className={`p-4 pt-6 pb-4 border-b ${
               theme === "dark" 
-                ? "border-gray-700 bg-gray-800/50" 
-                : "border-gray-200 bg-gray-50/50"
+                ? "border-gray-700 bg-gray-800" 
+                : "border-gray-200 bg-gray-100"
             }`}>
               <div className="flex items-center justify-between">
                 <h2 className={`text-lg font-bold ${
@@ -101,7 +101,7 @@ const MobileNav: React.FC<MobileNavProps> = ({ theme }) => {
 
             {/* Navigation Links */}
             <div className={`flex flex-col p-4 space-y-2 ${
-              theme === "dark" ? "bg-gray-900/30" : "bg-white/30"
+              theme === "dark" ? "bg-gray-850" : "bg-gray-50"
             }`}>
               {navLinks.map((link) => (
                 <AnimatedLink
@@ -113,11 +113,11 @@ const MobileNav: React.FC<MobileNavProps> = ({ theme }) => {
                     transition-all duration-200 transform hover:scale-[1.02]
                     ${location.pathname === link.to
                       ? theme === "dark" 
-                        ? "bg-sky-900/70 text-sky-100 border-l-4 border-sky-400 shadow-lg" 
-                        : "bg-sky-100/90 text-sky-800 border-l-4 border-sky-500 shadow-lg"
+                        ? "bg-sky-800 text-sky-100 border-l-4 border-sky-400 shadow-lg" 
+                        : "bg-sky-200 text-sky-900 border-l-4 border-sky-600 shadow-lg"
                       : theme === "dark"
-                        ? "hover:bg-gray-800/70 text-gray-100 hover:text-white bg-gray-800/30"
-                        : "hover:bg-blue-50/90 text-gray-800 hover:text-blue-800 bg-white/50"
+                        ? "hover:bg-gray-700 text-white hover:text-sky-200 bg-gray-800"
+                        : "hover:bg-blue-100 text-gray-900 hover:text-blue-900 bg-white shadow-sm"
                     }
                   `}
 
@@ -126,11 +126,13 @@ const MobileNav: React.FC<MobileNavProps> = ({ theme }) => {
                     {link.icon}
                   </span>
                   <div className="flex flex-col">
-                    <span className="text-base font-medium">{link.label}</span>
+                    <span className={`text-base font-bold ${
+                      theme === "dark" ? "text-white" : "text-gray-900"
+                    }`}>{link.label}</span>
                     <span className={`text-xs font-medium ${
                       location.pathname === link.to 
-                        ? theme === "dark" ? 'opacity-90 text-sky-200' : 'opacity-90 text-sky-700'
-                        : theme === "dark" ? 'opacity-80 text-gray-300' : 'opacity-80 text-gray-600'
+                        ? theme === "dark" ? 'text-sky-200' : 'text-sky-800'
+                        : theme === "dark" ? 'text-gray-200' : 'text-gray-700'
                     }`}>
                       {link.to === "/" ? "Welcome home" :
                        link.to === "/projects" ? "My work & experience" :
