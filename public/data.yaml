@@ -296,12 +296,12 @@ profile:
         - Content Creation
     - title: Teacher's Assistant (TA)
       years: 2024
-      description: Worked as a Teacher Assistant for Calculus II and Computer Algorithm Lab, providing support to students in solving problems, understanding complex concepts, debugging code, and developing algorithm designs. Gained valuable experience in communication, teamwork, mentorship, and leadership.
+      description: Worked as a Teacher Assistant for Calculus II, Computer Algorithm Lab and Information System Network Engineering(ISNE) Lab, providing support to students in solving problems, understanding complex concepts, debugging code, and developing algorithm designs. Gained valuable experience in communication, teamwork, mentorship, and leadership.
       skills:
-        - Python
         - C/C++/C#
         - Leadership
-
+        - Communication
+        - Mentoring
 
 roadmap:
   - title: Physical Therapy with Motion Tracking (I-THANKe)
@@ -529,3 +529,12 @@ roadmap:
       - Mentorship
       - Project Management
     experience: Participated in the Intel® AI Global Impact Festival Mentorship Program, where I collaborated with industry experts and fellow mentees to develop innovative AI solutions for real-world challenges. This program enhanced my skills in AI development, project management, and teamwork while providing valuable insights into the latest trends in AI technology.
+  - title: Information System Network Engineering(ISNE) LAB Teacher's Assistant(TA)
+    date: 2025-06-18
+    category: work
+    skills:
+      - Teaching
+      - Mentorship
+      - Leadership
+      - Communication
+    experience: Worked as a Teacher Assistant for the Information System Network Engineering (ISNE) lab, providing support to students in understanding complex concepts, troubleshooting technical issues, and guiding them through practical exercises. This role enhanced my teaching and mentorship skills while fostering a collaborative learning environment.
