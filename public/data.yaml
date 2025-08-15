@@ -135,6 +135,17 @@ profile:
         - /PMAward/PM Award6.jpg
         - /PMAward/PM Award7.jpg
       link: https://www.facebook.com/watch/?v=5448753708542852
+    - title: MEDCHIC HACKATHON - First Runner Up Pitching Competition
+      year: 2023
+      eventDescription: A hackathon focused on pitching innovative healthcare solutions, bringing together developers, designers, and healthcare professionals.
+      myExperience: I collaborated with a team to develop a prototype and pitch script for a healthcare application, enhancing my skills in rapid prototyping, user-centered design, and presentation.
+      images:
+        - /MEDCHIC/MEDCHIC2.jpg
+        - /MEDCHIC/MEDCHIC1.jpg
+        - /MEDCHIC/MEDCHIC3.jpg
+        - /MEDCHIC/MEDCHIC4.jpg
+        - /MEDCHIC/MEDCHIC5.jpg
+        - /MEDCHIC/MEDCHIC6.jpg
     - title: FIRST Tech Challenge (FTC) 2022 – Best Engineering Design (Team Medusa)
       year: 2022
       eventDescription: FTC is a global robotics competition for high school students, with regions leading up to world finals.
@@ -148,7 +159,7 @@ profile:
       myExperience: Leading systems development and optimization, I directed strategy sessions, mechanical build, and software implementation. Competing globally fostered greater engineering under pressure, collaborative problem-solving, and exposure to high-stakes team coordination.
       images:
         - /FTC2023/FTC.png
-    - title: INTERLINK Cabling Contest #12 [July 10, 2024] – National Finalist
+    - title: INTERLINK Cabling Contest No.12 [July 10, 2024] – National Finalist
       year: 2024
       link: https://interlink.co.th/news/detail/470
       eventDescription: A nationwide competition in Thailand assessing expert-level network cabling skills and design, awarding the Royal Trophy.
