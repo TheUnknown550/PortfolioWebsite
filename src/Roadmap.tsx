@@ -21,15 +21,11 @@ interface RoadmapProps {
 const categories = [
   { value: "education", label: "Education", icon: "🎓" },
   { value: "award", label: "Awards", icon: "🏆" },
-  { value: "achievement", label: "Achievements", icon: "🥇" },
   { value: "project", label: "Projects", icon: "🚀" },
   { value: "competition", label: "Competitions", icon: "🏅" },
   { value: "workshop", label: "Workshops", icon: "🎯" },
   { value: "mentorship", label: "Mentorship", icon: "🤝" },
-  { value: "work", label: "Work Experience", icon: "💼" },
-  { value: "volunteer", label: "Volunteer", icon: "👥" },
-  { value: "skill", label: "Skills", icon: "🛠️" },
-  { value: "experience", label: "Experience", icon: "�" }
+  { value: "work", label: "Work Experience", icon: "💼" }
 ];
 
 const getCategoryInfo = (cat: string) => 
@@ -39,15 +35,11 @@ const categoryColor = (cat: string, theme: string) => {
   const colors: Record<string, string> = {
     education: theme === "dark" ? "bg-blue-600/20 text-blue-300 border-blue-600/30" : "bg-blue-100 text-blue-700 border-blue-200",
     award: theme === "dark" ? "bg-yellow-600/20 text-yellow-300 border-yellow-600/30" : "bg-yellow-100 text-yellow-700 border-yellow-200",
-    achievement: theme === "dark" ? "bg-green-600/20 text-green-300 border-green-600/30" : "bg-green-100 text-green-700 border-green-200",
     project: theme === "dark" ? "bg-purple-600/20 text-purple-300 border-purple-600/30" : "bg-purple-100 text-purple-700 border-purple-200",
     competition: theme === "dark" ? "bg-orange-600/20 text-orange-300 border-orange-600/30" : "bg-orange-100 text-orange-700 border-orange-200",
     workshop: theme === "dark" ? "bg-cyan-600/20 text-cyan-300 border-cyan-600/30" : "bg-cyan-100 text-cyan-700 border-cyan-200",
     mentorship: theme === "dark" ? "bg-emerald-600/20 text-emerald-300 border-emerald-600/30" : "bg-emerald-100 text-emerald-700 border-emerald-200",
-    work: theme === "dark" ? "bg-slate-600/20 text-slate-300 border-slate-600/30" : "bg-slate-100 text-slate-700 border-slate-200",
-    volunteer: theme === "dark" ? "bg-pink-600/20 text-pink-300 border-pink-600/30" : "bg-pink-100 text-pink-700 border-pink-200",
-    skill: theme === "dark" ? "bg-indigo-600/20 text-indigo-300 border-indigo-600/30" : "bg-indigo-100 text-indigo-700 border-indigo-200",
-    experience: theme === "dark" ? "bg-teal-600/20 text-teal-300 border-teal-600/30" : "bg-teal-100 text-teal-700 border-teal-200"
+    work: theme === "dark" ? "bg-slate-600/20 text-slate-300 border-slate-600/30" : "bg-slate-100 text-slate-700 border-slate-200"
   };
   return colors[cat] || (theme === "dark" ? "bg-gray-600/20 text-gray-300 border-gray-600/30" : "bg-gray-100 text-gray-700 border-gray-200");
 };
