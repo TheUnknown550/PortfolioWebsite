@@ -293,6 +293,48 @@ profile:
         - Presentation Skills
         - Thai
         - English
+      duration: "8 months"
+      technologies:
+        - "Unity 3D"
+        - "C#"
+        - "TensorFlow"
+        - "OpenCV"
+        - "MediaPipe"
+        - "SQLite"
+      tags:
+        - "healthcare"
+        - "ai"
+        - "accessibility"
+        - "gamification"
+      team:
+        - "Matt Tanthai Cosh (Lead Developer)"
+        - "Dr. Sarah Johnson (Medical Advisor)"
+        - "Alex Chen (UI/UX Designer)"
+      links:
+        - title: "Project Demo"
+          url: "https://example.com/ithanke-demo"
+          type: "demo"
+        - title: "Research Paper"
+          url: "https://example.com/ithanke-paper.pdf"
+          type: "document"
+        - title: "Video Presentation"
+          url: "https://youtube.com/watch?v=example"
+          type: "video"
+      images:
+        - "/projects/ithanke/app-interface.png"
+        - "/projects/ithanke/motion-tracking.jpg"
+        - "/projects/ithanke/gamification-ui.png"
+        - "/projects/ithanke/data-dashboard.png"
+      sections:
+        - title: "Technical Innovation"
+          content: "I-THANKe uses advanced computer vision and machine learning to provide real-time feedback on patient movements. The system can detect deviations from prescribed exercises and provide corrective guidance."
+        - title: "Impact & Vision"
+          content: "This project addresses the growing need for accessible physical therapy, especially in remote areas. By gamifying the experience, we increase patient engagement and adherence to therapy programs."
+      achievements:
+        - "Developed novel motion tracking algorithm with 95% accuracy"
+        - "Created gamification system that increased patient engagement by 40%"
+        - "Presented at 3 medical technology conferences"
+        - "Filed provisional patent for motion tracking methodology"
     - title: FIRST Tech Challenge - FTC, Team Astraeus
       years: 2023
       description: Took on the role of primary builder and systems developer, driving the design of innovative mechanisms tailored to that year's challenge. Focused on optimizing performance through mechanical precision, strategic design choices, and collaboration with teammates on coding and troubleshooting. Helped the team develop a robot that balanced consistency with creativity, strengthening leadership and cross-team communication skills.

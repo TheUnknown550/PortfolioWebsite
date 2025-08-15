@@ -28,6 +28,21 @@ export interface ProfileData {
       years: string;
       description: string;
       skills: string[];
+      images?: string[];
+      links?: Array<{
+        title: string;
+        url: string;
+        type?: 'github' | 'demo' | 'video' | 'website' | 'document' | 'other';
+      }>;
+      sections?: Array<{
+        title: string;
+        content: string;
+      }>;
+      tags?: string[];
+      achievements?: string[];
+      duration?: string;
+      team?: string[];
+      technologies?: string[];
     }>;
   };
   roadmap: Array<{

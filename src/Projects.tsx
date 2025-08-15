@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import ReactModal from "react-modal";
 import Badge from "./components/Badge";
 import Button from "./components/Button";
 import { getProjects } from "./utils/dataLoader";
@@ -10,6 +11,22 @@ interface Project {
   date?: string; // YYYY-MM-DD format like roadmap
   description: string;
   skills?: string[];
+  // Optional modal fields
+  images?: string[];
+  links?: {
+    title: string;
+    url: string;
+    type?: 'website' | 'github' | 'demo' | 'video' | 'document' | 'other';
+  }[];
+  sections?: {
+    title: string;
+    content: string;
+  }[];
+  tags?: string[];
+  achievements?: string[];
+  duration?: string;
+  team?: string[];
+  technologies?: string[];
 }
 
 interface ProjectsProps {
@@ -24,6 +41,11 @@ const Projects: React.FC<ProjectsProps> = ({ theme }) => {
   const [sortBy, setSortBy] = useState<'date' | 'title' | 'importance'>('importance');
   const [reverse, setReverse] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
+  
+  // Modal state
+  const [modalOpen, setModalOpen] = useState(false);
+  const [modalProject, setModalProject] = useState<Project | null>(null);
+  const [modalImgIdx, setModalImgIdx] = useState(0);
 
   // For importance, use the order in the JSON file (default)
   const [originalOrder, setOriginalOrder] = useState<Project[]>([]);
@@ -117,6 +139,24 @@ const Projects: React.FC<ProjectsProps> = ({ theme }) => {
     // Return date with year only (using January 1st as default)
     return year > 0 ? new Date(year, 0, 1) : new Date(0);
   }
+
+  // Modal functions
+  const openModal = (project: Project) => {
+    setModalProject(project);
+    setModalImgIdx(0);
+    setModalOpen(true);
+  };
+
+  const getLinkIcon = (type?: string) => {
+    switch (type) {
+      case 'github': return '📁';
+      case 'demo': return '🚀';
+      case 'video': return '🎥';
+      case 'website': return '🌐';
+      case 'document': return '📄';
+      default: return '🔗';
+    }
+  };
 
   let sortedProjects = [...projects];
   if (sortBy === 'date') {
@@ -465,6 +505,7 @@ const Projects: React.FC<ProjectsProps> = ({ theme }) => {
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: idx * 0.05, type: "spring", stiffness: 100 }}
+                  onClick={() => openModal(proj)}
                   className={`group p-4 rounded-xl transition-all duration-300 hover:scale-105 cursor-pointer ${
                     theme === "dark"
                       ? "bg-gray-800/60 border border-gray-700 hover:border-purple-500/50 hover:shadow-lg hover:shadow-purple-500/10"
@@ -506,7 +547,8 @@ const Projects: React.FC<ProjectsProps> = ({ theme }) => {
                   initial={{ opacity: 0, y: 20, scale: 0.95 }}
                   animate={{ opacity: 1, y: 0, scale: 1 }}
                   transition={{ delay: idx * 0.1, type: "spring", stiffness: 100 }}
-                  className={`group p-4 sm:p-6 lg:p-8 rounded-xl sm:rounded-2xl transition-all duration-500 hover:scale-[1.02] border-l-4 ${
+                  onClick={() => openModal(proj)}
+                  className={`group p-4 sm:p-6 lg:p-8 rounded-xl sm:rounded-2xl transition-all duration-500 hover:scale-[1.02] border-l-4 cursor-pointer ${
                     theme === "dark"
                       ? "bg-gray-800/50 border border-gray-700 border-l-blue-500 hover:border-blue-400/50 hover:shadow-2xl hover:shadow-blue-500/10"
                       : "bg-white border border-gray-200 border-l-blue-500 hover:border-blue-300 shadow-lg hover:shadow-2xl hover:shadow-blue-500/10"
@@ -633,6 +675,211 @@ const Projects: React.FC<ProjectsProps> = ({ theme }) => {
           )}
         </div>
       </div>
+
+      {/* Project Modal */}
+      {modalProject && (
+        <ReactModal
+          isOpen={modalOpen}
+          onRequestClose={() => setModalOpen(false)}
+          shouldCloseOnOverlayClick={true}
+          shouldCloseOnEsc={true}
+          className="fixed inset-4 bg-white dark:bg-gray-800 rounded-lg shadow-xl overflow-hidden z-50 max-w-4xl mx-auto my-8"
+          overlayClassName="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-40"
+        >
+          <div className="flex flex-col h-full">
+            {/* Modal Header */}
+            <div className="flex justify-between items-center p-6 border-b border-gray-200 dark:border-gray-700">
+              <div>
+                <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
+                  {modalProject.title}
+                </h2>
+                {modalProject.duration && (
+                  <p className="text-gray-600 dark:text-gray-400 mt-1">
+                    Duration: {modalProject.duration}
+                  </p>
+                )}
+              </div>
+              <button
+                onClick={() => setModalOpen(false)}
+                className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 text-2xl"
+              >
+                ✕
+              </button>
+            </div>
+
+            {/* Modal Content */}
+            <div className="flex-1 overflow-y-auto p-6">
+              {/* Images Gallery */}
+              {modalProject.images && modalProject.images.length > 0 && (
+                <div className="mb-6">
+                  <div className="relative">
+                    <img
+                      src={modalProject.images[modalImgIdx]}
+                      alt={`${modalProject.title} - Image ${modalImgIdx + 1}`}
+                      className="w-full h-64 md:h-80 object-cover rounded-lg"
+                    />
+                    {modalProject.images.length > 1 && (
+                      <>
+                        <button
+                          onClick={() => setModalImgIdx(prev => 
+                            prev === 0 ? modalProject.images!.length - 1 : prev - 1
+                          )}
+                          className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75"
+                        >
+                          ‹
+                        </button>
+                        <button
+                          onClick={() => setModalImgIdx(prev => 
+                            prev === modalProject.images!.length - 1 ? 0 : prev + 1
+                          )}
+                          className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75"
+                        >
+                          ›
+                        </button>
+                      </>
+                    )}
+                  </div>
+                  {modalProject.images.length > 1 && (
+                    <div className="flex justify-center mt-3 space-x-2">
+                      {modalProject.images.map((_, idx) => (
+                        <button
+                          key={idx}
+                          onClick={() => setModalImgIdx(idx)}
+                          className={`w-2 h-2 rounded-full ${
+                            idx === modalImgIdx 
+                              ? 'bg-blue-600' 
+                              : 'bg-gray-300 dark:bg-gray-600'
+                          }`}
+                        />
+                      ))}
+                    </div>
+                  )}
+                </div>
+              )}
+
+              {/* Description */}
+              <div className="mb-6">
+                <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+                  {modalProject.description}
+                </p>
+              </div>
+
+              {/* Technologies */}
+              {modalProject.technologies && modalProject.technologies.length > 0 && (
+                <div className="mb-6">
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
+                    Technologies Used
+                  </h3>
+                  <div className="flex flex-wrap gap-2">
+                    {modalProject.technologies.map((tech, idx) => (
+                      <span
+                        key={idx}
+                        className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Tags */}
+              {modalProject.tags && modalProject.tags.length > 0 && (
+                <div className="mb-6">
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
+                    Tags
+                  </h3>
+                  <div className="flex flex-wrap gap-2">
+                    {modalProject.tags.map((tag, idx) => (
+                      <span
+                        key={idx}
+                        className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-full text-sm"
+                      >
+                        #{tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Team */}
+              {modalProject.team && modalProject.team.length > 0 && (
+                <div className="mb-6">
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
+                    Team Members
+                  </h3>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                    {modalProject.team.map((member, idx) => (
+                      <div key={idx} className="flex items-center space-x-2">
+                        <span className="text-blue-600 dark:text-blue-400">👤</span>
+                        <span className="text-gray-700 dark:text-gray-300">{member}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Achievements */}
+              {modalProject.achievements && modalProject.achievements.length > 0 && (
+                <div className="mb-6">
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
+                    Key Achievements
+                  </h3>
+                  <ul className="space-y-2">
+                    {modalProject.achievements.map((achievement, idx) => (
+                      <li key={idx} className="flex items-start space-x-2">
+                        <span className="text-green-600 dark:text-green-400 mt-1">🏆</span>
+                        <span className="text-gray-700 dark:text-gray-300">{achievement}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              {/* Custom Sections */}
+              {modalProject.sections && modalProject.sections.length > 0 && (
+                <div className="mb-6">
+                  {modalProject.sections.map((section, idx) => (
+                    <div key={idx} className="mb-6">
+                      <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
+                        {section.title}
+                      </h3>
+                      <div className="text-gray-700 dark:text-gray-300 leading-relaxed whitespace-pre-line">
+                        {section.content}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+
+              {/* Links */}
+              {modalProject.links && modalProject.links.length > 0 && (
+                <div className="mb-6">
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
+                    Project Links
+                  </h3>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    {modalProject.links.map((link, idx) => (
+                      <a
+                        key={idx}
+                        href={link.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center space-x-3 p-3 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors"
+                      >
+                        <span className="text-xl">{getLinkIcon(link.type)}</span>
+                        <span className="text-gray-900 dark:text-white font-medium">
+                          {link.title}
+                        </span>
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
+        </ReactModal>
+      )}
     </div>
   );
 };
