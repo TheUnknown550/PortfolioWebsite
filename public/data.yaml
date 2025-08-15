@@ -61,6 +61,9 @@ profile:
         - /Intel/Intel Booth.jpg
         - /Intel/Intel Computer Ceramony.jpg
         - /Intel/Intel Innovation.jpg
+        - /Intel/114064.jpg
+        - /Intel/Intel1.jpg
+        - /Intel/Intel2.jpg
     - title: Microsoft Imagine Cup 2023 – World Runner-up
       year: 2023
       link: https://techcommunity.microsoft.com/blog/studentdeveloperblog/celebrating-the-innovators-of-tomorrow-announcing-the-top-3-teams-of-the-2023-im/3784110
@@ -72,6 +75,8 @@ profile:
         - /ImagineCup/ImagineCup1.jpg
         - /ImagineCup/ImagineCup2.png
         - /ImagineCup/ImagineCup3.png
+        - /ImagineCup/ImagineCup5.jpg
+        - /ImagineCup/ImagineCup6.jpg
     - title: Regeneron ISEF 2023 – World Finalist
       year: 2023
       link: https://www.societyforscience.org/isef/regeneron-isef-2023/
@@ -82,7 +87,10 @@ profile:
         - /ISEF/ISEF3.jpg
         - /ISEF/ISEF.jpg
         - /ISEF/ISEF1.jpg
-        - /ISEF/114066.jpg
+        - /ISEF/ISEF6.jpg
+        - /ISEF/ISEF5.jpg
+        - /ISEF/ISEF8.jpg
+        - /ISEF/ISEF7.jpg
         - /ISEF/114067.jpg
         - /ISEF/114068.jpg
         - /ISEF/114069.jpg
@@ -96,15 +104,19 @@ profile:
       myExperience: My gold-winning project involved in-depth scientific inquiry, data analysis, and poster presentation. It strengthened my research methodology, statistical analysis, and public outreach skills.
       images:
         - /TYSF/TYSF4.png
+        - /TYSF/TYSF5.png
         - /TYSF/TYSF.jpg
         - /TYSF/TYSF1.jpg
         - /TYSF/TYSF2.jpg
         - /TYSF/TYSF3.jpg
+        - /TYSF/TYSF6.jpg
     - title: Thailand ICT Awards (TICTA) 2022 – Winner
       year: 2022
       eventDescription: Thailand's top digital-technology awards recognizing innovation in software, hardware, and ICT services.
       myExperience: Our project won a national ICT award (possibly in a student category). I handled end-to-end development—from requirement gathering to deployment—deepening my experience in product-market fit, technical delivery, and industry standards adherence.
       images:
+        - /TICTA/TICTA1.jpg
+        - /TICTA/TICTA2.jpg
         - /TICTA/Ticta.jpg
         - /TICTA/Ticta 2.jpg
         - /TICTA/Ticta Microsoft.jpg
@@ -115,7 +127,13 @@ profile:
       images:
         - /PMAward/PM Award.jpg
         - /PMAward/PMAward.webp
+        - /PMAward/PMAward1.jpg
         - /PMAward/PMAward2.jpg
+        - /PMAward/PMAward3.jpg
+        - /PMAward/PMAward4.jpg
+        - /PMAward/PM Award5.jpg
+        - /PMAward/PM Award6.jpg
+        - /PMAward/PM Award7.jpg
       link: https://www.facebook.com/watch/?v=5448753708542852
     - title: FIRST Tech Challenge (FTC) 2022 – Best Engineering Design (Team Medusa)
       year: 2022
@@ -123,6 +141,7 @@ profile:
       myExperience: As lead engineer and programmer, I designed mechanical systems, developed control logic, and led iterative prototyping. Winning "Best Engineering Design" recognized my technical leadership and CAD, mechatronic integration, and agile development skills.
       images:
         - /FTC2022/FTC.png
+        - /FTC2022/FTC1.jpg
     - title: FIRST Tech Challenge (FTC) 2023 – Best Engineering Design (Team Astraeus)
       year: 2023
       eventDescription: FTC is a global robotics competition for high school students, with regions leading up to world finals.
@@ -135,10 +154,12 @@ profile:
       eventDescription: A nationwide competition in Thailand assessing expert-level network cabling skills and design, awarding the Royal Trophy.
       myExperience: I was among top national finalists in technical cabling, showcasing proficiency in network design, precision installation, and standard compliance within a rigorous time-constrained environment.
       images:
+        - /INTERLINK/Cabling1.jpg
         - /INTERLINK/cabling.jpg
         - /INTERLINK/Cabling 1.jpg
         - /INTERLINK/Cabling 2.jpg
         - /INTERLINK/Cabling 3.jpg
+        - /INTERLINK/S__169025583.jpg
   projects:
     - title: Cardiac Self-Monitoring Tool (CS-M Tool)
       years: 2021
