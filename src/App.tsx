@@ -1,15 +1,31 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Suspense } from "react";
 import { BrowserRouter as Router, Routes, Route, Link, useLocation } from "react-router-dom";
-import PortfolioLanding from "./PortfolioLanding";
-import Roadmap from "./Roadmap";
-import Projects from "./Projects";
-import HonorsAwards from "./HonorsAwards";
 import ThemeToggle from "./components/ThemeToggle";
 import MobileNav from "./components/MobileNav";
 import AnimatedPage from "./components/AnimatedPage";
 import ContactModal from "./ContactModal";
 import Button from "./components/Button";
 import ScrollToTop from "./components/ScrollToTop";
+
+// Lazy load page components for code splitting
+const PortfolioLanding = React.lazy(() => import("./PortfolioLanding"));
+const Roadmap = React.lazy(() => import("./Roadmap"));
+const Projects = React.lazy(() => import("./Projects"));
+const HonorsAwards = React.lazy(() => import("./HonorsAwards"));
+
+// Loading component
+const PageLoading: React.FC<{ theme: "light" | "dark" }> = ({ theme }) => (
+  <div className={`flex items-center justify-center min-h-[50vh] ${
+    theme === "dark" ? "text-white" : "text-gray-900"
+  }`}>
+    <div className="text-center">
+      <div className={`inline-block animate-spin rounded-full h-8 w-8 border-b-2 ${
+        theme === "dark" ? "border-blue-400" : "border-blue-600"
+      }`}></div>
+      <p className="mt-3 text-sm opacity-70">Loading...</p>
+    </div>
+  </div>
+);
 
 const App: React.FC = () => {
   const [theme, setTheme] = useState<"light" | "dark">(() => {
@@ -207,12 +223,14 @@ const AppContent: React.FC<{
           }
         `}</style>
         <main className="relative">
-          <Routes>
-            <Route path="/" element={<AnimatedPage><PortfolioLanding theme={theme} /></AnimatedPage>} />
-            <Route path="/projects" element={<AnimatedPage><Projects theme={theme} /></AnimatedPage>} />
-            <Route path="/honors" element={<AnimatedPage><HonorsAwards theme={theme} /></AnimatedPage>} />
-            <Route path="/roadmap" element={<AnimatedPage><Roadmap theme={theme} /></AnimatedPage>} />
-          </Routes>
+          <Suspense fallback={<PageLoading theme={theme} />}>
+            <Routes>
+              <Route path="/" element={<AnimatedPage><PortfolioLanding theme={theme} /></AnimatedPage>} />
+              <Route path="/projects" element={<AnimatedPage><Projects theme={theme} /></AnimatedPage>} />
+              <Route path="/honors" element={<AnimatedPage><HonorsAwards theme={theme} /></AnimatedPage>} />
+              <Route path="/roadmap" element={<AnimatedPage><Roadmap theme={theme} /></AnimatedPage>} />
+            </Routes>
+          </Suspense>
           
           {/* Global Animations */}
           <style>{`
