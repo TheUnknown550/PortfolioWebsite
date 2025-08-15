@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Badge from "./components/Badge";
 import Button from "./components/Button";
+import { getProjects } from "./utils/dataLoader";
 
 interface Project {
   title: string;
@@ -77,11 +78,13 @@ const Projects: React.FC<ProjectsProps> = ({ theme }) => {
 
   useEffect(() => {
     setLoading(true);
-    fetch("/data.json")
-      .then(res => res.json())
+    getProjects()
       .then(data => {
-        setProjects(data.profile.projects);
-        setOriginalOrder(data.profile.projects);
+        setProjects(data);
+        setOriginalOrder(data);
+      })
+      .catch((error) => {
+        console.error('Error loading projects data:', error);
       })
       .finally(() => setLoading(false));
   }, []);

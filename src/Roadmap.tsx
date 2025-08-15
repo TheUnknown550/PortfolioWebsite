@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 import ReactModal from "react-modal";
 import Button from "./components/Button";
 import Badge from "./components/Badge";
+import { getRoadmap } from "./utils/dataLoader";
 
 interface RoadmapEvent {
-  id: number;
   title: string;
   description?: string;
   experience?: string;
@@ -61,13 +61,15 @@ const Roadmap: React.FC<RoadmapProps> = ({ theme = "light" }) => {
 
   useEffect(() => {
     setLoading(true);
-    fetch("/data.json")
-      .then(res => res.json())
+    getRoadmap()
       .then(data => {
-        setEvents(data.roadmap || []);
+        setEvents(data || []);
         setLoading(false);
       })
-      .catch(() => setLoading(false));
+      .catch((error) => {
+        console.error('Error loading roadmap data:', error);
+        setLoading(false);
+      });
   }, []);
 
   // Helper function to parse dates and sort chronologically (most recent first)
@@ -324,7 +326,7 @@ const Roadmap: React.FC<RoadmapProps> = ({ theme = "light" }) => {
                       <div className="space-y-6 lg:space-y-8">
                         {yearGroup.events.map((event, eventIndex) => (
                           <motion.div
-                            key={event.id}
+                            key={`${event.title}-${event.date}`}
                             initial={{ opacity: 0, x: -30 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.5, delay: (yearIndex * 0.1) + (eventIndex * 0.05) }}
@@ -380,7 +382,7 @@ const Roadmap: React.FC<RoadmapProps> = ({ theme = "light" }) => {
                                 <div className="flex flex-wrap gap-2">
                                   {event.skills.slice(0, 3).map((skill, skillIndex) => (
                                     <span
-                                      key={`${event.id}-skill-${skillIndex}`}
+                                      key={`${event.title}-skill-${skillIndex}`}
                                       className={`px-3 py-1 text-xs rounded-full ${
                                         theme === "dark"
                                           ? "bg-blue-600/20 text-blue-300 border border-blue-600/30"
@@ -486,7 +488,7 @@ const Roadmap: React.FC<RoadmapProps> = ({ theme = "light" }) => {
                     <div className="flex flex-wrap gap-2">
                       {modalEvent.skills.map((skill, index) => (
                         <span
-                          key={`modal-${modalEvent.id}-skill-${index}`}
+                          key={`modal-${modalEvent.title}-skill-${index}`}
                           className={`px-3 py-2 text-sm rounded-lg ${
                             theme === "dark"
                               ? "bg-blue-600/20 text-blue-300 border border-blue-600/30"

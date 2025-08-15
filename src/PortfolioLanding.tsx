@@ -7,6 +7,7 @@ import Section from "./components/Section";
 import Badge from "./components/Badge";
 import ProfilePhoto from "./components/ProfilePhoto";
 import Button from "./components/Button";
+import { getProfile } from "./utils/dataLoader";
 
 interface Project {
   title: string;
@@ -90,9 +91,11 @@ const PortfolioLanding: React.FC<PortfolioLandingProps> = ({ theme = "light" }) 
   }, [currentRoleIndex]);
 
   useEffect(() => {
-    fetch("/data.json")
-      .then((res) => res.json())
-      .then((data) => setProfile(data.profile));
+    getProfile()
+      .then((data) => setProfile(data))
+      .catch((error) => {
+        console.error('Error loading profile data:', error);
+      });
   }, []);
 
   if (!profile) {

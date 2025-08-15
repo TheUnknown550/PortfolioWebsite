@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import ReactModal from "react-modal";
 import Button from "./components/Button";
+import { getHonors } from "./utils/dataLoader";
 
 interface Honor {
   title: string;
@@ -32,11 +33,13 @@ const HonorsAwards: React.FC<HonorsAwardsProps> = ({ theme }) => {
 
   useEffect(() => {
     setLoading(true);
-    fetch("/data.json")
-      .then(res => res.json())
+    getHonors()
       .then(data => {
-        setHonors(data.profile.honors);
-        setOriginalOrder(data.profile.honors);
+        setHonors(data);
+        setOriginalOrder(data);
+      })
+      .catch((error) => {
+        console.error('Error loading honors data:', error);
       })
       .finally(() => setLoading(false));
   }, []);
