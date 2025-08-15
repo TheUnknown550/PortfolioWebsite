@@ -250,6 +250,16 @@ profile:
       skills:
         - AI Development
         - Industry Insights
+    - title: MCXStudios24
+      years: 2025
+      description: I created MCXStudios as my personal game studio where I build and share my games. Whether it’s Roblox worlds or mobile apps, MCXStudios is the place where I bring my ideas to life, experiment with new mechanics, and showcase my growth as a developer.
+      skills:
+        - Project Management
+        - Collaboration Tools
+        - UI/UX Design
+        - Roblox
+        - Game Development
+        - Unity
     - title: Summer Internship at TLIC – IoT & Project Management Intern
       years: 2025
       description: Gained hands-on experience in IoT system design and installation, contributing to real-world implementation projects. Also developed insights into project management workflows, including planning, coordination, and on-site execution.
@@ -478,7 +488,7 @@ roadmap:
       - Mentoring
     experience: Served as Teaching Assistant for Calculus II and Computer Algorithm Laboratory, providing comprehensive academic support to undergraduate students. Facilitated problem-solving sessions, debugged complex code implementations, and guided students through advanced algorithm design concepts. This role developed my mentoring capabilities, enhanced communication skills for explaining technical concepts clearly, and strengthened leadership abilities while contributing to academic excellence in mathematics and computer science education.
   - title: Summer Internship at TLIC – IoT & Project Management Intern
-    date: 2025-06-01
+    date: 2025-04-01
     category: work
     skills:
       - Robotics & IoT
@@ -488,7 +498,7 @@ roadmap:
       - Python
     experience: Gained intensive professional experience in IoT ecosystem development and project management through hands-on industry internship. Contributed to real-world IoT system design, installation, and deployment projects while learning enterprise-level project coordination methodologies. This immersive experience bridged academic knowledge with practical industry applications, developing skills in Raspberry Pi programming, Home Assistant integration, and collaborative project execution in professional technology environments.
   - title: Workshop on AI Driven Innovations in INDIA
-    date: 2025-07-01
+    date: 2025-03-25
     category: workshop
     skills:
       - AI Development
@@ -546,3 +556,14 @@ roadmap:
       - Leadership
       - Communication
     experience: Worked as a Teacher Assistant for the Information System Network Engineering (ISNE) lab, providing support to students in understanding complex concepts, troubleshooting technical issues, and guiding them through practical exercises. This role enhanced my teaching and mentorship skills while fostering a collaborative learning environment.
+  - title: MCXStudios24
+    date: 2025-06-22
+    category: project
+    skills:
+      - UI/UX Design
+      - Content Creation
+      - Game Development
+      - Project Management
+      - Coding/Programming
+      - Game Design
+    experience: I created MCXStudios as my personal game studio where I build and share my games. Whether it’s Roblox worlds or mobile apps, MCXStudios is the place where I bring my ideas to life, experiment with new mechanics, and showcase my growth as a developer.

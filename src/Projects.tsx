@@ -6,7 +6,7 @@ import { getProjects } from "./utils/dataLoader";
 
 interface Project {
   title: string;
-  years: string;
+  years: string | number;
   description: string;
   skills?: string[];
 }
@@ -35,6 +35,9 @@ const Projects: React.FC<ProjectsProps> = ({ theme }) => {
       return '🌐';
     }
 
+    if (titleLower.includes('mcxstudios')) {
+      return '🎮';
+    } 
     // AI/Medical projects
     if (titleLower.includes('cardiac') || titleLower.includes('cs-m') || titleLower.includes('heart')) {
       return '❤️';
@@ -94,10 +97,12 @@ const Projects: React.FC<ProjectsProps> = ({ theme }) => {
       .finally(() => setLoading(false));
   }, []);
 
-  function parseYearRange(years?: string) {
+  function parseYearRange(years?: string | number) {
     if (!years) return 0;
+    // Convert to string if it's not already
+    const yearString = typeof years === 'string' ? years : years.toString();
     // Try to get the latest year in the range
-    const match = years.match(/(\d{4})(?!.*\d{4})/);
+    const match = yearString.match(/(\d{4})(?!.*\d{4})/);
     return match ? parseInt(match[1], 10) : 0;
   }
 
