@@ -820,6 +820,22 @@ const Projects: React.FC<ProjectsProps> = ({ theme }) => {
                 </div>
               )}
 
+              {/* Skills */}
+              {modalProject.skills && modalProject.skills.length > 0 && (
+                <div className="mb-6">
+                  <h3 className={`text-lg font-semibold mb-3 ${
+                    theme === "dark" ? "text-white" : "text-gray-900"
+                  }`}>
+                    Skills & Technologies
+                  </h3>
+                  <div className="flex flex-wrap gap-2">
+                    {modalProject.skills.map((skill, idx) => (
+                      <Badge key={idx} theme={theme}>{skill}</Badge>
+                    ))}
+                  </div>
+                </div>
+              )}
+
               {/* Tags */}
               {modalProject.tags && modalProject.tags.length > 0 && (
                 <div className="mb-6">
