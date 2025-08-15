@@ -14,7 +14,8 @@ interface Project {
   // Optional modal fields
   images?: string[];
   links?: {
-    title: string;
+    title?: string;
+    name?: string;
     url: string;
     type?: 'website' | 'github' | 'demo' | 'video' | 'document' | 'other';
   }[];
@@ -25,7 +26,11 @@ interface Project {
   tags?: string[];
   achievements?: string[];
   duration?: string;
-  team?: string[];
+  team?: (string | {
+    name: string;
+    role: string;
+    responsibilities?: string;
+  })[];
   technologies?: string[];
 }
 
@@ -683,25 +688,41 @@ const Projects: React.FC<ProjectsProps> = ({ theme }) => {
           onRequestClose={() => setModalOpen(false)}
           shouldCloseOnOverlayClick={true}
           shouldCloseOnEsc={true}
-          className="fixed inset-4 bg-white dark:bg-gray-800 rounded-lg shadow-xl overflow-hidden z-50 max-w-4xl mx-auto my-8"
+          className={`fixed inset-4 rounded-lg shadow-xl overflow-hidden z-50 max-w-4xl mx-auto my-8 ${
+            theme === "dark" 
+              ? "bg-gray-800 border border-gray-700" 
+              : "bg-white border border-gray-200"
+          }`}
           overlayClassName="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-40"
         >
           <div className="flex flex-col h-full">
             {/* Modal Header */}
-            <div className="flex justify-between items-center p-6 border-b border-gray-200 dark:border-gray-700">
+            <div className={`flex justify-between items-center p-6 border-b ${
+              theme === "dark" 
+                ? "border-gray-700" 
+                : "border-gray-200"
+            }`}>
               <div>
-                <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
+                <h2 className={`text-2xl font-bold ${
+                  theme === "dark" ? "text-white" : "text-gray-900"
+                }`}>
                   {modalProject.title}
                 </h2>
                 {modalProject.duration && (
-                  <p className="text-gray-600 dark:text-gray-400 mt-1">
+                  <p className={`mt-1 ${
+                    theme === "dark" ? "text-gray-400" : "text-gray-600"
+                  }`}>
                     Duration: {modalProject.duration}
                   </p>
                 )}
               </div>
               <button
                 onClick={() => setModalOpen(false)}
-                className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 text-2xl"
+                className={`text-2xl transition-colors ${
+                  theme === "dark" 
+                    ? "text-gray-400 hover:text-gray-200" 
+                    : "text-gray-500 hover:text-gray-700"
+                }`}
               >
                 ✕
               </button>
@@ -716,7 +737,7 @@ const Projects: React.FC<ProjectsProps> = ({ theme }) => {
                     <img
                       src={modalProject.images[modalImgIdx]}
                       alt={`${modalProject.title} - Image ${modalImgIdx + 1}`}
-                      className="w-full h-64 md:h-80 object-cover rounded-lg"
+                      className="w-full max-h-96 object-contain rounded-lg bg-gray-100 dark:bg-gray-800"
                     />
                     {modalProject.images.length > 1 && (
                       <>
@@ -724,7 +745,11 @@ const Projects: React.FC<ProjectsProps> = ({ theme }) => {
                           onClick={() => setModalImgIdx(prev => 
                             prev === 0 ? modalProject.images!.length - 1 : prev - 1
                           )}
-                          className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75"
+                          className={`absolute left-2 top-1/2 transform -translate-y-1/2 p-2 rounded-full transition-all ${
+                            theme === "dark" 
+                              ? "bg-gray-900 bg-opacity-70 text-white hover:bg-opacity-90" 
+                              : "bg-white bg-opacity-70 text-gray-900 hover:bg-opacity-90"
+                          }`}
                         >
                           ‹
                         </button>
@@ -732,7 +757,11 @@ const Projects: React.FC<ProjectsProps> = ({ theme }) => {
                           onClick={() => setModalImgIdx(prev => 
                             prev === modalProject.images!.length - 1 ? 0 : prev + 1
                           )}
-                          className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75"
+                          className={`absolute right-2 top-1/2 transform -translate-y-1/2 p-2 rounded-full transition-all ${
+                            theme === "dark" 
+                              ? "bg-gray-900 bg-opacity-70 text-white hover:bg-opacity-90" 
+                              : "bg-white bg-opacity-70 text-gray-900 hover:bg-opacity-90"
+                          }`}
                         >
                           ›
                         </button>
@@ -745,10 +774,10 @@ const Projects: React.FC<ProjectsProps> = ({ theme }) => {
                         <button
                           key={idx}
                           onClick={() => setModalImgIdx(idx)}
-                          className={`w-2 h-2 rounded-full ${
+                          className={`w-2 h-2 rounded-full transition-colors ${
                             idx === modalImgIdx 
-                              ? 'bg-blue-600' 
-                              : 'bg-gray-300 dark:bg-gray-600'
+                              ? (theme === "dark" ? "bg-blue-400" : "bg-blue-600")
+                              : (theme === "dark" ? "bg-gray-600" : "bg-gray-300")
                           }`}
                         />
                       ))}
@@ -759,7 +788,9 @@ const Projects: React.FC<ProjectsProps> = ({ theme }) => {
 
               {/* Description */}
               <div className="mb-6">
-                <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+                <p className={`leading-relaxed ${
+                  theme === "dark" ? "text-gray-300" : "text-gray-700"
+                }`}>
                   {modalProject.description}
                 </p>
               </div>
@@ -767,14 +798,20 @@ const Projects: React.FC<ProjectsProps> = ({ theme }) => {
               {/* Technologies */}
               {modalProject.technologies && modalProject.technologies.length > 0 && (
                 <div className="mb-6">
-                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
+                  <h3 className={`text-lg font-semibold mb-3 ${
+                    theme === "dark" ? "text-white" : "text-gray-900"
+                  }`}>
                     Technologies Used
                   </h3>
                   <div className="flex flex-wrap gap-2">
                     {modalProject.technologies.map((tech, idx) => (
                       <span
                         key={idx}
-                        className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm"
+                        className={`px-3 py-1 rounded-full text-sm ${
+                          theme === "dark" 
+                            ? "bg-blue-900 text-blue-200" 
+                            : "bg-blue-100 text-blue-800"
+                        }`}
                       >
                         {tech}
                       </span>
@@ -786,14 +823,20 @@ const Projects: React.FC<ProjectsProps> = ({ theme }) => {
               {/* Tags */}
               {modalProject.tags && modalProject.tags.length > 0 && (
                 <div className="mb-6">
-                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
+                  <h3 className={`text-lg font-semibold mb-3 ${
+                    theme === "dark" ? "text-white" : "text-gray-900"
+                  }`}>
                     Tags
                   </h3>
                   <div className="flex flex-wrap gap-2">
                     {modalProject.tags.map((tag, idx) => (
                       <span
                         key={idx}
-                        className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-full text-sm"
+                        className={`px-3 py-1 rounded-full text-sm ${
+                          theme === "dark" 
+                            ? "bg-gray-700 text-gray-200" 
+                            : "bg-gray-100 text-gray-800"
+                        }`}
                       >
                         #{tag}
                       </span>
@@ -805,14 +848,38 @@ const Projects: React.FC<ProjectsProps> = ({ theme }) => {
               {/* Team */}
               {modalProject.team && modalProject.team.length > 0 && (
                 <div className="mb-6">
-                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
+                  <h3 className={`text-lg font-semibold mb-3 ${
+                    theme === "dark" ? "text-white" : "text-gray-900"
+                  }`}>
                     Team Members
                   </h3>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                     {modalProject.team.map((member, idx) => (
-                      <div key={idx} className="flex items-center space-x-2">
-                        <span className="text-blue-600 dark:text-blue-400">👤</span>
-                        <span className="text-gray-700 dark:text-gray-300">{member}</span>
+                      <div key={idx} className={`p-3 rounded-lg ${
+                        theme === "dark" ? "bg-gray-800" : "bg-gray-50"
+                      }`}>
+                        <div className="flex items-start space-x-2">
+                          <span className={theme === "dark" ? "text-blue-400" : "text-blue-600"}>👤</span>
+                          <div className="flex-1">
+                            {typeof member === 'string' ? (
+                              <span className={theme === "dark" ? "text-gray-300" : "text-gray-700"}>{member}</span>
+                            ) : (
+                              <>
+                                <div className={`font-medium ${theme === "dark" ? "text-white" : "text-gray-900"}`}>
+                                  {member.name}
+                                </div>
+                                <div className={`text-sm ${theme === "dark" ? "text-blue-400" : "text-blue-600"}`}>
+                                  {member.role}
+                                </div>
+                                {member.responsibilities && (
+                                  <div className={`text-xs mt-1 ${theme === "dark" ? "text-gray-400" : "text-gray-600"}`}>
+                                    {member.responsibilities}
+                                  </div>
+                                )}
+                              </>
+                            )}
+                          </div>
+                        </div>
                       </div>
                     ))}
                   </div>
@@ -822,14 +889,18 @@ const Projects: React.FC<ProjectsProps> = ({ theme }) => {
               {/* Achievements */}
               {modalProject.achievements && modalProject.achievements.length > 0 && (
                 <div className="mb-6">
-                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
+                  <h3 className={`text-lg font-semibold mb-3 ${
+                    theme === "dark" ? "text-white" : "text-gray-900"
+                  }`}>
                     Key Achievements
                   </h3>
                   <ul className="space-y-2">
                     {modalProject.achievements.map((achievement, idx) => (
                       <li key={idx} className="flex items-start space-x-2">
-                        <span className="text-green-600 dark:text-green-400 mt-1">🏆</span>
-                        <span className="text-gray-700 dark:text-gray-300">{achievement}</span>
+                        <span className={`mt-1 ${
+                          theme === "dark" ? "text-green-400" : "text-green-600"
+                        }`}>🏆</span>
+                        <span className={theme === "dark" ? "text-gray-300" : "text-gray-700"}>{achievement}</span>
                       </li>
                     ))}
                   </ul>
@@ -841,10 +912,14 @@ const Projects: React.FC<ProjectsProps> = ({ theme }) => {
                 <div className="mb-6">
                   {modalProject.sections.map((section, idx) => (
                     <div key={idx} className="mb-6">
-                      <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
+                      <h3 className={`text-lg font-semibold mb-3 ${
+                        theme === "dark" ? "text-white" : "text-gray-900"
+                      }`}>
                         {section.title}
                       </h3>
-                      <div className="text-gray-700 dark:text-gray-300 leading-relaxed whitespace-pre-line">
+                      <div className={`leading-relaxed whitespace-pre-line ${
+                        theme === "dark" ? "text-gray-300" : "text-gray-700"
+                      }`}>
                         {section.content}
                       </div>
                     </div>
@@ -855,7 +930,9 @@ const Projects: React.FC<ProjectsProps> = ({ theme }) => {
               {/* Links */}
               {modalProject.links && modalProject.links.length > 0 && (
                 <div className="mb-6">
-                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
+                  <h3 className={`text-lg font-semibold mb-3 ${
+                    theme === "dark" ? "text-white" : "text-gray-900"
+                  }`}>
                     Project Links
                   </h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
@@ -865,11 +942,17 @@ const Projects: React.FC<ProjectsProps> = ({ theme }) => {
                         href={link.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center space-x-3 p-3 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors"
+                        className={`flex items-center space-x-3 p-3 rounded-lg transition-colors ${
+                          theme === "dark" 
+                            ? "bg-gray-700 hover:bg-gray-600" 
+                            : "bg-gray-50 hover:bg-gray-100"
+                        }`}
                       >
                         <span className="text-xl">{getLinkIcon(link.type)}</span>
-                        <span className="text-gray-900 dark:text-white font-medium">
-                          {link.title}
+                        <span className={`font-medium ${
+                          theme === "dark" ? "text-white" : "text-gray-900"
+                        }`}>
+                          {link.title || link.name}
                         </span>
                       </a>
                     ))}
