@@ -218,83 +218,86 @@ const Projects: React.FC<ProjectsProps> = ({ theme }) => {
                 : "bg-white/70 border border-gray-200 shadow-lg"
             }`}>
               <div className="flex flex-col gap-4">
-                {/* Search Bar */}
-                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 items-start sm:items-center">
-                  <span className={`text-sm font-medium whitespace-nowrap ${
-                    theme === "dark" ? "text-gray-300" : "text-gray-700"
-                  }`}>
-                    Search:
-                  </span>
-                  <div className="relative flex-1 w-full sm:max-w-sm">
-                    <input
-                      type="text"
-                      placeholder="Search projects, skills, or description..."
-                      value={searchQuery}
-                      onChange={(e) => setSearchQuery(e.target.value)}
-                      className={`w-full px-4 py-2 pl-10 rounded-lg text-sm border transition-colors ${
-                        theme === "dark"
-                          ? "bg-gray-700 text-gray-200 border-gray-600 placeholder-gray-400 focus:border-blue-400"
-                          : "bg-white text-gray-700 border-gray-300 placeholder-gray-500 focus:border-blue-400"
-                      } focus:outline-none focus:ring-2 focus:ring-blue-400/20`}
-                    />
-                    <svg 
-                      className={`absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 ${
-                        theme === "dark" ? "text-gray-400" : "text-gray-500"
-                      }`} 
-                      fill="none" 
-                      stroke="currentColor" 
-                      viewBox="0 0 24 24"
-                    >
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                    </svg>
-                    {searchQuery && (
-                      <button
-                        onClick={() => setSearchQuery("")}
-                        className={`absolute right-3 top-1/2 transform -translate-y-1/2 w-4 h-4 rounded-full ${
-                          theme === "dark" ? "text-gray-400 hover:text-gray-300" : "text-gray-500 hover:text-gray-700"
-                        } transition-colors`}
+                {/* Search and Sort Controls */}
+                <div className="flex flex-col lg:flex-row gap-4 lg:gap-8 items-start lg:items-center">
+                  {/* Sort Controls */}
+                  <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 items-start sm:items-center">
+                    <span className={`text-sm font-medium whitespace-nowrap ${
+                      theme === "dark" ? "text-gray-300" : "text-gray-700"
+                    }`}>
+                      Sort by:
+                    </span>
+                    <div className="flex gap-2 items-center w-full sm:w-auto">
+                      <select
+                        className={`px-3 py-2 rounded-lg text-sm font-medium border transition-colors flex-1 sm:flex-none min-w-0 ${
+                          theme === "dark"
+                            ? "bg-gray-700 text-gray-200 border-gray-600 focus:border-blue-400"
+                            : "bg-white text-gray-700 border-gray-300 focus:border-blue-400"
+                        } focus:outline-none focus:ring-2 focus:ring-opacity-50`}
+                        value={sortBy}
+                        onChange={e => setSortBy(e.target.value as 'date' | 'title' | 'importance')}
                       >
-                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                        <option value="importance">Importance</option>
+                        <option value="date">Date (Latest)</option>
+                        <option value="title">Title (A-Z)</option>
+                      </select>
+                      
+                      <Button
+                        variant="icon"
+                        theme={theme}
+                        onClick={() => setReverse(r => !r)}
+                        className={`transition-transform duration-200 flex-shrink-0 ${reverse ? 'rotate-180' : ''}`}
+                        title={reverse ? 'Normal order' : 'Reverse order'}
+                      >
+                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                         </svg>
-                      </button>
-                    )}
+                      </Button>
+                    </div>
                   </div>
-                </div>
 
-                {/* Sort Controls */}
-                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 items-start sm:items-center">
-                  <span className={`text-sm font-medium whitespace-nowrap ${
-                    theme === "dark" ? "text-gray-300" : "text-gray-700"
-                  }`}>
-                    Sort by:
-                  </span>
-                  <div className="flex gap-2 items-center w-full sm:w-auto">
-                    <select
-                      className={`px-3 py-2 rounded-lg text-sm font-medium border transition-colors flex-1 sm:flex-none min-w-0 ${
-                        theme === "dark"
-                          ? "bg-gray-700 text-gray-200 border-gray-600 focus:border-blue-400"
-                          : "bg-white text-gray-700 border-gray-300 focus:border-blue-400"
-                      } focus:outline-none focus:ring-2 focus:ring-opacity-50`}
-                      value={sortBy}
-                      onChange={e => setSortBy(e.target.value as 'date' | 'title' | 'importance')}
-                    >
-                      <option value="importance">Importance</option>
-                      <option value="date">Date (Latest)</option>
-                      <option value="title">Title (A-Z)</option>
-                    </select>
-                    
-                    <Button
-                      variant="icon"
-                      theme={theme}
-                      onClick={() => setReverse(r => !r)}
-                      className={`transition-transform duration-200 flex-shrink-0 ${reverse ? 'rotate-180' : ''}`}
-                      title={reverse ? 'Normal order' : 'Reverse order'}
-                    >
-                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  {/* Search Bar */}
+                  <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 items-start sm:items-center lg:flex-1">
+                    <span className={`text-sm font-medium whitespace-nowrap ${
+                      theme === "dark" ? "text-gray-300" : "text-gray-700"
+                    }`}>
+                      Search:
+                    </span>
+                    <div className="relative flex-1 w-full lg:max-w-md">
+                      <input
+                        type="text"
+                        placeholder="Search projects, skills, or description..."
+                        value={searchQuery}
+                        onChange={(e) => setSearchQuery(e.target.value)}
+                        className={`w-full px-4 py-2 pl-10 rounded-lg text-sm border transition-colors ${
+                          theme === "dark"
+                            ? "bg-gray-700 text-gray-200 border-gray-600 placeholder-gray-400 focus:border-blue-400"
+                            : "bg-white text-gray-700 border-gray-300 placeholder-gray-500 focus:border-blue-400"
+                        } focus:outline-none focus:ring-2 focus:ring-blue-400/20`}
+                      />
+                      <svg 
+                        className={`absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 ${
+                          theme === "dark" ? "text-gray-400" : "text-gray-500"
+                        }`} 
+                        fill="none" 
+                        stroke="currentColor" 
+                        viewBox="0 0 24 24"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                       </svg>
-                    </Button>
+                      {searchQuery && (
+                        <button
+                          onClick={() => setSearchQuery("")}
+                          className={`absolute right-3 top-1/2 transform -translate-y-1/2 w-4 h-4 rounded-full ${
+                            theme === "dark" ? "text-gray-400 hover:text-gray-300" : "text-gray-500 hover:text-gray-700"
+                          } transition-colors`}
+                        >
+                          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                          </svg>
+                        </button>
+                      )}
+                    </div>
                   </div>
                 </div>
 
