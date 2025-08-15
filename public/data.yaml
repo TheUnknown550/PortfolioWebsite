@@ -212,14 +212,10 @@ profile:
         - Python
         - C/C++/C#
         - Signal Processing
-        - JavaScript
         - AI Development
         - Basic Neural Networks
         - Recurrent Neural Networks
-        - Web/App Development
-        - React
         - 2D/3D Design
-        - Solidworks
         - Video Editing
         - Presentation & Pitching
         - Project Management
@@ -267,10 +263,19 @@ profile:
       years: 2021
       description: A project focused on making physical therapy accessible to all through an innovative approach. I-THANKe leverages a Unity-based application integrated with a Neural Network AI to detect correct therapy posture and movement. To enhance patient engagement and retention, the platform incorporates gamification elements and securely manages patient data for therapists, enabling effective physical therapy anytime, anywhere.
       skills:
+        - Coding/Programming
+        - Gamification
         - Unity
         - AI Development
         - Basic Neural Networks
-        - C#
+        - C/C++/C#
+        - Leadership
+        - Project Management
+        - Problem Solving
+        - Product Analysis
+        - Presentation Skills
+        - Thai
+        - English
     - title: FIRST Tech Challenge - FTC, Team Astraeus
       years: 2023
       description: Took on the role of primary builder and systems developer, driving the design of innovative mechanisms tailored to that year's challenge. Focused on optimizing performance through mechanical precision, strategic design choices, and collaboration with teammates on coding and troubleshooting. Helped the team develop a robot that balanced consistency with creativity, strengthening leadership and cross-team communication skills.
@@ -294,6 +299,8 @@ profile:
         - Web Development
         - UI/UX Design
         - Content Creation
+        - React
+        - English
     - title: Teacher's Assistant (TA)
       years: 2024
       description: Worked as a Teacher Assistant for Calculus II, Computer Algorithm Lab and Information System Network Engineering(ISNE) Lab, providing support to students in solving problems, understanding complex concepts, debugging code, and developing algorithm designs. Gained valuable experience in communication, teamwork, mentorship, and leadership.
