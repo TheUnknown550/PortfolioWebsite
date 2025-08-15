@@ -187,6 +187,11 @@ profile:
       myExperience: As lead engineer and programmer, I designed mechanical systems, developed control logic, and led iterative prototyping. Winning "Best Engineering Design" recognized my technical leadership and CAD, mechatronic integration, and agile development skills.
       images:
         - /FTC2022/FTC.png
+        - /FTC2022/FTC2.jpg
+        - /FTC2022/FTC3.jpg
+        - /FTC2022/FTC4.jpg
+        - /FTC2022/FTC5.jpg
+        - /FTC2022/FTCThrophy.jpg
         - /FTC2022/FTC1.jpg
     - title: FIRST Tech Challenge (FTC) 2023 – Best Engineering Design (Team Astraeus)
       year: 2023
@@ -194,7 +199,8 @@ profile:
       myExperience: Leading systems development and optimization, I directed strategy sessions, mechanical build, and software implementation. Competing globally fostered greater engineering under pressure, collaborative problem-solving, and exposure to high-stakes team coordination.
       images:
         - /FTC2023/FTC.png
-    
+        - /FTC2023/FTC20231.jpg
+        - /FTC2023/FTC20232.jpg
   projects:
     - title: Cardiac Self-Monitoring Tool (CS-M Tool)
       years: 2021
