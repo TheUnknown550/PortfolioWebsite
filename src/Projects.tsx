@@ -18,11 +18,62 @@ const Projects: React.FC<ProjectsProps> = ({ theme }) => {
   const [projects, setProjects] = useState<Project[]>([]);
   const [loading, setLoading] = useState(true);
   const [showSkills, setShowSkills] = useState(true);
+  const [compactView, setCompactView] = useState(false);
   const [sortBy, setSortBy] = useState<'date' | 'title' | 'importance'>('importance');
   const [reverse, setReverse] = useState(false);
 
   // For importance, use the order in the JSON file (default)
   const [originalOrder, setOriginalOrder] = useState<Project[]>([]);
+
+  // Function to get appropriate icon based on project title/content
+  const getProjectIcon = (title: string, index: number) => {
+    const titleLower = title.toLowerCase();
+    
+    // AI/Medical projects
+    if (titleLower.includes('cardiac') || titleLower.includes('cs-m') || titleLower.includes('heart')) {
+      return '❤️';
+    }
+    if (titleLower.includes('physical therapy') || titleLower.includes('i-thanke')) {
+      return '🏥';
+    }
+    if (titleLower.includes('intel') && titleLower.includes('ai')) {
+      return '🧠';
+    }
+    if (titleLower.includes('microsoft') && titleLower.includes('imagine')) {
+      return '�';
+    }
+    
+    // Robotics projects
+    if (titleLower.includes('ftc') || titleLower.includes('tech challenge') || titleLower.includes('medusa') || titleLower.includes('astraeus')) {
+      return '🤖';
+    }
+    
+    // Learning/Workshop/Mentorship
+    if (titleLower.includes('workshop') && titleLower.includes('india')) {
+      return '🌍';
+    }
+    if (titleLower.includes('mentorship') && titleLower.includes('intel')) {
+      return '�';
+    }
+    if (titleLower.includes('mentorship') && titleLower.includes('microsoft')) {
+      return '💼';
+    }
+    if (titleLower.includes('workshop') || titleLower.includes('mentorship')) {
+      return '📚';
+    }
+    
+    // Work/Education
+    if (titleLower.includes('internship') || titleLower.includes('tlic') || titleLower.includes('iot')) {
+      return '⚙️';
+    }
+    if (titleLower.includes('teacher') || titleLower.includes('assistant') || titleLower.includes('ta')) {
+      return '👨‍🏫';
+    }
+    
+    // Default icons for any remaining projects
+    const defaultIcons = ['💻', '⚡', '🛠️', '🚀', '🔬', '⭐', '🎯', '💡', '🔧', '📱'];
+    return defaultIcons[index % defaultIcons.length];
+  };
 
   useEffect(() => {
     setLoading(true);
@@ -186,8 +237,8 @@ const Projects: React.FC<ProjectsProps> = ({ theme }) => {
                   </div>
                 </div>
 
-                {/* Toggle Skills */}
-                <div className="flex items-center justify-between sm:justify-start pt-2 border-t border-gray-200 dark:border-gray-700">
+                {/* Toggle Skills and View Controls */}
+                <div className="flex flex-col sm:flex-row gap-4 pt-2 border-t border-gray-200 dark:border-gray-700">
                   <label className="flex items-center gap-3 cursor-pointer select-none">
                     <span className={`text-sm font-medium ${
                       theme === "dark" ? "text-gray-300" : "text-gray-700"
@@ -212,13 +263,38 @@ const Projects: React.FC<ProjectsProps> = ({ theme }) => {
                       </div>
                     </div>
                   </label>
+
+                  <label className="flex items-center gap-3 cursor-pointer select-none">
+                    <span className={`text-sm font-medium ${
+                      theme === "dark" ? "text-gray-300" : "text-gray-700"
+                    }`}>
+                      Compact View
+                    </span>
+                    <div className="relative">
+                      <input
+                        type="checkbox"
+                        checked={compactView}
+                        onChange={() => setCompactView(v => !v)}
+                        className="sr-only"
+                      />
+                      <div className={`w-11 h-6 rounded-full transition-colors duration-200 ${
+                        compactView
+                          ? (theme === "dark" ? "bg-purple-600" : "bg-purple-500")
+                          : (theme === "dark" ? "bg-gray-600" : "bg-gray-300")
+                      }`}>
+                        <div className={`w-4 h-4 bg-white rounded-full shadow-md transform transition-transform duration-200 ${
+                          compactView ? "translate-x-6" : "translate-x-1"
+                        } mt-1`} />
+                      </div>
+                    </div>
+                  </label>
                 </div>
               </div>
             </div>
           </motion.div>
 
           {/* Projects Grid */}
-          <div className="space-y-8">
+          <div className={compactView ? "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4" : "space-y-8"}>
             {loading ? (
               // Loading Skeletons
               Array.from({ length: 4 }).map((_, idx) => (
@@ -227,41 +303,101 @@ const Projects: React.FC<ProjectsProps> = ({ theme }) => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: idx * 0.1 }}
-                  className={`p-8 rounded-2xl animate-pulse ${
-                    theme === "dark"
-                      ? "bg-gray-800/50 border border-gray-700"
-                      : "bg-white border border-gray-200 shadow-lg"
+                  className={`animate-pulse ${
+                    compactView 
+                      ? `p-4 rounded-xl ${
+                          theme === "dark"
+                            ? "bg-gray-800/50 border border-gray-700"
+                            : "bg-white border border-gray-200 shadow-lg"
+                        }`
+                      : `p-8 rounded-2xl ${
+                          theme === "dark"
+                            ? "bg-gray-800/50 border border-gray-700"
+                            : "bg-white border border-gray-200 shadow-lg"
+                        }`
                   }`}
                 >
-                  <div className="space-y-4">
-                    <div className="flex justify-between items-start">
-                      <div className={`h-6 w-48 rounded ${
-                        theme === "dark" ? "bg-gray-700" : "bg-gray-200"
-                      }`} />
-                      <div className={`h-4 w-20 rounded ${
-                        theme === "dark" ? "bg-gray-700" : "bg-gray-200"
-                      }`} />
-                    </div>
+                  {compactView ? (
                     <div className="space-y-2">
-                      <div className={`h-4 w-full rounded ${
+                      <div className={`h-5 w-3/4 rounded ${
                         theme === "dark" ? "bg-gray-700" : "bg-gray-200"
                       }`} />
-                      <div className={`h-4 w-3/4 rounded ${
+                      <div className={`h-3 w-1/2 rounded ${
                         theme === "dark" ? "bg-gray-700" : "bg-gray-200"
                       }`} />
                     </div>
-                    <div className="flex gap-2">
-                      {Array.from({ length: 3 }).map((_, i) => (
-                        <div key={i} className={`h-6 w-16 rounded-full ${
+                  ) : (
+                    <div className="space-y-4">
+                      <div className="flex justify-between items-start">
+                        <div className={`h-6 w-48 rounded ${
                           theme === "dark" ? "bg-gray-700" : "bg-gray-200"
                         }`} />
-                      ))}
+                        <div className={`h-4 w-20 rounded ${
+                          theme === "dark" ? "bg-gray-700" : "bg-gray-200"
+                        }`} />
+                      </div>
+                      <div className="space-y-2">
+                        <div className={`h-4 w-full rounded ${
+                          theme === "dark" ? "bg-gray-700" : "bg-gray-200"
+                        }`} />
+                        <div className={`h-4 w-3/4 rounded ${
+                          theme === "dark" ? "bg-gray-700" : "bg-gray-200"
+                        }`} />
+                      </div>
+                      <div className="flex gap-2">
+                        {Array.from({ length: 3 }).map((_, i) => (
+                          <div key={i} className={`h-6 w-16 rounded-full ${
+                            theme === "dark" ? "bg-gray-700" : "bg-gray-200"
+                          }`} />
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </motion.div>
+              ))
+            ) : compactView ? (
+              // Compact Project Cards
+              sortedProjects.map((proj, idx) => (
+                <motion.div
+                  key={`${proj.title}-${idx}`}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: idx * 0.05, type: "spring", stiffness: 100 }}
+                  className={`group p-4 rounded-xl transition-all duration-300 hover:scale-105 cursor-pointer ${
+                    theme === "dark"
+                      ? "bg-gray-800/60 border border-gray-700 hover:border-purple-500/50 hover:shadow-lg hover:shadow-purple-500/10"
+                      : "bg-white border border-gray-200 hover:border-purple-300 shadow-md hover:shadow-lg hover:shadow-purple-500/10"
+                  }`}
+                >
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className={`p-2 rounded-lg flex-shrink-0 ${
+                      theme === "dark"
+                        ? "bg-gradient-to-br from-purple-500/20 to-blue-500/20"
+                        : "bg-gradient-to-br from-purple-100 to-blue-100"
+                    }`}>
+                      <span className="text-lg">
+                        {getProjectIcon(proj.title, idx)}
+                      </span>
+                    </div>
+                    <div className="min-w-0 flex-1">
+                      <h3 className={`text-sm font-bold truncate group-hover:text-purple-500 transition-colors ${
+                        theme === "dark" ? "text-white" : "text-gray-900"
+                      }`}>
+                        {proj.title}
+                      </h3>
                     </div>
                   </div>
+                  <span className={`text-xs font-mono px-2 py-1 rounded inline-block ${
+                    theme === "dark" 
+                      ? "bg-gray-700 text-gray-300" 
+                      : "bg-gray-100 text-gray-600"
+                  }`}>
+                    {proj.years}
+                  </span>
                 </motion.div>
               ))
             ) : (
-              // Project Cards
+              // Detailed Project Cards
               sortedProjects.map((proj, idx) => (
                 <motion.div
                   key={`${proj.title}-${idx}`}
@@ -283,7 +419,7 @@ const Projects: React.FC<ProjectsProps> = ({ theme }) => {
                           : "bg-gradient-to-br from-blue-100 to-indigo-100"
                       }`}>
                         <span className="text-xl sm:text-2xl">
-                          {idx === 0 ? '🚀' : idx === 1 ? '⚡' : idx === 2 ? '🛠️' : '💻'}
+                          {getProjectIcon(proj.title, idx)}
                         </span>
                       </div>
                       <div className="min-w-0 flex-1">

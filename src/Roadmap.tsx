@@ -7,7 +7,8 @@ import Badge from "./components/Badge";
 interface RoadmapEvent {
   id: number;
   title: string;
-  description: string;
+  description?: string;
+  experience?: string;
   date: string;
   category: string;
   skills?: string[];
@@ -97,7 +98,46 @@ const Roadmap: React.FC<RoadmapProps> = ({ theme = "light" }) => {
     });
   };
 
-  const filtered = sortEventsByDate(events.filter(e => selected.includes(e.category)));
+  // Helper function to extract year from date string
+  const getYearFromDate = (dateStr: string): string => {
+    if (/^\d{4}$/.test(dateStr)) {
+      return dateStr;
+    } else if (/^\d{4}-\d{2}$/.test(dateStr)) {
+      return dateStr.split('-')[0];
+    } else {
+      const date = new Date(dateStr);
+      return isNaN(date.getTime()) ? 'Unknown' : date.getFullYear().toString();
+    }
+  };
+
+  // Helper function to group events by year
+  const groupEventsByYear = (events: RoadmapEvent[]) => {
+    const sortedEvents = sortEventsByDate(events);
+    const grouped: { [year: string]: RoadmapEvent[] } = {};
+    
+    sortedEvents.forEach(event => {
+      const year = getYearFromDate(event.date);
+      if (!grouped[year]) {
+        grouped[year] = [];
+      }
+      grouped[year].push(event);
+    });
+    
+    // Sort years in descending order (most recent first)
+    const sortedYears = Object.keys(grouped).sort((a, b) => {
+      if (a === 'Unknown') return 1;
+      if (b === 'Unknown') return -1;
+      return parseInt(b) - parseInt(a);
+    });
+    
+    return sortedYears.map(year => ({
+      year,
+      events: grouped[year]
+    }));
+  };
+
+  const filtered = events.filter(e => selected.includes(e.category));
+  const groupedByYear = groupEventsByYear(filtered);
 
   return (
     <div className={`min-h-screen transition-colors duration-300 relative overflow-hidden ${
@@ -226,14 +266,14 @@ const Roadmap: React.FC<RoadmapProps> = ({ theme = "light" }) => {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="relative"
             >
-              {filtered.length === 0 ? (
+              {groupedByYear.length === 0 ? (
                 <div className="text-center py-12">
                   <p className={`text-lg ${theme === "dark" ? "text-gray-400" : "text-gray-600"}`}>
                     No events match your current filters
                   </p>
                 </div>
               ) : (
-                <div className="space-y-8 lg:space-y-12 relative">
+                <div className="space-y-12 lg:space-y-16 relative">
                   {/* Timeline Line */}
                   <div className={`absolute left-4 lg:left-8 top-0 bottom-0 w-0.5 ${
                     theme === "dark" 
@@ -241,84 +281,128 @@ const Roadmap: React.FC<RoadmapProps> = ({ theme = "light" }) => {
                       : "bg-gradient-to-b from-blue-600 via-purple-500 to-green-600"
                   }`} />
                   
-                  {filtered.map((event, index) => (
+                  {groupedByYear.map((yearGroup, yearIndex) => (
                     <motion.div
-                      key={event.id}
-                      initial={{ opacity: 0, x: -50 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.5, delay: index * 0.1 }}
-                      className="relative pl-12 lg:pl-16"
+                      key={yearGroup.year}
+                      initial={{ opacity: 0, y: 30 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.6, delay: yearIndex * 0.2 }}
+                      className="relative"
                     >
-                      {/* Timeline Dot */}
-                      <div className={`absolute left-2 lg:left-6 top-6 w-4 h-4 rounded-full border-2 ${
-                        theme === "dark"
-                          ? "bg-gray-900 border-blue-400"
-                          : "bg-white border-blue-600"
-                      }`} />
-                      
-                      {/* Event Card */}
-                      <motion.div
-                        whileHover={{ scale: 1.02 }}
-                        className={`p-6 rounded-2xl cursor-pointer transition-all duration-300 ${
+                      {/* Year Section Break */}
+                      <div className="relative mb-8 lg:mb-12">
+                        <div className={`absolute left-2 lg:left-6 w-6 h-6 rounded-full border-4 ${
                           theme === "dark"
-                            ? "bg-gray-800/60 backdrop-blur-lg border border-gray-700 hover:bg-gray-800/80 hover:shadow-xl hover:shadow-blue-500/10"
-                            : "bg-white/60 backdrop-blur-lg border border-gray-200 hover:bg-white/80 hover:shadow-xl hover:shadow-blue-500/10"
-                        }`}
-                        onClick={() => {
-                          setModalEvent(event);
-                          setModalOpen(true);
-                        }}
-                      >
-                        <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4 mb-4">
-                          <div>
-                            <h3 className={`text-lg lg:text-xl font-bold mb-2 ${
-                              theme === "dark" ? "text-white" : "text-gray-900"
+                            ? "bg-gradient-to-r from-blue-500 to-purple-500 border-gray-900"
+                            : "bg-gradient-to-r from-blue-600 to-purple-600 border-white"
+                        } shadow-lg`} />
+                        
+                        <div className="pl-12 lg:pl-16">
+                          <div className={`inline-flex items-center px-6 py-3 rounded-2xl backdrop-blur-lg border-2 ${
+                            theme === "dark"
+                              ? "bg-gradient-to-r from-blue-900/50 to-purple-900/50 border-blue-500/30 text-blue-300"
+                              : "bg-gradient-to-r from-blue-50/80 to-purple-50/80 border-blue-300/50 text-blue-700"
+                          } shadow-xl`}>
+                            <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                            </svg>
+                            <span className="text-xl lg:text-2xl font-bold">
+                              {yearGroup.year}
+                            </span>
+                            <span className={`ml-3 text-sm px-2 py-1 rounded-full ${
+                              theme === "dark"
+                                ? "bg-blue-600/30 text-blue-300"
+                                : "bg-blue-200 text-blue-700"
                             }`}>
-                              {event.title}
-                            </h3>
-                            <p className={`text-sm ${
-                              theme === "dark" ? "text-gray-400" : "text-gray-600"
-                            }`}>
-                              {event.date}
-                            </p>
+                              {yearGroup.events.length} event{yearGroup.events.length !== 1 ? 's' : ''}
+                            </span>
                           </div>
-                          
-                          <Badge className={categoryColor(event.category, theme)}>
-                            <span className="mr-1">{getCategoryInfo(event.category).icon}</span>
-                            {getCategoryInfo(event.category).label}
-                          </Badge>
                         </div>
-                        
-                        <p className={`text-sm lg:text-base mb-4 ${
-                          theme === "dark" ? "text-gray-300" : "text-gray-700"
-                        }`}>
-                          {event.description}
-                        </p>
-                        
-                        {event.skills && event.skills.length > 0 && (
-                          <div className="flex flex-wrap gap-2">
-                            {event.skills.slice(0, 3).map((skill, skillIndex) => (
-                              <span
-                                key={`${event.id}-skill-${skillIndex}`}
-                                className={`px-3 py-1 text-xs rounded-full ${
-                                  theme === "dark"
-                                    ? "bg-blue-600/20 text-blue-300 border border-blue-600/30"
-                                    : "bg-blue-100 text-blue-700 border border-blue-200"
-                                }`}
-                              >
-                                {skill}
-                              </span>
-                            ))}
-                            {event.skills.length > 3 && (
-                              <span className={`px-3 py-1 text-xs rounded-full ${
-                                theme === "dark" ? "text-gray-400" : "text-gray-600"
+                      </div>
+
+                      {/* Events for this year */}
+                      <div className="space-y-6 lg:space-y-8">
+                        {yearGroup.events.map((event, eventIndex) => (
+                          <motion.div
+                            key={event.id}
+                            initial={{ opacity: 0, x: -30 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.5, delay: (yearIndex * 0.1) + (eventIndex * 0.05) }}
+                            className="relative pl-12 lg:pl-16"
+                          >
+                            {/* Timeline Dot */}
+                            <div className={`absolute left-2.5 lg:left-6.5 top-6 w-3 h-3 rounded-full border-2 ${
+                              theme === "dark"
+                                ? "bg-gray-900 border-blue-400"
+                                : "bg-white border-blue-600"
+                            }`} />
+                            
+                            {/* Event Card */}
+                            <motion.div
+                              whileHover={{ scale: 1.02 }}
+                              className={`p-6 rounded-2xl cursor-pointer transition-all duration-300 ${
+                                theme === "dark"
+                                  ? "bg-gray-800/60 backdrop-blur-lg border border-gray-700 hover:bg-gray-800/80 hover:shadow-xl hover:shadow-blue-500/10"
+                                  : "bg-white/60 backdrop-blur-lg border border-gray-200 hover:bg-white/80 hover:shadow-xl hover:shadow-blue-500/10"
+                              }`}
+                              onClick={() => {
+                                setModalEvent(event);
+                                setModalOpen(true);
+                              }}
+                            >
+                              <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4 mb-4">
+                                <div>
+                                  <h3 className={`text-lg lg:text-xl font-bold mb-2 ${
+                                    theme === "dark" ? "text-white" : "text-gray-900"
+                                  }`}>
+                                    {event.title}
+                                  </h3>
+                                  <p className={`text-sm ${
+                                    theme === "dark" ? "text-gray-400" : "text-gray-600"
+                                  }`}>
+                                    {event.date}
+                                  </p>
+                                </div>
+                                
+                                <Badge className={categoryColor(event.category, theme)}>
+                                  <span className="mr-1">{getCategoryInfo(event.category).icon}</span>
+                                  {getCategoryInfo(event.category).label}
+                                </Badge>
+                              </div>
+                              
+                              <p className={`text-sm lg:text-base mb-4 ${
+                                theme === "dark" ? "text-gray-300" : "text-gray-700"
                               }`}>
-                                +{event.skills.length - 3} more
-                              </span>
-                            )}
-                          </div>
-                        )}
-                      </motion.div>
+                                {event.description || event.experience}
+                              </p>
+                              
+                              {event.skills && event.skills.length > 0 && (
+                                <div className="flex flex-wrap gap-2">
+                                  {event.skills.slice(0, 3).map((skill, skillIndex) => (
+                                    <span
+                                      key={`${event.id}-skill-${skillIndex}`}
+                                      className={`px-3 py-1 text-xs rounded-full ${
+                                        theme === "dark"
+                                          ? "bg-blue-600/20 text-blue-300 border border-blue-600/30"
+                                          : "bg-blue-100 text-blue-700 border border-blue-200"
+                                      }`}
+                                    >
+                                      {skill}
+                                    </span>
+                                  ))}
+                                  {event.skills.length > 3 && (
+                                    <span className={`px-3 py-1 text-xs rounded-full ${
+                                      theme === "dark" ? "text-gray-400" : "text-gray-600"
+                                    }`}>
+                                      +{event.skills.length - 3} more
+                                    </span>
+                                  )}
+                                </div>
+                              )}
+                            </motion.div>
+                          </motion.div>
+                        ))}
+                      </div>
                     </motion.div>
                   ))}
                 </div>
@@ -388,7 +472,7 @@ const Roadmap: React.FC<RoadmapProps> = ({ theme = "light" }) => {
                   <p className={`text-sm lg:text-base ${
                     theme === "dark" ? "text-gray-300" : "text-gray-700"
                   }`}>
-                    {modalEvent.description}
+                    {modalEvent.description || modalEvent.experience}
                   </p>
                 </div>
                 
