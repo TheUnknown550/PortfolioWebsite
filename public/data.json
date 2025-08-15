@@ -233,98 +233,98 @@
   "date": "2022-08-01",
   "category": "award",
   "skills": ["Presentation Skills", "Scientific Communication"],
-  "experience": "Received dual recognition for technical merits and outstanding communication."
+  "experience": "Achieved the highest honor in Thailand's national science competition, earning both First Place in Applied Science and the prestigious Best Communication Award. This dual recognition highlighted not only the technical excellence of my research but also my ability to communicate complex scientific concepts with clarity and impact. The experience refined my presentation skills, taught me to engage diverse audiences effectively, and demonstrated how compelling storytelling can amplify scientific innovation."
     },
     {
       "title": "FIRST Tech Challenge (FTC) 2022 – Best Engineering Design (Team Medusa)",
       "date": "2022-11-10",
       "category": "competition",
   "skills": ["Robotics & IoT", "REV Control HUB", "EV3 Hub", "CAD"],
-      "experience": "Led engineering and programming, winning Best Engineering Design for technical leadership and integration."
+      "experience": "Demonstrated exceptional engineering excellence as the lead engineer and programmer, earning the prestigious Best Engineering Design award for innovative technical solutions. This recognition validated my approach to systematic robot design, advanced programming methodologies, and seamless hardware-software integration. The achievement showcased my ability to lead technical teams while delivering cutting-edge robotics solutions under competitive pressure."
     },
     {
       "title": "FIRST Tech Challenge: FTC, Team Medusa",
       "date": "2022-12-01",
       "category": "project",
   "skills": ["Robotics & IoT", "REV Control HUB", "EV3 Hub", "C/C++/C#"],
-      "experience": "Lead engineer and programmer, responsible for robot design and control software."
+      "experience": "Served as the lead engineer and programmer for Team Medusa, taking full ownership of robot architecture and control system development. Managed the complete engineering lifecycle from conceptual design through final implementation, ensuring robust mechanical systems integrated seamlessly with sophisticated programming solutions. This role developed my technical leadership capabilities while delivering high-performance robotics solutions in a fast-paced competitive environment."
     },
     {
       "title": "Regeneron ISEF 2023 – World Finalist",
       "date": "2023-05-19",
       "category": "award",
   "skills": ["Presentation Skills", "Experimental Design", "Scientific Presentation", "Peer Review"],
-      "experience": "Presented original research and competed among top global students."
+      "experience": "Achieved world finalist status at the most prestigious international science fair, representing months of rigorous research, experimentation, and peer review. Competed alongside the brightest young researchers globally, presenting original scientific work to panels of expert judges. This experience elevated my research methodology, scientific presentation skills, and ability to defend complex experimental designs under intense academic scrutiny."
     },
     {
       "title": "FIRST Tech Challenge: FTC, Team Astraeus",
       "date": "2023-04-01",
       "category": "project",
   "skills": ["Robotics & IoT", "REV Control HUB", "EV3 Hub", "C/C++/C#"],
-      "experience": "Primary builder and systems developer, driving design and performance optimization."
+      "experience": "Evolved into the primary builder and systems developer for Team Astraeus, driving innovative mechanical design and performance optimization strategies. Focused on creating sophisticated mechanisms tailored to complex challenge requirements while maintaining system reliability and efficiency. This role enhanced my ability to balance creative engineering solutions with practical implementation constraints, fostering advanced technical leadership and collaborative problem-solving skills."
     },
     {
       "title": "FIRST Tech Challenge (FTC) 2023 – World Championship Competitor (Team Astraeus)",
       "date": "2023-04-25",
       "category": "competition",
   "skills": ["Project Management", "Leadership", "Problem Solving", "Presentation Skills"],
-      "experience": "Led systems development and optimization, competing at the world championship in Houston, Texas."
+      "experience": "Led Team Astraeus to compete at the FTC World Championship in Houston, Texas, representing the pinnacle of global robotics competition. Spearheaded comprehensive systems development and performance optimization while managing cross-functional team dynamics under intense pressure. This world-stage experience refined my leadership capabilities, strategic planning skills, and ability to execute complex technical solutions on the highest competitive platform."
     },
     {
       "title": "Microsoft Imagine Cup 2023 – World Runner-up",
       "date": "2023-07-01",
       "category": "award",
   "skills": ["Python", "AI Development", "Basic Neural Networks", "Recurrent Neural Networks", "Signal Processing", "Recurrent Neural Networks", "React Native"],
-      "experience": "Led software architecture and UI design for CS-M Tool, placing 2nd globally."
+      "experience": "Achieved global recognition as World Runner-up at Microsoft's premier technology competition, leading the complete software architecture and user interface design for the CS-M Tool. This achievement demonstrated exceptional technical execution and innovation on the world stage, competing against thousands of teams globally. The experience validated my ability to deliver enterprise-grade solutions while effectively communicating complex technical concepts to international panels of Microsoft experts and industry leaders."
     },
     {
       "title": "Microsoft Imagine Cup World Championship Mentorship Program",
       "date": "2023-07-15",
       "category": "mentorship",
       "skills": ["Business Analysis", "Presentation Skills", "Project Management", "Leadership", "Problem Solving", "Coding/Programming", "Python", "C/C++/C#", "JavaScript", "AI Development", "Basic Neural Networks", "Recurrent Neural Networks", "Web/App Development", "React", "Video Editing", "Product Analysis", "Thai", "English"],
-      "experience": "Focused on business development and pitching strategies with Microsoft mentors."
+      "experience": "Selected for an exclusive global mentorship program following our World Runner-up achievement, receiving direct guidance from Microsoft executives and seasoned entrepreneurs. Focused intensively on business development methodologies, advanced pitching strategies, and product-market fit analysis. This prestigious program provided invaluable insights into scaling technology solutions into viable businesses while developing strategic communication skills essential for tech leadership."
     },
     {
       "title": "Started University at Chiang Mai University",
       "date": "2023-08-01",
       "category": "education",
       "skills": ["Coding/Programming", "Python", "C/C++/C#", "Java", "JavaScript", "AI Development", "Web/App Development", "React", "Database Management", "SQL", "Laravels", "Database Design", "2D/3D Design", "Solidworks", "Blender", "Networking & Cabling", "Presentation & Pitching", "Project Management", "Leadership", "Problem Solving", "Presentation Skills", "Thai", "English"],
-      "experience": "Began undergraduate studies in ISNE at CMU."
+      "experience": "At the age of 16, embarked on my undergraduate journey in Information Systems and Networking Engineering (ISNE) at Chiang Mai University, one of Thailand's premier institutions. This transition marked the beginning of formal higher education, building upon years of competition experience with structured academic rigor. The program provides comprehensive foundation in advanced programming, system architecture, database management, and networking technologies while fostering continued growth in project management and technical leadership capabilities."
     },
     {
       "title": "Cardiac Self-Monitoring Tool (CS-M Tool)",
       "date": "2022-01-01",
       "category": "project",
       "skills": ["Coding/Programming", "Python", "C/C++/C#","Signal Processing", "JavaScript", "AI Development", "Basic Neural Networks", "Recurrent Neural Networks", "Web/App Development", "React", "2D/3D Design", "Solidworks", "Video Editing", "Presentation & Pitching", "Project Management", "Leadership", "Problem Solving", "Business Analysis", "Product Analysis", "Presentation Skills", "Thai", "English"],  
-      "experience": "Developed a device and app for heart disease detection, recognized by Intel, Microsoft, and ISEF."
+      "experience": "Engineered a revolutionary cardiac monitoring solution combining advanced hardware design with sophisticated AI-driven mobile applications for early heart disease detection. The CS-M Tool represents a comprehensive end-to-end medical technology project, featuring custom signal processing algorithms, neural network-based diagnosis, and intuitive user interfaces. This flagship project garnered international recognition from Intel AI Global Impact Festival, Microsoft Imagine Cup, and Regeneron ISEF, establishing the foundation for my expertise in healthcare technology and AI development."
     },
     {
       "title": "INTERLINK Cabling Contest #12 – National Finalist",
       "date": "2024-07-10",
       "category": "competition",
   "skills": ["Networking & Cabling", "Technical Skills", "Standard Compliance"],
-      "experience": "Finalist in a national cabling competition, demonstrating expert-level skills."
+      "experience": "Achieved national finalist status in Thailand's premier networking and cabling competition, demonstrating mastery of industry-standard installation practices and technical protocols. Competed against top professionals and students nationwide, showcasing expertise in structured cabling systems, network infrastructure design, and compliance with international standards. This achievement validated my hands-on technical skills in networking hardware and established credibility in telecommunications infrastructure."
     },
     {
       "title": "Calculus & Algorithm Teacher’s Assistant (TA)",
       "date": "2024-09-01",
       "category": "work",
   "skills": ["Python", "C/C++/C#", "Leadership", "Mentoring"],
-      "experience": "TA for Calculus II and Computer Algorithm Lab, supporting students and developing communication skills."
+      "experience": "Served as Teaching Assistant for Calculus II and Computer Algorithm Laboratory, providing comprehensive academic support to undergraduate students. Facilitated problem-solving sessions, debugged complex code implementations, and guided students through advanced algorithm design concepts. This role developed my mentoring capabilities, enhanced communication skills for explaining technical concepts clearly, and strengthened leadership abilities while contributing to academic excellence in mathematics and computer science education."
     },
     {
       "title": "Summer Internship at TLIC – IoT & Project Management Intern",
       "date": "2025-06-01",
       "category": "work",
   "skills": ["Robotics & IoT", "Project Management", "Raspberry Pi", "Home Assistant", "Python"],
-      "experience": "Hands-on experience in IoT system design, installation, and project management."
+      "experience": "Gained intensive professional experience in IoT ecosystem development and project management through hands-on industry internship. Contributed to real-world IoT system design, installation, and deployment projects while learning enterprise-level project coordination methodologies. This immersive experience bridged academic knowledge with practical industry applications, developing skills in Raspberry Pi programming, Home Assistant integration, and collaborative project execution in professional technology environments."
     },
     {
       "title": "Workshop on AI Driven Innovations in INDIA",
       "date": "2025-07-01",
       "category": "workshop",
   "skills": ["AI Development", "Industry Insights", "Basic Neural Networks", "Recurrent Neural Networks", "Image Processing (YOLO, Media Pipe)"],
-      "experience": "Attended an international workshop with tech leaders, learning about AI advancements and applications."
+      "experience": "Participated in an exclusive international workshop hosted in India, featuring distinguished former and current senior professionals from major technology companies including Apple, Samsung, Nvidia, Google, Microsoft, and Meta. Gained cutting-edge insights into AI-driven innovations, emerging industry trends, and practical applications across diverse technological sectors. This global exposure enhanced my understanding of international AI development practices while building valuable professional networks with industry leaders and fellow technologists."
     }
   ]
 }
