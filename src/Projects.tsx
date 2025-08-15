@@ -30,7 +30,11 @@ const Projects: React.FC<ProjectsProps> = ({ theme }) => {
   // Function to get appropriate icon based on project title/content
   const getProjectIcon = (title: string, index: number) => {
     const titleLower = title.toLowerCase();
-    
+
+    if (titleLower.includes('.com')) {
+      return '🌐';
+    }
+
     // AI/Medical projects
     if (titleLower.includes('cardiac') || titleLower.includes('cs-m') || titleLower.includes('heart')) {
       return '❤️';

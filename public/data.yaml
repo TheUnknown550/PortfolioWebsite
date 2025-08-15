@@ -287,6 +287,13 @@ profile:
         - REV Control HUB
         - EV3 Hub
         - C/C++/C#
+    - title: mattcosh.com
+      years: 2025
+      description: Developed a personal portfolio website to showcase my projects, skills, and experiences.
+      skills:
+        - Web Development
+        - UI/UX Design
+        - Content Creation
     - title: Teacher's Assistant (TA)
       years: 2024
       description: Worked as a Teacher Assistant for Calculus II and Computer Algorithm Lab, providing support to students in solving problems, understanding complex concepts, debugging code, and developing algorithm designs. Gained valuable experience in communication, teamwork, mentorship, and leadership.
