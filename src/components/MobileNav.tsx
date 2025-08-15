@@ -5,6 +5,7 @@ import Button from "./Button";
 
 interface MobileNavProps {
   theme: "light" | "dark";
+  onNavigate?: (targetPath: string) => void;
 }
 
 const navLinks = [
@@ -14,7 +15,7 @@ const navLinks = [
   { to: "/roadmap", label: "Journey", icon: "🗺️" },
 ];
 
-const MobileNav: React.FC<MobileNavProps> = ({ theme }) => {
+const MobileNav: React.FC<MobileNavProps> = ({ theme, onNavigate }) => {
   const [open, setOpen] = useState(false);
   const location = useLocation();
 
@@ -107,7 +108,10 @@ const MobileNav: React.FC<MobileNavProps> = ({ theme }) => {
                 <AnimatedLink
                   key={link.to}
                   to={link.to}
-                  onClick={() => setOpen(false)}
+                  onClick={() => {
+                    onNavigate?.(link.to);
+                    setOpen(false);
+                  }}
                   className={`
                     group flex items-center gap-4 px-4 py-4 rounded-xl
                     transition-all duration-200 transform hover:scale-[1.02]

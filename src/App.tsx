@@ -9,6 +9,7 @@ import MobileNav from "./components/MobileNav";
 import AnimatedPage from "./components/AnimatedPage";
 import ContactModal from "./ContactModal";
 import Button from "./components/Button";
+import ScrollToTop from "./components/ScrollToTop";
 
 const App: React.FC = () => {
   const [theme, setTheme] = useState<"light" | "dark">(() => {
@@ -41,6 +42,19 @@ const AppContent: React.FC<{
 }> = ({ theme, toggleTheme, contactOpen, setContactOpen }) => {
   const location = useLocation();
 
+  // Function to handle navigation with scroll to top
+  const handleNavigation = (targetPath: string) => {
+    if (location.pathname === targetPath) {
+      // If clicking the same page, scroll to top
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+      });
+    }
+    // React Router will handle the navigation automatically via Link
+  };
+
   // Bounce logic for Contact Me button
   useEffect(() => {
     let count = 0;
@@ -71,6 +85,7 @@ const AppContent: React.FC<{
           ? "min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700 text-gray-100"
           : "min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-100 text-gray-900"
       }>
+        <ScrollToTop />
         <nav className={`
           sticky top-0 z-50 backdrop-blur-lg transition-all duration-300
           ${theme === "dark"
@@ -95,6 +110,7 @@ const AppContent: React.FC<{
                 </div>
                 <Link 
                   to="/" 
+                  onClick={() => handleNavigation("/")}
                   className={`text-xl sm:text-2xl lg:text-3xl font-extrabold tracking-tight transition-colors duration-300 ${
                     theme === "dark"
                       ? "text-sky-300 hover:text-sky-100"
@@ -116,6 +132,7 @@ const AppContent: React.FC<{
                   <Link
                     key={link.to}
                     to={link.to}
+                    onClick={() => handleNavigation(link.to)}
                     className={`
                       group relative px-4 py-2 rounded-lg font-medium transition-all duration-300 hover:scale-105
                       ${location.pathname === link.to
@@ -147,7 +164,7 @@ const AppContent: React.FC<{
               {/* Mobile Navigation & Theme Toggle */}
               <div className="md:hidden flex items-center gap-3">
                 <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
-                <MobileNav theme={theme} />
+                <MobileNav theme={theme} onNavigate={handleNavigation} />
               </div>
             </div>
           </div>
