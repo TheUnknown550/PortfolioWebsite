@@ -222,30 +222,24 @@ profile:
         - Presentation Skills
         - Thai
         - English
-    - title: Physical Therapy with Motion Tracking (I-THANKe)
-      years: 2021
-      description: A project focused on making physical therapy accessible to all through an innovative approach. I-THANKe leverages a Unity-based application integrated with a Neural Network AI to detect correct therapy posture and movement. To enhance patient engagement and retention, the platform incorporates gamification elements and securely manages patient data for therapists, enabling effective physical therapy anytime, anywhere.
-      skills:
-        - Unity
-        - AI Development
-        - Basic Neural Networks
-        - C#
-    - title: FIRST Tech Challenge - FTC, Team Medusa
-      years: 2022
-      description: Served as the lead engineer and programmer, responsible for designing and implementing the robot's mechanical systems and control software. Worked on translating game objectives into effective technical solutions, ensuring the robot was reliable and competitive throughout the season. Gained experience in rapid prototyping, iterative testing, and integrating hardware with software to meet complex design challenges.
-      skills:
-        - Robotics & IoT
-        - REV Control HUB
-        - EV3 Hub
-        - C/C++/C#
-    - title: FIRST Tech Challenge - FTC, Team Astraeus
+    - title: Microsoft Imagine Cup World Championship Mentorship Program
       years: 2023
-      description: Took on the role of primary builder and systems developer, driving the design of innovative mechanisms tailored to that year's challenge. Focused on optimizing performance through mechanical precision, strategic design choices, and collaboration with teammates on coding and troubleshooting. Helped the team develop a robot that balanced consistency with creativity, strengthening leadership and cross-team communication skills.
+      description: Selected for a global mentorship program as part of the Imagine Cup World Championship. Focused on business development, pitching strategies, and product-market fit with guidance from experienced entrepreneurs and Microsoft experts. Gained practical knowledge in turning tech ideas into scalable business solutions.
       skills:
-        - Robotics & IoT
-        - REV Control HUB
-        - EV3 Hub
-        - C/C++/C#
+        - Business Analysis
+        - Presentation Skills
+        - Project Management
+        - Product Analysis
+        - Price Analysis
+        - Market Research
+    - title: Intel® AI Global Impact Festival Mentorship Program
+      years: 2022
+      description: Selected for a global mentorship program as part of the Intel® AI Global Impact Festival, featuring masterclasses from AI and industry experts. Learned about AI applications, business strategy, and technical evaluation methods. Enhanced understanding of model testing, real-world deployment, and innovation in AI.
+      skills:
+        - AI Development
+        - Business Strategy
+        - Project Management
+        - Product Analysis
     - title: Workshop on AI Driven Innovations in INDIA
       years: 2025
       description: Attended an international workshop hosted in India featuring former and current senior professionals from major tech companies, such as Apple, Samsung, Nvidia, Google, Microsoft, and Meta. Gained insights into cutting-edge AI advancements and practical applications across industries.
@@ -261,24 +255,38 @@ profile:
         - Raspberry Pi
         - Home Assistant
         - Python
-    - title: Intel® AI Global Impact Festival Mentorship Program
-      years: 2022
-      description: Selected for a global mentorship program as part of the Intel® AI Global Impact Festival, featuring masterclasses from AI and industry experts. Learned about AI applications, business strategy, and technical evaluation methods. Enhanced understanding of model testing, real-world deployment, and innovation in AI.
+    - title: Physical Therapy with Motion Tracking (I-THANKe)
+      years: 2021
+      description: A project focused on making physical therapy accessible to all through an innovative approach. I-THANKe leverages a Unity-based application integrated with a Neural Network AI to detect correct therapy posture and movement. To enhance patient engagement and retention, the platform incorporates gamification elements and securely manages patient data for therapists, enabling effective physical therapy anytime, anywhere.
       skills:
+        - Unity
         - AI Development
-    - title: Microsoft Imagine Cup World Championship Mentorship Program
+        - Basic Neural Networks
+        - C#
+    - title: FIRST Tech Challenge - FTC, Team Astraeus
       years: 2023
-      description: Selected for a global mentorship program as part of the Imagine Cup World Championship. Focused on business development, pitching strategies, and product-market fit with guidance from experienced entrepreneurs and Microsoft experts. Gained practical knowledge in turning tech ideas into scalable business solutions.
+      description: Took on the role of primary builder and systems developer, driving the design of innovative mechanisms tailored to that year's challenge. Focused on optimizing performance through mechanical precision, strategic design choices, and collaboration with teammates on coding and troubleshooting. Helped the team develop a robot that balanced consistency with creativity, strengthening leadership and cross-team communication skills.
       skills:
-        - Business Analysis
-        - Presentation Skills
+        - Robotics & IoT
+        - REV Control HUB
+        - EV3 Hub
+        - C/C++/C#
+    - title: FIRST Tech Challenge - FTC, Team Medusa
+      years: 2022
+      description: Served as the lead engineer and programmer, responsible for designing and implementing the robot's mechanical systems and control software. Worked on translating game objectives into effective technical solutions, ensuring the robot was reliable and competitive throughout the season. Gained experience in rapid prototyping, iterative testing, and integrating hardware with software to meet complex design challenges.
+      skills:
+        - Robotics & IoT
+        - REV Control HUB
+        - EV3 Hub
+        - C/C++/C#
     - title: Teacher's Assistant (TA)
-      years: 2024-2025
+      years: 2024
       description: Worked as a Teacher Assistant for Calculus II and Computer Algorithm Lab, providing support to students in solving problems, understanding complex concepts, debugging code, and developing algorithm designs. Gained valuable experience in communication, teamwork, mentorship, and leadership.
       skills:
         - Python
         - C/C++/C#
         - Leadership
+
 
 roadmap:
   - title: Physical Therapy with Motion Tracking (I-THANKe)
