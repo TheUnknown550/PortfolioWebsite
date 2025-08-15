@@ -206,6 +206,7 @@ profile:
   projects:
     - title: Cardiac Self-Monitoring Tool (CS-M Tool)
       years: 2021
+      date: 2022-01-01
       description: A project that set out to solve the world's number 1 cause of death, heart disease. With an innovative recording device paired with a React Native-based application and a Neural Network AI capable of detecting heart sound abnormalities. With this solution, we made heart disease detection and screening accessible anywhere, improving early detection and treatment. This project gained recognition and awards from Intel, Microsoft, and ISEF.
       skills:
         - Coding/Programming
@@ -228,6 +229,7 @@ profile:
         - English
     - title: Microsoft Imagine Cup World Championship Mentorship Program
       years: 2023
+      date: 2023-07-15
       description: Selected for a global mentorship program as part of the Imagine Cup World Championship. Focused on business development, pitching strategies, and product-market fit with guidance from experienced entrepreneurs and Microsoft experts. Gained practical knowledge in turning tech ideas into scalable business solutions.
       skills:
         - Business Analysis
@@ -238,6 +240,7 @@ profile:
         - Market Research
     - title: Intel® AI Global Impact Festival Mentorship Program
       years: 2022
+      date: 2022-10-01
       description: Selected for a global mentorship program as part of the Intel® AI Global Impact Festival, featuring masterclasses from AI and industry experts. Learned about AI applications, business strategy, and technical evaluation methods. Enhanced understanding of model testing, real-world deployment, and innovation in AI.
       skills:
         - AI Development
@@ -246,12 +249,14 @@ profile:
         - Product Analysis
     - title: Workshop on AI Driven Innovations in INDIA
       years: 2025
+      date: 2025-03-25
       description: Attended an international workshop hosted in India featuring former and current senior professionals from major tech companies, such as Apple, Samsung, Nvidia, Google, Microsoft, and Meta. Gained insights into cutting-edge AI advancements and practical applications across industries.
       skills:
         - AI Development
         - Industry Insights
     - title: MCXStudios24
       years: 2025
+      date: 2025-06-22
       description: I created MCXStudios as my personal game studio where I build and share my games. Whether it’s Roblox worlds or mobile apps, MCXStudios is the place where I bring my ideas to life, experiment with new mechanics, and showcase my growth as a developer.
       skills:
         - Project Management
@@ -262,6 +267,7 @@ profile:
         - Unity
     - title: Summer Internship at TLIC – IoT & Project Management Intern
       years: 2025
+      date: 2025-04-01
       description: Gained hands-on experience in IoT system design and installation, contributing to real-world implementation projects. Also developed insights into project management workflows, including planning, coordination, and on-site execution.
       skills:
         - Robotics & IoT
@@ -271,6 +277,7 @@ profile:
         - Python
     - title: Physical Therapy with Motion Tracking (I-THANKe)
       years: 2021
+      date: 2021-09-01
       description: A project focused on making physical therapy accessible to all through an innovative approach. I-THANKe leverages a Unity-based application integrated with a Neural Network AI to detect correct therapy posture and movement. To enhance patient engagement and retention, the platform incorporates gamification elements and securely manages patient data for therapists, enabling effective physical therapy anytime, anywhere.
       skills:
         - Coding/Programming

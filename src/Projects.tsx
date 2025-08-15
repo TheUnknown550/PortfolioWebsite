@@ -7,6 +7,7 @@ import { getProjects } from "./utils/dataLoader";
 interface Project {
   title: string;
   years: string | number;
+  date?: string; // YYYY-MM-DD format like roadmap
   description: string;
   skills?: string[];
 }
@@ -97,18 +98,29 @@ const Projects: React.FC<ProjectsProps> = ({ theme }) => {
       .finally(() => setLoading(false));
   }, []);
 
-  function parseYearRange(years?: string | number) {
-    if (!years) return 0;
+  function parseProjectDate(project: Project): Date {
+    // Use the date field if available (YYYY-MM-DD format)
+    if (project.date) {
+      return new Date(project.date);
+    }
+    
+    // Fallback to parsing years field
+    if (!project.years) return new Date(0);
+    
     // Convert to string if it's not already
-    const yearString = typeof years === 'string' ? years : years.toString();
+    const yearString = typeof project.years === 'string' ? project.years : project.years.toString();
+    
     // Try to get the latest year in the range
     const match = yearString.match(/(\d{4})(?!.*\d{4})/);
-    return match ? parseInt(match[1], 10) : 0;
+    const year = match ? parseInt(match[1], 10) : 0;
+    
+    // Return date with year only (using January 1st as default)
+    return year > 0 ? new Date(year, 0, 1) : new Date(0);
   }
 
   let sortedProjects = [...projects];
   if (sortBy === 'date') {
-    sortedProjects.sort((a, b) => parseYearRange(b.years) - parseYearRange(a.years));
+    sortedProjects.sort((a, b) => parseProjectDate(b).getTime() - parseProjectDate(a).getTime());
   } else if (sortBy === 'title') {
     sortedProjects.sort((a, b) => a.title.localeCompare(b.title));
   } else if (sortBy === 'importance') {
@@ -124,6 +136,7 @@ const Projects: React.FC<ProjectsProps> = ({ theme }) => {
       project.title.toLowerCase().includes(searchLower) ||
       project.description.toLowerCase().includes(searchLower) ||
       (project.years && project.years.toString().toLowerCase().includes(searchLower)) ||
+      (project.date && project.date.toLowerCase().includes(searchLower)) ||
       (project.skills && project.skills.some(skill => 
         skill.toLowerCase().includes(searchLower)
       ))
