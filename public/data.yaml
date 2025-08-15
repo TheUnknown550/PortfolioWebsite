@@ -51,7 +51,7 @@ profile:
       - Thai
       - English
   honors:
-    - title: Intel ® AI Global Impact Festival – Global Award Winner
+    - title: Intel ® AI Global Impact Festival – Global Award Winner 2022
       year: 2022
       link: https://www.intc.com/news-events/press-releases/detail/1575/intel-announces-ai-global-impact-festival-grand-prize
       eventDescription: Annual festival by Intel that spotlights AI-powered student innovations aimed at real-world impact.
@@ -98,6 +98,18 @@ profile:
         - /ISEF/114074.jpg
         - /ISEF/114076.jpg
         - /ISEF/114077.jpg
+    - title: Asia Pacific ICT Alliance Awards (APICTA) 2022
+      year: 2022
+      eventDescription: APICTA is a prestigious awards program that recognizes and promotes innovative ICT solutions across the Asia Pacific region.
+      myExperience: Participating in APICTA allowed me to showcase my project on a larger stage, gaining valuable feedback from industry experts and peers. This experience enhanced my understanding of the ICT landscape and the importance of innovation in addressing regional challenges.
+      images:
+        - /APICTA/APICTA1.jpg
+        - /APICTA/APICTA2.jpg
+        - /APICTA/APICTA3.jpg
+        - /APICTA/APICTA4.jpg
+        - /APICTA/APICTA5.jpg
+        - /APICTA/APICTA6.jpg
+        - /APICTA/APICTA7.jpg
     - title: Thailand Young Scientist Festival (TYSF) 2022 – Gold Medalist
       year: 2022
       eventDescription: Organized by NSTDA and the Science Society of Thailand, TYSF celebrates student scientific research at a national level.
@@ -127,6 +139,7 @@ profile:
       images:
         - /PMAward/PM Award.jpg
         - /PMAward/PMAward.webp
+        - /PMAward/PM Award9.jpg
         - /PMAward/PMAward1.jpg
         - /PMAward/PMAward2.jpg
         - /PMAward/PMAward3.jpg
@@ -134,6 +147,8 @@ profile:
         - /PMAward/PM Award5.jpg
         - /PMAward/PM Award6.jpg
         - /PMAward/PM Award7.jpg
+        - /PMAward/PM Award8.jpg
+        - /PMAward/PM Award10.jpg
       link: https://www.facebook.com/watch/?v=5448753708542852
     - title: MEDCHIC HACKATHON - First Runner Up Pitching Competition
       year: 2023
@@ -146,6 +161,26 @@ profile:
         - /MEDCHIC/MEDCHIC4.jpg
         - /MEDCHIC/MEDCHIC5.jpg
         - /MEDCHIC/MEDCHIC6.jpg
+    - title: INTERLINK Cabling Contest No.12 [July 10, 2024] – National Finalist
+      year: 2024
+      link: https://interlink.co.th/news/detail/470
+      eventDescription: A nationwide competition in Thailand assessing expert-level network cabling skills and design, awarding the Royal Trophy.
+      myExperience: I was among top national finalists in technical cabling, showcasing proficiency in network design, precision installation, and standard compliance within a rigorous time-constrained environment.
+      images:
+        - /INTERLINK/Cabling1.jpg
+        - /INTERLINK/cabling.jpg
+        - /INTERLINK/Cabling 1.jpg
+        - /INTERLINK/Cabling 2.jpg
+        - /INTERLINK/Cabling 3.jpg
+        - /INTERLINK/S__169025583.jpg
+    - title: National Science Week 2022 – Gold Medalist in Applied Science at the Regional National
+      year: 2022
+      eventDescription: A regional science competition in Thailand recognizing outstanding student projects in applied science.
+      myExperience: I presented a project that demonstrated practical applications of scientific principles, earning a gold medal for innovation and execution. This experience enhanced my research presentation skills and ability to communicate complex ideas effectively.
+      images:
+        - /NSW/NSW1.jpg
+        - /NSW/NSW2.jpg
+        - /NSW/NSW3.jpg
     - title: FIRST Tech Challenge (FTC) 2022 – Best Engineering Design (Team Medusa)
       year: 2022
       eventDescription: FTC is a global robotics competition for high school students, with regions leading up to world finals.
@@ -159,18 +194,7 @@ profile:
       myExperience: Leading systems development and optimization, I directed strategy sessions, mechanical build, and software implementation. Competing globally fostered greater engineering under pressure, collaborative problem-solving, and exposure to high-stakes team coordination.
       images:
         - /FTC2023/FTC.png
-    - title: INTERLINK Cabling Contest No.12 [July 10, 2024] – National Finalist
-      year: 2024
-      link: https://interlink.co.th/news/detail/470
-      eventDescription: A nationwide competition in Thailand assessing expert-level network cabling skills and design, awarding the Royal Trophy.
-      myExperience: I was among top national finalists in technical cabling, showcasing proficiency in network design, precision installation, and standard compliance within a rigorous time-constrained environment.
-      images:
-        - /INTERLINK/Cabling1.jpg
-        - /INTERLINK/cabling.jpg
-        - /INTERLINK/Cabling 1.jpg
-        - /INTERLINK/Cabling 2.jpg
-        - /INTERLINK/Cabling 3.jpg
-        - /INTERLINK/S__169025583.jpg
+    
   projects:
     - title: Cardiac Self-Monitoring Tool (CS-M Tool)
       years: 2021
@@ -276,7 +300,7 @@ roadmap:
       - Python
     experience: Developed the CS-M Tool, won the Global Award, and refined my pitch and technical communication under mentorship.
   - title: Thailand Young Scientist Festival (TYSF) 2022 – Gold Medalist
-    date: 2022-05-15
+    date: 2022-11-25
     category: award
     skills:
       - Presentation Skills
@@ -298,15 +322,6 @@ roadmap:
       - Presentation Skills
       - Scientific Communication
     experience: Achieved the highest honor in Thailand's national science competition, earning both First Place in Applied Science and the prestigious Best Communication Award. This dual recognition highlighted not only the technical excellence of my research but also my ability to communicate complex scientific concepts with clarity and impact. The experience refined my presentation skills, taught me to engage diverse audiences effectively, and demonstrated how compelling storytelling can amplify scientific innovation.
-  - title: FIRST Tech Challenge (FTC) 2022 – Best Engineering Design (Team Medusa)
-    date: 2022-11-10
-    category: competition
-    skills:
-      - Robotics & IoT
-      - REV Control HUB
-      - EV3 Hub
-      - CAD
-    experience: Demonstrated exceptional engineering excellence as the lead engineer and programmer, earning the prestigious Best Engineering Design award for innovative technical solutions. This recognition validated my approach to systematic robot design, advanced programming methodologies, and seamless hardware-software integration. The achievement showcased my ability to lead technical teams while delivering cutting-edge robotics solutions under competitive pressure.
   - title: FIRST Tech Challenge - FTC, Team Medusa
     date: 2022-12-01
     category: project
@@ -334,15 +349,6 @@ roadmap:
       - EV3 Hub
       - C/C++/C#
     experience: Evolved into the primary builder and systems developer for Team Astraeus, driving innovative mechanical design and performance optimization strategies. Focused on creating sophisticated mechanisms tailored to complex challenge requirements while maintaining system reliability and efficiency. This role enhanced my ability to balance creative engineering solutions with practical implementation constraints, fostering advanced technical leadership and collaborative problem-solving skills.
-  - title: FIRST Tech Challenge (FTC) 2023 – World Championship Competitor (Team Astraeus)
-    date: 2023-04-25
-    category: competition
-    skills:
-      - Project Management
-      - Leadership
-      - Problem Solving
-      - Presentation Skills
-    experience: Led Team Astraeus to compete at the FTC World Championship in Houston, Texas, representing the pinnacle of global robotics competition. Spearheaded comprehensive systems development and performance optimization while managing cross-functional team dynamics under intense pressure. This world-stage experience refined my leadership capabilities, strategic planning skills, and ability to execute complex technical solutions on the highest competitive platform.
   - title: Microsoft Imagine Cup 2023 – World Runner-up
     date: 2023-07-01
     category: award
@@ -366,7 +372,6 @@ roadmap:
       - Coding/Programming
       - Python
       - C/C++/C#
-      - JavaScript
       - AI Development
       - Basic Neural Networks
       - Recurrent Neural Networks
@@ -386,18 +391,15 @@ roadmap:
       - C/C++/C#
       - Java
       - JavaScript
-      - AI Development
       - Web/App Development
       - React
       - Database Management
       - SQL
-      - Laravels
+      - Laravel
       - Database Design
       - 2D/3D Design
       - Solidworks
-      - Blender
       - Networking & Cabling
-      - Presentation & Pitching
       - Project Management
       - Leadership
       - Problem Solving
@@ -413,14 +415,9 @@ roadmap:
       - Python
       - C/C++/C#
       - Signal Processing
-      - JavaScript
       - AI Development
       - Basic Neural Networks
       - Recurrent Neural Networks
-      - Web/App Development
-      - React
-      - 2D/3D Design
-      - Solidworks
       - Video Editing
       - Presentation & Pitching
       - Project Management
@@ -432,7 +429,7 @@ roadmap:
       - Thai
       - English
     experience: Engineered a revolutionary cardiac monitoring solution combining advanced hardware design with sophisticated AI-driven mobile applications for early heart disease detection. The CS-M Tool represents a comprehensive end-to-end medical technology project, featuring custom signal processing algorithms, neural network-based diagnosis, and intuitive user interfaces. This flagship project garnered international recognition from Intel AI Global Impact Festival, Microsoft Imagine Cup, and Regeneron ISEF, establishing the foundation for my expertise in healthcare technology and AI development.
-  - title: INTERLINK Cabling Contest #12 – National Finalist
+  - title: INTERLINK Cabling Contest No.12 – National Finalist
     date: 2024-07-10
     category: competition
     skills:
@@ -469,3 +466,27 @@ roadmap:
       - Recurrent Neural Networks
       - Image Processing (YOLO, Media Pipe)
     experience: Participated in an exclusive international workshop hosted in India, featuring distinguished former and current senior professionals from major technology companies including Apple, Samsung, Nvidia, Google, Microsoft, and Meta. Gained cutting-edge insights into AI-driven innovations, emerging industry trends, and practical applications across diverse technological sectors. This global exposure enhanced my understanding of international AI development practices while building valuable professional networks with industry leaders and fellow technologists.
+  - title: MEDCHIC HACKATHON - First Runner Up Pitching Competition
+    date: 2023-03-11
+    category: competition
+    skills:
+      - AI Development
+      - Healthcare Technology
+      - Team Collaboration
+    experience: Achieved First Runner Up position in the MEDCHIC HACKATHON, a competition focused on innovative healthcare solutions. Collaborated with a multidisciplinary team to develop a cutting-edge AI-driven application aimed at improving patient outcomes in chronic disease management. This experience honed my skills in healthcare technology, team collaboration, and agile project management while contributing to a meaningful cause.
+  - title: National Science Week 2022 – Gold Medalist in Applied Science at the Regional National Science Week
+    date: 2022-08-18
+    category: competition
+    skills:
+      - Research
+      - Presentation
+      - Team Collaboration
+    experience: Awarded Gold Medal in Applied Science at the Regional National Science Week event for my project on renewable energy solutions. This recognition highlighted my research capabilities, innovative thinking, and ability to communicate complex scientific concepts effectively. Collaborating with a team of fellow students, we developed a comprehensive presentation that showcased our findings and proposed solutions to real-world environmental challenges.
+  - title: Asia Pacific ICT Alliance Awards (APICTA) 2022
+    date: 2022-12-03
+    category: competition
+    skills:
+        - Innovation
+        - ICT Solutions
+        - Presentation
+    experience: Participated in the Asia Pacific ICT Alliance Awards (APICTA) 2022, showcasing my project on innovative ICT solutions. This experience allowed me to connect with industry leaders and gain insights into the latest trends in technology. The feedback received during the event was invaluable in refining my project and understanding the competitive landscape.

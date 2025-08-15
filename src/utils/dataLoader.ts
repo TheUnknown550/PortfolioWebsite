@@ -53,8 +53,25 @@ export async function loadProfileData(): Promise<ProfileData> {
     }
     
     const yamlText = await response.text();
-    const data = yaml.load(yamlText) as ProfileData;
+    const rawData = yaml.load(yamlText) as any;
     
+    // Convert Date objects back to strings for React compatibility
+    const processData = (obj: any): any => {
+      if (obj instanceof Date) {
+        return obj.toISOString().split('T')[0]; // Convert to YYYY-MM-DD format
+      } else if (Array.isArray(obj)) {
+        return obj.map(processData);
+      } else if (obj && typeof obj === 'object') {
+        const processed: any = {};
+        for (const [key, value] of Object.entries(obj)) {
+          processed[key] = processData(value);
+        }
+        return processed;
+      }
+      return obj;
+    };
+    
+    const data = processData(rawData) as ProfileData;
     cachedData = data;
     return data;
   } catch (error) {
