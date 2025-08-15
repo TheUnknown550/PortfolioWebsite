@@ -11,7 +11,7 @@ interface MobileNavProps {
 const navLinks = [
   { to: "/", label: "Home", icon: "🏠" },
   { to: "/projects", label: "Projects", icon: "💼" },
-  { to: "/honors", label: "Awards", icon: "🏆" },
+  { to: "/honors", label: "Awards", icon: "�" },
   { to: "/roadmap", label: "Journey", icon: "🗺️" },
 ];
 

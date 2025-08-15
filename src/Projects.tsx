@@ -41,7 +41,7 @@ const Projects: React.FC<ProjectsProps> = ({ theme }) => {
       return '🧠';
     }
     if (titleLower.includes('microsoft') && titleLower.includes('imagine')) {
-      return '�';
+      return '💻';
     }
     
     // Robotics projects
@@ -54,7 +54,7 @@ const Projects: React.FC<ProjectsProps> = ({ theme }) => {
       return '🌍';
     }
     if (titleLower.includes('mentorship') && titleLower.includes('intel')) {
-      return '�';
+      return '💻';
     }
     if (titleLower.includes('mentorship') && titleLower.includes('microsoft')) {
       return '💼';

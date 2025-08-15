@@ -18,6 +18,26 @@ interface HonorsAwardsProps {
   theme: "light" | "dark";
 }
 
+// Function to get appropriate icon based on award title
+const getAwardIcon = (title: string): string => {
+  const lowerTitle = title.toLowerCase();
+  
+  if (lowerTitle.includes('intel')) return '🧠'; // Brain for AI/Intel
+  if (lowerTitle.includes('microsoft')) return '💻'; // Computer for Microsoft
+  if (lowerTitle.includes('regeneron') || lowerTitle.includes('isef')) return '🔬'; // Science for ISEF
+  if (lowerTitle.includes('apicta') || lowerTitle.includes('ict')) return '📱'; // Mobile for ICT
+  if (lowerTitle.includes('science') || lowerTitle.includes('tysf')) return '⚗️'; // Chemistry for science
+  if (lowerTitle.includes('prime minister')) return '🎯'; // Target for PM award
+  if (lowerTitle.includes('hackathon') || lowerTitle.includes('medchic')) return '⚡'; // Lightning for hackathon
+  if (lowerTitle.includes('cabling') || lowerTitle.includes('interlink')) return '🔌'; // Plug for cabling
+  if (lowerTitle.includes('robotics') || lowerTitle.includes('ftc')) return '🤖'; // Robot for FTC
+  if (lowerTitle.includes('gold') || lowerTitle.includes('first place')) return '🥇'; // Gold medal
+  if (lowerTitle.includes('runner') || lowerTitle.includes('second')) return '🥈'; // Silver medal
+  if (lowerTitle.includes('finalist') || lowerTitle.includes('third')) return '🥉'; // Bronze medal
+  
+  return '🏆'; // Default trophy
+};
+
 const HonorsAwards: React.FC<HonorsAwardsProps> = ({ theme }) => {
   const [honors, setHonors] = useState<Honor[]>([]);
   const [loading, setLoading] = useState(true);
@@ -119,7 +139,7 @@ const HonorsAwards: React.FC<HonorsAwardsProps> = ({ theme }) => {
                   : "bg-yellow-100 text-yellow-700 border border-yellow-200"
               }`}
             >
-              <span className="text-lg sm:text-xl">🏆</span>
+              <span className="text-lg sm:text-xl">�</span>
               <span className="hidden sm:inline">Recognition & Achievements</span>
               <span className="sm:hidden">Awards</span>
             </motion.div>
@@ -251,7 +271,7 @@ const HonorsAwards: React.FC<HonorsAwardsProps> = ({ theme }) => {
                         : "bg-gradient-to-br from-yellow-100 to-orange-100"
                     }`}>
                       <span className="text-xl sm:text-2xl">
-                        {idx === 0 ? '🏆' : idx === 1 ? '🥇' : idx === 2 ? '⭐' : '🎖️'}
+                        {getAwardIcon(honor.title)}
                       </span>
                     </div>
                     <span className={`text-xs sm:text-sm font-mono px-2 py-1 rounded ${
@@ -404,7 +424,7 @@ const HonorsAwards: React.FC<HonorsAwardsProps> = ({ theme }) => {
                       ? "bg-gradient-to-br from-yellow-500/20 to-orange-500/20"
                       : "bg-gradient-to-br from-yellow-100 to-orange-100"
                   }`}>
-                    <span className="text-lg">🏆</span>
+                    <span className="text-lg">{getAwardIcon(modalHonor.title)}</span>
                   </div>
                   <div>
                     <h3 className={`text-lg sm:text-xl font-bold ${
