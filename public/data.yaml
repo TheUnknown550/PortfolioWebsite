@@ -466,13 +466,50 @@ profile:
           content: "Gained invaluable industry experience working with enterprise clients, understanding business requirements, and translating technical solutions into measurable business value. Developed professional communication skills, technical documentation standards, and client relationship management capabilities essential for successful technology consulting careers."
       achievements:
         - "Successfully delivered 3 major IoT projects on time and under budget"
-        - "Developed IoT solutions serving 50+ hectares of agricultural land"
-        - "Achieved 35% water consumption reduction in smart agriculture project"
-        - "Contributed to 25% operational efficiency improvement in manufacturing"
-        - "Received outstanding intern evaluation (9.2/10) from supervisor"
-        - "Presented solutions to 5+ enterprise clients"
         - "Developed reusable IoT frameworks adopted by company"
-        - "Earned permanent employment offer upon graduation"
+        - "Offered the opportunity to return for a subsequent summer internship."
+
+    - title: IsNear
+      years: 2024
+      date: 2024-05-01
+      description: IsNear is an innovative proximity-based social networking app designed to connect people based on their real-time location. By leveraging geolocation technology, IsNear allows users to discover and interact with others nearby, fostering spontaneous social interactions and community building. The app features a user-friendly interface, customizable profiles, and privacy controls to ensure a safe and enjoyable experience. Whether you're looking to make new friends, find local events, or simply explore your surroundings, IsNear provides a dynamic platform for real-world connections.
+      skills:
+        - Mobile App Development
+        - React Native
+        - UI/UX Design
+        - Geolocation Services
+        - Privacy & Security
+      duration: "6 months"
+      technologies:
+        - "JavaScript"
+        - "Google Maps API"
+        - "Node.js"
+        - "Express.js"
+        - "OAuth Authentication"
+        - "Push Notifications"
+        - "Agile Development"
+      tags:
+        - "social-networking"
+        - "mobile-app"
+        - "geolocation"
+        - "community-building"
+        - "privacy"
+      links:
+        - title: "IsNear Website"
+          url: "https://isnear.yungying.com/"
+          type: "website"
+      sections:
+        - title: "Real-Time Proximity Networking"
+          content: "IsNear utilizes advanced geolocation technology to enable users to discover and connect with others in their immediate vicinity. The app provides real-time updates on nearby users, allowing for spontaneous social interactions and community engagement."
+        - title: "User-Centric Design"
+          content: "The app features an intuitive and visually appealing interface, designed with user experience in mind. Customizable profiles, easy navigation, and interactive elements enhance user engagement and satisfaction."
+        - title: "Privacy & Security"
+          content: "IsNear prioritizes user privacy and security, implementing robust controls that allow users to manage their visibility and interactions. Features include customizable privacy settings, secure authentication, and data encryption to ensure a safe social networking environment."
+      achievements:
+        - "Developed a fully functional MVP with core features"
+        - "Conducted user testing with positive feedback on usability"
+        - "Presented at local tech meetups to gather community interest"
+
     - title: Physical Therapy with Motion Tracking (I-THANKe)
       years: 2021
       date: 2021-09-01
