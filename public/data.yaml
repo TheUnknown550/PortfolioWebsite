@@ -435,7 +435,7 @@ profile:
     - title: Summer Internship at TLIC – IoT & Project Management Intern
       years: 2025
       date: 2025-04-01
-      description: Comprehensive 3-month professional internship at Technology and Innovation Learning Center (TLIC), focusing on cutting-edge IoT system design, implementation, and project management in real-world industrial environments. Contributed to multiple high-impact automation projects serving diverse clients across manufacturing, agriculture, and smart city sectors. The experience provided hands-on exposure to enterprise-level IoT deployment, client relationship management, and cross-functional team collaboration in professional consulting environments.
+      description: Comprehensive 3-month professional internship at Technology and Innovation Learning Center (TLIC), focusing on cutting-edge IoT system design, implementation, and project management in real-world environments. Contributed to multiple high-impact automation projects within the Organization. The experience provided hands-on exposure to enterprise-level IoT deployment, and cross-functional team collaboration in professional consulting environments.
       skills:
         - Robotics & IoT
         - Project Management
@@ -897,7 +897,7 @@ roadmap:
       - Raspberry Pi
       - Home Assistant
       - Python
-    experience: Gained intensive professional experience in IoT ecosystem development and project management through hands-on industry internship. Contributed to real-world IoT system design, installation, and deployment projects while learning enterprise-level project coordination methodologies. This immersive experience bridged academic knowledge with practical industry applications, developing skills in Raspberry Pi programming, Home Assistant integration, and collaborative project execution in professional technology environments.
+    experience: Gained intensive professional experience in IoT ecosystem development and project management through hands-on industry internship. Contributed to real-world IoT system design, installation, and deployment projects. This immersive experience bridged academic knowledge with practical industry applications, developing skills in Raspberry Pi programming, Home Assistant integration, and collaborative project execution in professional technology environments.
   - title: Workshop on AI Driven Innovations in INDIA
     date: 2025-03-25
     category: workshop
