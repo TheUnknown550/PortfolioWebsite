@@ -273,6 +273,50 @@ profile:
         - "Patent pending for signal processing algorithm"
         - "Clinical validation with 500+ patient recordings"
         - "Selected for Intel AI Global Impact Festival"
+    - title: AI Trading System
+      years: 2025
+      date: 2025-09-12
+      description: An advanced AI-driven trading system designed to optimize investment strategies through machine learning algorithms. The system analyzes vast datasets, including historical price movements, market trends, and economic indicators, to make informed trading decisions. By leveraging reinforcement learning techniques, the AI continuously adapts to market changes, aiming to maximize returns while minimizing risks. The project showcases the integration of cutting-edge AI technologies in the financial sector, providing a scalable solution for both individual traders and institutional investors.
+      skills:
+        - AI Development
+        - Machine Learning
+        - Reinforcement Learning
+        - Data Analysis
+        - Python Programming
+        - Financial Modeling
+      duration: "6 months"
+      technologies:
+        - "Python"
+        - "Pandas"
+        - "NumPy"
+        - "Scikit-learn"
+        - "Matplotlib"
+      tags:
+        - "finance"
+        - "ai"
+        - "machine-learning"
+        - "trading"
+        - "investment"
+      links:
+        - title: "AI Trading System GitHub Repository"
+          url: "https://github.com/TheUnknown550/AI-Trading-System"
+          type: "code"
+      sections:
+        - title: "System Architecture"
+          content: "The AI Trading System is built on a modular architecture that includes data ingestion, preprocessing, model training, and execution components. The system utilizes APIs to fetch real-time market data and historical datasets for comprehensive analysis."
+        - title: "Machine Learning Models"
+          content: "The core of the system employs various machine learning models, including decision trees, random forests, and neural networks. Reinforcement learning algorithms are implemented to enable the AI to learn optimal trading strategies through trial and error."
+        - title: "Performance Evaluation"
+          content: "The system's performance is evaluated using backtesting techniques on historical data. Key metrics such as return on investment (ROI), Sharpe ratio, and maximum drawdown are analyzed to assess the effectiveness of the trading strategies."
+      achievements:
+        - "Developed 22 AI models for stocks, crypto, and forex assets"
+        - "Achieved 52.1% average model accuracy, outperforming random chance"
+        - "Implemented real-time portfolio monitoring with 30-second updates"
+        - "Automated trading cycles every 4 hours with robust error handling"
+        - "Integrated high-confidence filtering (65%+) for trade execution"
+        - "Maintained strict risk management with 20% position limits"
+        - "Built comprehensive documentation and usage guides"
+        - "Paper trading environment ensures safety and auditability"
     - title: Microsoft Imagine Cup World Championship Mentorship Program
       years: 2023
       date: 2023-07-15
@@ -968,3 +1012,35 @@ roadmap:
       - Coding/Programming
       - Game Design
     experience: I created MCXStudios as my personal game studio where I build and share my games. Whether it’s Roblox worlds or mobile apps, MCXStudios is the place where I bring my ideas to life, experiment with new mechanics, and showcase my growth as a developer.
+  - title: AI Trading System
+    date: 2025-09-12
+    category: project
+    skills:
+      - AI Development
+      - Basic Neural Networks
+      - Reinforcement Learning
+      - Financial Analysis
+      - Python
+      - Machine Learning
+      - scikit-learn
+      - yfinance
+      - pandas
+      - Algorithmic Trading
+      - Risk Management
+      - Real-time Systems
+      - Data Analysis
+      - Portfolio Management
+      - Automation
+    technologies:
+      - Python 3.9+
+      - scikit-learn
+      - yfinance
+      - pandas
+      - joblib
+      - numpy
+      - matplotlib
+      - Technical Analysis
+      - Paper Trading APIs
+      - Real-time Data Feeds
+      - Automated Workflows
+    experience: Developed a comprehensive AI-powered trading automation system with 22 trained models across stocks, crypto, and forex. Built professional-grade automation workflows with real-time portfolio monitoring, achieving 52.1% average model accuracy and $10,012.58 portfolio value with robust risk management. Implemented 4-hour trading cycles, real-time updates every 30 seconds, and comprehensive error handling for production-ready algorithmic trading. Features include high confidence filtering (65%+ trades only), maximum 20% position sizing, and complete audit trail logging.

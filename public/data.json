@@ -1,0 +1,125 @@
+{
+  "profile": {
+    "name": "Matt Tanthai Cosh",
+    "bio": "A determined and ambitious undergraduate, majoring in Information Systems and Networking Engineering (ISNE) at Chiang Mai University (CMU) with a strong foundation in engineering and technology, and a track record in innovative projects and competitions.",
+    "education": [
+      {
+        "institution": "Chiang Mai University",
+        "program": "Faculty of Engineering, Information System and Networking Engineering (ISNE) 3rd year Undergraduate",
+        "year": 2025,
+        "gpa": 3.83
+      },
+      {
+        "institution": "Prince Royal's College",
+        "program": "Gifted Computer Plus Program (GC+)",
+        "year": 2023,
+        "gpa": 3.80
+      }
+    ],
+    "skills": {
+      "hard": [
+        "Coding/Programming",
+        "Python",
+        "C/C++/C#",
+        "Java",
+        "JavaScript",
+        "AI Development",
+        "Machine Learning",
+        "Web Development",
+        "Database Management"
+      ],
+      "soft": [
+        "Project Management",
+        "Leadership",
+        "Problem Solving",
+        "Business Analysis",
+        "Presentation Skills"
+      ],
+      "languages": [
+        "Thai",
+        "English"
+      ]
+    },
+    "honors": [
+      {
+        "title": "Intel ® AI Global Impact Festival – Global Award Winner 2022",
+        "year": 2022,
+        "eventDescription": "Annual festival by Intel that spotlights AI-powered student innovations aimed at real-world impact.",
+        "myExperience": "As part of the 13–17 age category, I developed the CS-M Tool, an AI solution that won the Global Award.",
+        "images": []
+      },
+      {
+        "title": "Microsoft Imagine Cup 2023 – World Runner-up",
+        "year": 2023,
+        "eventDescription": "A global student tech competition hosted by Microsoft, showcasing projects with social or environmental impact.",
+        "myExperience": "As the core developer of CS-M Tool, I led software architecture and UI design. Our team placed 2nd globally.",
+        "images": []
+      }
+    ],
+    "projects": [
+      {
+        "title": "Cardiac Self-Monitoring Tool (CS-M Tool)",
+        "years": "2022-2023",
+        "description": "An AI-powered healthcare application designed to monitor cardiac health through advanced image processing and machine learning techniques.",
+        "skills": [
+          "Python",
+          "AI Development",
+          "Image Processing",
+          "Machine Learning",
+          "Healthcare Technology"
+        ],
+        "technologies": [
+          "Python",
+          "TensorFlow",
+          "OpenCV",
+          "YOLO",
+          "MediaPipe"
+        ]
+      },
+      {
+        "title": "AI Trading System",
+        "years": "2025",
+        "description": "Professional AI-powered trading automation with real-time portfolio monitoring, featuring 22 trained models across stocks, crypto, and forex.",
+        "skills": [
+          "Python",
+          "Machine Learning",
+          "Algorithmic Trading",
+          "Risk Management",
+          "Real-time Systems"
+        ],
+        "technologies": [
+          "Python 3.9+",
+          "scikit-learn",
+          "yfinance",
+          "pandas",
+          "joblib"
+        ]
+      }
+    ]
+  },
+  "roadmap": [
+    {
+      "title": "AI Trading System",
+      "date": "2025-09-12",
+      "category": "project",
+      "skills": [
+        "AI Development",
+        "Python",
+        "Machine Learning",
+        "Financial Analysis"
+      ],
+      "experience": "Developed a comprehensive AI-powered trading automation system with 22 trained models across stocks, crypto, and forex."
+    },
+    {
+      "title": "Intel ® AI Global Impact Festival – Global Award Winner",
+      "date": "2022-09-21",
+      "category": "competition",
+      "skills": [
+        "AI Development",
+        "Presentation",
+        "Innovation"
+      ],
+      "experience": "Developed the CS-M Tool, won the Global Award, and refined my pitch and technical communication under mentorship."
+    }
+  ]
+}
