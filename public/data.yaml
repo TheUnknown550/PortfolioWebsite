@@ -195,6 +195,18 @@ profile:
         - /Awards/FTC2022/FTC5.jpg
         - /Awards/FTC2022/FTCThrophy.jpg
         - /Awards/FTC2022/FTC1.jpg
+    - title: The 31st Tri-U International Joint Seminar & Symposium – Workshop Presentation Award
+      year: 2024
+      link: https://triu2024.eng.chula.ac.th/
+      eventDescription: An international academic symposium held in Japan bringing together students and researchers from leading universities across Asia to present and discuss cutting-edge research and innovations.
+      myExperience: I traveled to Japan to participate in this prestigious international symposium, where I presented my research and received the Certificate of Workshop Presentation Award. This experience enhanced my international presentation skills, cross-cultural collaboration abilities, and exposure to diverse research methodologies from top Asian universities. The event took place from September 22-26, 2024.
+      images: []
+    - title: Developing the Artificial Intelligence of Things (DAIoT) Workshop – Helsinki University
+      year: 2024
+      link: https://www.helsinki.fi/
+      eventDescription: An intensive hands-on workshop hosted at Helsinki University, Finland, focusing on the integration of Artificial Intelligence with Internet of Things technologies, taught by leading professors in the field.
+      myExperience: I traveled to Helsinki, Finland for an immersive 12-day workshop (September 29 - October 10, 2024) at one of Europe's top universities. Under the guidance of world-class professors, I gained hands-on experience in developing AIoT solutions, learning advanced integration techniques between AI algorithms and IoT devices. This international experience broadened my technical expertise in emerging technologies and provided invaluable exposure to European academic research standards.
+      images: []
     - title: FIRST Tech Challenge (FTC) 2023 – Best Engineering Design (Team Astraeus)
       year: 2023
       eventDescription: FTC is a global robotics competition for high school students, with regions leading up to world finals.
@@ -317,6 +329,103 @@ profile:
         - "Maintained strict risk management with 20% position limits"
         - "Built comprehensive documentation and usage guides"
         - "Paper trading environment ensures safety and auditability"
+    - title: Developing the Artificial Intelligence of Things (DAIoT) Workshop – Helsinki University
+      years: 2024
+      description: An intensive 12-day hands-on workshop at Helsinki University, Finland, one of Europe's leading research institutions. This immersive program provided comprehensive training in the integration of Artificial Intelligence with Internet of Things technologies under the guidance of world-class professors and researchers. The workshop covered advanced topics in AIoT system design, edge computing, sensor integration, machine learning deployment on embedded systems, and real-world implementation of intelligent IoT solutions. Gained invaluable international academic experience and exposure to cutting-edge European research methodologies in emerging technologies.
+      skills:
+        - AI Development
+        - IoT Development
+        - AIoT Integration
+        - Python Programming
+        - Embedded Systems
+        - Edge Computing
+        - Sensor Integration
+        - Machine Learning Deployment
+        - Research Methodology
+        - Technical Documentation
+        - International Collaboration
+        - Cross-cultural Communication
+      duration: "12 days"
+      technologies:
+        - "Python"
+        - "TensorFlow Lite"
+        - "IoT Frameworks"
+        - "Edge AI"
+        - "Raspberry Pi"
+        - "Arduino"
+        - "Sensor Networks"
+        - "MQTT Protocol"
+        - "Cloud Integration"
+        - "Data Analytics"
+      tags:
+        - "ai"
+        - "iot"
+        - "aiot"
+        - "workshop"
+        - "international"
+        - "education"
+        - "finland"
+        - "research"
+      images: []
+      sections:
+        - title: "Workshop Overview"
+          content: "Participated in an elite international workshop at Helsinki University, Finland, from September 29 to October 10, 2024. This intensive program brought together students and researchers from around the world to explore the convergence of Artificial Intelligence and Internet of Things technologies. Under the mentorship of leading European professors, gained hands-on experience in developing sophisticated AIoT systems that bridge the gap between intelligent algorithms and physical devices."
+        - title: "Technical Learning"
+          content: "Mastered advanced techniques for deploying machine learning models on resource-constrained IoT devices. Learned to design and implement edge computing solutions that enable real-time AI processing at the device level, reducing latency and bandwidth requirements. Explored sensor data acquisition, preprocessing, and integration with AI models for intelligent decision-making. Gained proficiency in optimizing AI algorithms for embedded systems and understanding the unique challenges of AIoT deployments."
+        - title: "International Experience"
+          content: "This experience provided invaluable exposure to European academic research standards and methodologies. Collaborated with peers from diverse backgrounds, enhancing cross-cultural communication and teamwork skills. Gained insights into international research practices, academic excellence standards, and the global landscape of AIoT innovation. The workshop strengthened my ability to work in multicultural environments and understand global perspectives on technology development."
+      achievements:
+        - "Completed intensive 12-day workshop at top European university"
+        - "Gained hands-on experience with AIoT system development"
+        - "Learned from world-class professors and researchers"
+        - "Developed practical skills in edge AI and IoT integration"
+        - "Enhanced international collaboration capabilities"
+        - "Exposure to European academic research standards"
+        - "Built professional network with global peers and mentors"
+    - title: The 31st Tri-U International Joint Seminar & Symposium – Workshop Presentation Award
+      years: 2024
+      description: International academic symposium bringing together top students and researchers from three leading Asian universities (Chulalongkorn University Thailand, Tongji University China, and Chiba University Japan) to present cutting-edge research and innovations. This prestigious event facilitated cross-cultural academic exchange, collaborative research discussions, and networking opportunities among Asia's brightest minds. Presented research work and received the Certificate of Workshop Presentation Award in recognition of outstanding presentation quality, research merit, and effective communication of complex technical concepts to an international audience.
+      skills:
+        - Research Presentation
+        - Academic Writing
+        - International Collaboration
+        - Cross-cultural Communication
+        - Technical Communication
+        - Public Speaking
+        - Research Methodology
+        - Peer Review
+        - Networking
+        - Scientific Discourse
+      duration: "5 days"
+      technologies:
+        - "Research Tools"
+        - "Presentation Software"
+        - "Data Visualization"
+        - "Academic Publishing"
+      tags:
+        - "research"
+        - "international"
+        - "symposium"
+        - "award"
+        - "japan"
+        - "presentation"
+        - "academic"
+      images: []
+      sections:
+        - title: "Symposium Experience"
+          content: "Traveled to Japan to participate in the 31st Tri-U International Joint Seminar & Symposium from September 22-26, 2024. This prestigious academic event gathered outstanding students and researchers from Chulalongkorn University (Thailand), Tongji University (China), and Chiba University (Japan). Presented research findings to an international audience of academics, researchers, and peers, engaging in meaningful scientific discourse and receiving constructive feedback from experts in various fields."
+        - title: "Presentation & Recognition"
+          content: "Delivered a comprehensive research presentation showcasing technical innovation, methodology, and findings. The presentation was recognized with the Certificate of Workshop Presentation Award, acknowledging excellence in research communication, clarity of technical concepts, and effective engagement with the international audience. This recognition validated the quality of research work and presentation skills in a competitive international academic setting."
+        - title: "International Academic Exchange"
+          content: "Gained invaluable exposure to diverse research methodologies and perspectives from leading Asian universities. Engaged in collaborative discussions with researchers from different cultural and academic backgrounds, broadening understanding of international research practices. Enhanced cross-cultural communication abilities and learned to effectively present complex technical concepts to audiences from various disciplines and countries. Built lasting professional relationships with peers and mentors from across Asia."
+      achievements:
+        - "Received Certificate of Workshop Presentation Award"
+        - "Presented research at international symposium in Japan"
+        - "Represented Chiang Mai University at prestigious Tri-U event"
+        - "Enhanced international presentation and communication skills"
+        - "Engaged with researchers from top Asian universities"
+        - "Demonstrated research excellence in competitive setting"
+        - "Built international academic network"
     - title: Microsoft Imagine Cup World Championship Mentorship Program
       years: 2023
       date: 2023-07-15
@@ -767,6 +876,26 @@ profile:
         - "Contributed to curriculum improvements"
 
 roadmap:
+  - title: Developing the Artificial Intelligence of Things (DAIoT) Workshop – Helsinki University
+    date: 2025-10-10
+    category: education
+    skills:
+      - AI Development
+      - IoT Development
+      - AIoT Integration
+      - Python
+      - Embedded Systems
+      - Research Methodology
+    experience: Completed an intensive 12-day workshop at Helsinki University, Finland, gaining hands-on experience in developing AIoT solutions under the guidance of world-class professors. Learned advanced integration techniques between AI algorithms and IoT devices, broadening technical expertise in emerging technologies and gaining exposure to European academic research standards.
+  - title: The 31st Tri-U International Joint Seminar & Symposium – Workshop Presentation Award
+    date: 2025-09-26
+    category: award
+    skills:
+      - Research Presentation
+      - International Collaboration
+      - Academic Writing
+      - Cross-cultural Communication
+    experience: Traveled to Japan to participate in this prestigious international symposium, presenting research and receiving the Certificate of Workshop Presentation Award. Enhanced international presentation skills, cross-cultural collaboration abilities, and gained exposure to diverse research methodologies from top Asian universities.
   - title: Physical Therapy with Motion Tracking (I-THANKe)
     date: 2021-09-01
     category: project
