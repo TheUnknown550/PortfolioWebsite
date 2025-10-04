@@ -329,6 +329,170 @@ profile:
         - "Maintained strict risk management with 20% position limits"
         - "Built comprehensive documentation and usage guides"
         - "Paper trading environment ensures safety and auditability"
+    - title: FlashVideoBot
+      years: 2025
+      description: A comprehensive Python application that automatically fetches the latest news from multiple sources and creates engaging, eye-catching videos optimized for YouTube-style retention. The bot generates short (15-30 second) videos with dynamic text animations, visual effects, and professional audio narration. This open-source project represents the intersection of news aggregation, video generation, and content automation, providing creators with a powerful tool to produce high-quality content efficiently.
+      skills:
+        - Python Programming
+        - Video Processing
+        - News API Integration
+        - Text-to-Speech
+        - Video Automation
+        - FFmpeg
+        - Content Creation
+        - API Development
+        - Open Source Development
+        - Media Processing
+        - YouTube Optimization
+        - Audio Processing
+      duration: "Ongoing"
+      technologies:
+        - "Python"
+        - "FFmpeg"
+        - "MoviePy"
+        - "Pillow (PIL)"
+        - "Requests"
+        - "BeautifulSoup"
+        - "News APIs"
+        - "Text-to-Speech APIs"
+        - "Video Codecs"
+        - "Audio Processing"
+      tags:
+        - "video-automation"
+        - "news-aggregation"
+        - "content-creation"
+        - "youtube"
+        - "open-source"
+        - "python"
+        - "media-processing"
+      links:
+        - title: "FlashVideoBot GitHub Repository"
+          url: "https://github.com/TheUnknown550/FlashVideoBot"
+          type: "code"
+      images: []
+      sections:
+        - title: "Automated Content Creation"
+          content: "FlashVideoBot revolutionizes content creation by automating the entire process from news gathering to video production. The system fetches breaking news from multiple reliable sources, processes the content for optimal engagement, and generates professional-quality videos with dynamic animations and voiceovers. This automation enables content creators to focus on strategy and distribution while maintaining consistent, high-quality output."
+        - title: "Technical Innovation"
+          content: "Built using advanced Python libraries and video processing frameworks, the bot employs sophisticated algorithms for text analysis, visual composition, and audio synchronization. The system uses FFmpeg for video encoding, MoviePy for scene composition, and integrates multiple APIs for news fetching and text-to-speech conversion. The modular architecture allows for easy customization and extension of features."
+        - title: "Open Source Impact"
+          content: "As an open-source project, FlashVideoBot democratizes access to professional video creation tools. The project aims to help content creators, news organizations, and educational institutions produce engaging video content without requiring extensive technical expertise or expensive software. The open-source nature encourages community contributions and continuous improvement."
+      achievements:
+        - "Automated end-to-end video production pipeline"
+        - "Integration with multiple news APIs for diverse content"
+        - "Professional-quality text animations and visual effects"
+        - "Optimized for YouTube retention and engagement"
+        - "Open-source contribution to content creation community"
+        - "Modular architecture for easy customization"
+        - "Real-time news processing and video generation"
+    - title: Puzzle-Book-Generator
+      years: 2025
+      description: An innovative automatic book creation system that generates puzzle books including mazes, sudoku, and various brain teasers for commercial distribution. This entrepreneurial project combines algorithmic puzzle generation with automated book formatting and publishing workflows, enabling scalable content creation for platforms like Amazon KDP and Etsy. The system demonstrates the intersection of algorithm design, commercial publishing, and digital entrepreneurship.
+      skills:
+        - Python Programming
+        - Algorithm Development
+        - Puzzle Generation
+        - PDF Generation
+        - Book Formatting
+        - Commercial Publishing
+        - Amazon KDP
+        - Etsy Marketplace
+        - Entrepreneurship
+        - Digital Marketing
+        - Content Automation
+        - Print-on-Demand
+      duration: "4 months"
+      technologies:
+        - "Python"
+        - "PDF Libraries (ReportLab/FPDF)"
+        - "Maze Generation Algorithms"
+        - "Sudoku Solvers"
+        - "PIL/Pillow"
+        - "Amazon KDP API"
+        - "Print Formatting"
+        - "Book Layout Design"
+      tags:
+        - "puzzle-generation"
+        - "book-publishing"
+        - "amazon-kdp"
+        - "etsy"
+        - "entrepreneurship"
+        - "automation"
+        - "commercial"
+      links:
+        - title: "Puzzle-Book-Generator GitHub Repository"
+          url: "https://github.com/TheUnknown550/Puzzle-Book-Generator"
+          type: "code"
+      images: []
+      sections:
+        - title: "Algorithmic Puzzle Generation"
+          content: "Developed sophisticated algorithms for generating various types of puzzles including recursive backtracking for maze creation, constraint satisfaction for sudoku generation, and pattern-based algorithms for word searches and crosswords. Each puzzle type employs optimized algorithms to ensure unique, solvable puzzles with appropriate difficulty levels. The system can generate thousands of unique puzzles with configurable complexity settings."
+        - title: "Commercial Publishing Pipeline"
+          content: "Built an end-to-end publishing workflow that transforms generated puzzles into professionally formatted books ready for print-on-demand platforms. The system handles page layout, typography, cover design, and PDF optimization for commercial printing standards. Integration with Amazon KDP and Etsy enables automated listing and inventory management for scalable business operations."
+        - title: "Entrepreneurial Success"
+          content: "This project demonstrates practical application of programming skills in a commercial context, combining technical innovation with business acumen. The automated system enables passive income generation through puzzle book sales while showcasing the potential of algorithm-driven content creation. The project represents successful digital entrepreneurship using technical skills."
+      achievements:
+        - "Automated puzzle book generation and formatting system"
+        - "Commercial sales on Amazon KDP and Etsy platforms"
+        - "Multiple puzzle types with difficulty scaling"
+        - "Professional print-ready PDF generation"
+        - "Scalable business model with passive income potential"
+        - "Integration with major publishing platforms"
+        - "Demonstrated entrepreneurial application of programming"
+    - title: OBS-Multi-User-Management-System
+      years: 2025
+      description: A sophisticated multi-user management system for OBS Studio developed during an internship at TLIC (Technology Learning and Innovation Center). This system addresses the critical need for isolated user environments in shared streaming facilities, particularly in EZMedia rooms where multiple organizations require access to OBS with distinct configurations. The project demonstrates advanced system architecture, user management, and broadcast technology integration.
+      skills:
+        - Python Programming
+        - System Architecture
+        - User Management
+        - OBS Studio Integration
+        - Database Design
+        - Authentication Systems
+        - Configuration Management
+        - Broadcast Technology
+        - Multi-tenancy
+        - Security Implementation
+        - API Development
+        - Internship Project Management
+      duration: "3 months"
+      technologies:
+        - "Python"
+        - "OBS Studio"
+        - "SQLite/PostgreSQL"
+        - "Authentication Libraries"
+        - "Configuration Management"
+        - "User Session Management"
+        - "File System Management"
+        - "Broadcasting APIs"
+      tags:
+        - "obs-studio"
+        - "multi-user"
+        - "broadcasting"
+        - "internship"
+        - "system-management"
+        - "configuration"
+        - "media"
+      links:
+        - title: "OBS-Multi-User-Management-System GitHub Repository"
+          url: "https://github.com/TheUnknown550/OBS-Multi-User-Management-System"
+          type: "code"
+      images: []
+      sections:
+        - title: "Multi-User Architecture"
+          content: "Designed and implemented a robust multi-user system that provides complete isolation between different organizations using the same OBS installation. Each user group maintains separate scene collections, sources, settings, and streaming configurations without interference. The system employs advanced session management and file system organization to ensure data security and configuration integrity across multiple concurrent users."
+        - title: "Practical Industry Application"
+          content: "Developed during internship at TLIC to solve real-world challenges in shared media production environments. The system enables efficient resource utilization in EZMedia rooms where multiple organizations need professional broadcasting capabilities. This solution eliminates configuration conflicts, reduces setup time, and ensures professional-quality streaming for all users while maintaining organizational privacy and customization."
+        - title: "Professional Development"
+          content: "This internship project provided hands-on experience in enterprise software development, requirements gathering from real stakeholders, and deployment in production environments. Working with TLIC mentors enhanced understanding of industry best practices, professional code standards, and collaborative development workflows. The project demonstrates ability to deliver practical solutions for complex organizational needs."
+      achievements:
+        - "Complete user isolation in shared OBS environments"
+        - "Secure configuration management for multiple organizations"
+        - "Professional internship project at TLIC"
+        - "Real-world deployment in EZMedia facilities"
+        - "Advanced session and authentication management"
+        - "Streamlined workflow for media production teams"
+        - "Industry-standard security and privacy implementation"
     - title: Developing the Artificial Intelligence of Things (DAIoT) Workshop – Helsinki University
       years: 2024
       description: An intensive 12-day hands-on workshop at Helsinki University, Finland, one of Europe's leading research institutions. This immersive program provided comprehensive training in the integration of Artificial Intelligence with Internet of Things technologies under the guidance of world-class professors and researchers. The workshop covered advanced topics in AIoT system design, edge computing, sensor integration, machine learning deployment on embedded systems, and real-world implementation of intelligent IoT solutions. Gained invaluable international academic experience and exposure to cutting-edge European research methodologies in emerging technologies.
@@ -876,6 +1040,17 @@ profile:
         - "Contributed to curriculum improvements"
 
 roadmap:
+  - title: FlashVideoBot
+    date: 2025-10-04
+    category: project
+    skills:
+      - Python Programming
+      - Video Processing
+      - News API Integration
+      - Content Automation
+      - FFmpeg
+      - Open Source Development
+    experience: Launched FlashVideoBot, a comprehensive Python application that automatically fetches news and creates engaging YouTube-optimized videos with dynamic animations and professional narration. This open-source project represents the intersection of news aggregation, video generation, and content automation, providing creators with powerful tools for efficient content production.
   - title: Developing the Artificial Intelligence of Things (DAIoT) Workshop – Helsinki University
     date: 2025-10-10
     category: education
@@ -896,6 +1071,28 @@ roadmap:
       - Academic Writing
       - Cross-cultural Communication
     experience: Traveled to Japan to participate in this prestigious international symposium, presenting research and receiving the Certificate of Workshop Presentation Award. Enhanced international presentation skills, cross-cultural collaboration abilities, and gained exposure to diverse research methodologies from top Asian universities.
+  - title: OBS-Multi-User-Management-System
+    date: 2025-03-20
+    category: project
+    skills:
+      - Python Programming
+      - System Architecture
+      - User Management
+      - OBS Studio Integration
+      - Database Design
+      - Internship Development
+    experience: Developed a sophisticated multi-user management system for OBS Studio during internship at TLIC. This system enables isolated user environments in shared streaming facilities, particularly useful in EZMedia rooms where multiple organizations require access to OBS with distinct configurations. The project demonstrates advanced system architecture and real-world problem-solving in professional environments.
+  - title: Puzzle-Book-Generator
+    date: 2025-08-20
+    category: project
+    skills:
+      - Python Programming
+      - Algorithm Development
+      - Puzzle Generation
+      - Commercial Publishing
+      - Amazon KDP
+      - Entrepreneurship
+    experience: Created an innovative automatic book creation system that generates puzzle books including mazes, sudoku, and brain teasers for commercial distribution on Amazon KDP and Etsy. This entrepreneurial project combines algorithmic puzzle generation with automated publishing workflows, demonstrating the intersection of programming skills and digital business.
   - title: Physical Therapy with Motion Tracking (I-THANKe)
     date: 2021-09-01
     category: project
