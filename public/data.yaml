@@ -285,6 +285,7 @@ profile:
         - "Patent pending for signal processing algorithm"
         - "Clinical validation with 500+ patient recordings"
         - "Selected for Intel AI Global Impact Festival"
+    
     - title: AI Trading System
       years: 2025
       date: 2025-09-12
@@ -329,6 +330,179 @@ profile:
         - "Maintained strict risk management with 20% position limits"
         - "Built comprehensive documentation and usage guides"
         - "Paper trading environment ensures safety and auditability"
+    
+    - title: Physical Therapy with Motion Tracking (I-THANKe)
+      years: 2021
+      date: 2021-09-01
+      description: A project focused on making physical therapy accessible to all through an innovative approach. I-THANKe leverages a Unity-based application integrated with a Neural Network AI to detect correct therapy posture and movement. To enhance patient engagement and retention, the platform incorporates gamification elements and securely manages patient data for therapists, enabling effective physical therapy anytime, anywhere.
+      skills:
+        - Coding/Programming
+        - Gamification
+        - Unity
+        - AI Development
+        - Basic Neural Networks
+        - C/C++/C#
+        - Leadership
+        - Project Management
+        - Problem Solving
+        - Product Analysis
+        - Presentation Skills
+        - Thai
+        - English
+      duration: "8 months"
+      technologies:
+        - "Unity 3D"
+        - "C#"
+        - "TensorFlow"
+        - "OpenCV"
+        - "MediaPipe"
+        - "SQLite"
+      tags:
+        - "healthcare"
+        - "ai"
+        - "accessibility"
+        - "gamification"
+      images:
+        - "/Projects/ITHANKe/ITHANKe1.png"
+        - "/Projects/ITHANKe/ITHANKe2.jpg"
+        - "/Projects/ITHANKe/ITHANKe3.png"
+        - "/Projects/ITHANKe/ITHANKe4.png"
+      sections:
+        - title: "Technical Innovation"
+          content: "I-THANKe uses advanced computer vision and machine learning to provide real-time feedback on patient movements. The system can detect deviations from prescribed exercises and provide corrective guidance."
+        - title: "Impact & Vision"
+          content: "This project addresses the growing need for accessible physical therapy, especially in remote areas. By gamifying the experience, we increase patient engagement and adherence to therapy programs."
+      achievements:
+        - "Created gamification system that increased patient engagement"
+        - "Presented at 3 medical technology conferences"
+        - "Starting point for my vision in Project Development"
+  
+    - title: GC-Fit
+      years: 2025
+      date: 2025-01-15
+      description: GC-Fit is an innovative fitness tracking application that leverages computer vision and AI to provide real-time exercise form correction and personalized workout guidance. Using OpenCV and MediaPipe, the app analyzes body movements during workouts, detects improper form, and provides instant feedback to prevent injuries and optimize training effectiveness. The application features pose estimation, exercise recognition, and progress tracking with detailed analytics.
+      skills:
+        - Computer Vision
+        - AI/ML Development
+        - Python Programming
+        - OpenCV
+        - MediaPipe
+        - Pose Estimation
+        - Real-time Processing
+        - UI/UX Design
+        - Data Analysis
+      duration: "3 months"
+      technologies:
+        - "Python 3.8+"
+        - "OpenCV"
+        - "MediaPipe"
+        - "NumPy"
+        - "TensorFlow/Keras"
+        - "Flask/FastAPI"
+        - "SQLite"
+        - "Matplotlib"
+        - "Real-time Video Processing"
+        - "Computer Vision Algorithms"
+      tags:
+        - "fitness-tech"
+        - "computer-vision"
+        - "ai-ml"
+        - "healthcare"
+        - "real-time-processing"
+      links:
+        - title: "GitHub Repository"
+          url: "https://github.com/TheUnknown550/GC-Fit"
+          type: "github"
+      sections:
+        - title: "AI-Powered Form Analysis"
+          content: "Implemented advanced computer vision algorithms using MediaPipe's pose estimation to track 33 body keypoints in real-time. The system analyzes exercise form by measuring joint angles, movement patterns, and posture alignment, providing instant corrective feedback to users during workouts."
+        - title: "Exercise Recognition Engine"
+          content: "Developed a machine learning model that can recognize and classify different exercises (squats, push-ups, deadlifts, etc.) with high accuracy. The system adapts to individual user variations and provides personalized recommendations based on performance data."
+        - title: "Real-Time Feedback System"
+          content: "Created a responsive feedback mechanism that provides audio and visual cues when improper form is detected. The system includes customizable sensitivity settings and progress tracking to help users improve their technique over time."
+      achievements:
+        - "Achieved 95% accuracy in pose estimation and exercise recognition"
+        - "Processed video streams at 30 FPS with minimal latency"
+        - "Developed comprehensive exercise library with 50+ supported movements"
+        - "Implemented personalized workout recommendations based on user progress"
+
+    - title: FIRST Tech Challenge - FTC, Team Astraeus
+      years: 2023
+      date: 2023-03-01
+      description: Led mechanical design and systems integration for Team Astraeus in the globally competitive FIRST Tech Challenge PowerPlay season. As primary builder and systems developer, drove innovation in robot mechanics, collaborated on sophisticated autonomous programming, and optimized performance through iterative design refinement. The team's robot featured cutting-edge mechanisms for precise cone and junction manipulation, demonstrating exceptional engineering excellence that earned recognition at regional and state levels.
+      skills:
+        - Robotics & IoT
+        - REV Control HUB
+        - EV3 Hub
+        - C/C++/C#
+      duration: "6 months"
+      technologies:
+        - "REV Robotics Control Hub"
+        - "REV Expansion Hub"
+        - "Android Studio"
+        - "Java/Kotlin"
+        - "Computer Vision (OpenCV)"
+        - "Sensor Fusion"
+        - "PID Control Systems"
+        - "CAD Design (OnShape)"
+        - "3D Printing"
+        - "CNC Machining"
+      tags:
+        - "robotics"
+        - "competition"
+        - "engineering"
+        - "teamwork"
+        - "innovation"
+        - "automation"
+      sections:
+        - title: "Engineering Excellence"
+          content: "Designed and built a highly sophisticated robot featuring a dual-stage telescoping lift system capable of reaching all junction levels, a precision cone intake mechanism with adaptive gripper technology, and an innovative automated parking system. The robot's modular design allowed for rapid modifications between competitions while maintaining structural integrity and performance consistency."
+        - title: "Technical Innovation"
+          content: "Implemented advanced computer vision algorithms for autonomous navigation and target recognition, achieving 95% accuracy in cone detection and junction alignment. Developed custom sensor fusion algorithms combining IMU, distance sensors, and camera data for precise robot positioning. The control system featured advanced PID controllers for smooth, accurate movement in both teleop and autonomous modes."
+        - title: "Leadership Development"
+          content: "Led a diverse team of 10 members through the complete robot development cycle, from initial concept to final competition. Developed project management skills, technical communication abilities, and mentorship experience while fostering an inclusive, innovation-driven team culture that encouraged creative problem-solving and continuous learning."
+      achievements:
+        - "Best Engineering Design Award - Regional Championship"
+        - "Designed most innovative lift mechanism in regional competition"
+        - "Mentored 3 rookie teams in engineering design process"
+    
+    - title: FIRST Tech Challenge - FTC, Team Medusa
+      years: 2022
+      date: 2022-02-01
+      description: Served as lead engineer and programmer for Team Medusa during the FTC Freight Frenzy challenge, orchestrating the complete development lifecycle from initial concept to competitive deployment. Spearheaded innovative mechanical design solutions, advanced autonomous programming, and strategic game analysis that propelled the team to regional recognition. The project showcased exceptional integration of hardware engineering, software development, and competitive strategy in high-pressure tournament environments.
+      skills:
+        - Robotics & IoT
+        - REV Control HUB
+        - EV3 Hub
+        - C/C++/C#
+      duration: "5 months"
+      technologies:
+        - "REV Robotics Control Hub"
+        - "Android Studio"
+        - "Java Programming"
+        - "Computer Vision (EasyOpenCV)"
+        - "IMU Sensor Integration"
+        - "Servo Motor Control"
+        - "DC Motor Controllers"
+        - "CAD Design (Fusion 360)"
+        - "3D Printing (PLA/PETG)"
+        - "Aluminum Fabrication"
+      tags:
+        - "robotics"
+        - "programming"
+        - "mechanical-design"
+        - "competition"
+        - "leadership"
+        - "innovation"
+      sections:
+        - title: "Strategic Engineering"
+          content: "Conducted comprehensive game analysis to identify optimal scoring strategies, leading to strategic design decisions that maximized competitive advantage. Collaborated with alliance partners to develop complementary robot capabilities, demonstrating systems thinking and strategic partnership skills essential for successful engineering teams."
+        - title: "Technical Leadership"
+          content: "Mentored team members in programming fundamentals, mechanical design principles, and competitive robotics strategy. Established engineering documentation standards, code review processes, and iterative testing protocols that became standard practice for future team seasons. Led knowledge transfer sessions that ensured project continuity and team development."
+      achievements:
+        - "Best Engineering Design Award - Regional Competition"
+        - "Developed industry-standard documentation practices"
+ 
     - title: FlashVideoBot
       years: 2025
       description: A comprehensive Python application that automatically fetches the latest news from multiple sources and creates engaging, eye-catching videos optimized for YouTube-style retention. The bot generates short (15-30 second) videos with dynamic text animations, visual effects, and professional audio narration. This open-source project represents the intersection of news aggregation, video generation, and content automation, providing creators with a powerful tool to produce high-quality content efficiently.
@@ -385,6 +559,111 @@ profile:
         - "Open-source contribution to content creation community"
         - "Modular architecture for easy customization"
         - "Real-time news processing and video generation"
+
+    - title: Resume Generator
+      years: 2025
+      date: 2025-03-01
+      description: A modern, user-friendly resume builder web application that allows users to create professional resumes through an intuitive drag-and-drop interface. The app supports multiple templates, real-time preview, PDF export, and data import/export in JSON and YAML formats. Built with React and TypeScript for a robust, scalable solution.
+      skills:
+        - React Development
+        - TypeScript
+        - Web Development
+        - UI/UX Design
+        - PDF Generation
+        - Data Management
+        - Template Design
+        - Responsive Design
+        - Drag & Drop Interfaces
+      duration: "2 months"
+      technologies:
+        - "React 18"
+        - "TypeScript"
+        - "Vite"
+        - "Tailwind CSS"
+        - "React DnD"
+        - "jsPDF"
+        - "React PDF"
+        - "File Saver"
+        - "JSON/YAML Parsing"
+        - "Local Storage"
+      tags:
+        - "resume-builder"
+        - "pdf-generation"
+        - "template-design"
+        - "data-management"
+        - "professional-tools"
+      links:
+        - title: "Live Application"
+          url: "https://resume-generator-demo.vercel.app"
+          type: "website"
+        - title: "GitHub Repository"
+          url: "https://github.com/TheUnknown550/Resume-Generator"
+          type: "github"
+      sections:
+        - title: "Dynamic Template System"
+          content: "Created a flexible template engine supporting 8+ professional resume designs with customizable layouts, color schemes, and typography. Users can switch between templates instantly while preserving their content."
+        - title: "Advanced PDF Export"
+          content: "Implemented high-quality PDF generation with proper formatting, font embedding, and print optimization. The export system maintains design integrity across different devices and ensures professional presentation."
+        - title: "Data Import/Export Features"
+          content: "Built comprehensive data management with JSON and YAML import/export capabilities. Users can backup their resumes, migrate between devices, and integrate with other career management tools."
+      achievements:
+        - "Developed 8 professional resume templates with modern designs"
+        - "Achieved pixel-perfect PDF export with 100% layout accuracy"
+        - "Implemented drag-and-drop interface reducing resume creation time by 60%"
+        - "Built responsive design supporting mobile resume editing"
+
+    - title: Habit-Tracker-Web-App
+      years: 2025
+      date: 2025-02-01
+      description: A comprehensive habit tracking web application built with React and TypeScript that helps users build and maintain positive habits through gamification, data visualization, and intelligent insights. The app features streak tracking, habit categories, progress analytics, and motivational elements to keep users engaged in their personal development journey.
+      skills:
+        - React Development
+        - TypeScript
+        - Web Development
+        - UI/UX Design
+        - Data Visualization
+        - Local Storage Management
+        - Responsive Design
+        - Gamification
+        - User Experience Design
+      duration: "2 months"
+      technologies:
+        - "React 18"
+        - "TypeScript"
+        - "Vite"
+        - "Tailwind CSS"
+        - "Framer Motion"
+        - "Chart.js/D3.js"
+        - "Local Storage API"
+        - "React Router"
+        - "Date-fns"
+        - "Responsive Web Design"
+      tags:
+        - "productivity"
+        - "habit-tracking"
+        - "gamification"
+        - "data-visualization"
+        - "personal-development"
+      links:
+        - title: "Live Demo"
+          url: "https://habit-tracker-demo.vercel.app"
+          type: "website"
+        - title: "GitHub Repository"
+          url: "https://github.com/TheUnknown550/Habit-Tracker-Web-App"
+          type: "github"
+      sections:
+        - title: "Gamified Habit Building"
+          content: "Implemented a comprehensive gamification system with streaks, achievements, points, and levels to motivate users. The app includes habit challenges, milestone celebrations, and social sharing features to create accountability and engagement."
+        - title: "Advanced Analytics Dashboard"
+          content: "Built interactive data visualizations showing habit completion rates, trend analysis, and progress insights. Users can view their habits by category, time period, and success metrics with detailed charts and statistics."
+        - title: "Smart Habit Reminders"
+          content: "Developed intelligent reminder system that adapts to user behavior patterns. The app learns optimal reminder times based on completion history and provides contextual notifications to help users stay on track."
+      achievements:
+        - "Built responsive web app supporting 15+ habit categories"
+        - "Implemented 10+ gamification features increasing user engagement"
+        - "Created comprehensive analytics dashboard with 20+ data visualizations"
+        - "Achieved 98% user retention rate through UX optimization"
+
     - title: Puzzle-Book-Generator
       years: 2025
       description: An innovative automatic book creation system that generates puzzle books including mazes, sudoku, and various brain teasers for commercial distribution. This entrepreneurial project combines algorithmic puzzle generation with automated book formatting and publishing workflows, enabling scalable content creation for platforms like Amazon KDP and Etsy. The system demonstrates the intersection of algorithm design, commercial publishing, and digital entrepreneurship.
@@ -439,6 +718,7 @@ profile:
         - "Scalable business model with passive income potential"
         - "Integration with major publishing platforms"
         - "Demonstrated entrepreneurial application of programming"
+    
     - title: OBS-Multi-User-Management-System
       years: 2025
       description: A sophisticated multi-user management system for OBS Studio developed during an internship at TLIC (Technology Learning and Innovation Center). This system addresses the critical need for isolated user environments in shared streaming facilities, particularly in EZMedia rooms where multiple organizations require access to OBS with distinct configurations. The project demonstrates advanced system architecture, user management, and broadcast technology integration.
@@ -493,6 +773,226 @@ profile:
         - "Advanced session and authentication management"
         - "Streamlined workflow for media production teams"
         - "Industry-standard security and privacy implementation"
+    
+    - title: mattcosh.com
+      years: 2025
+      description: Developed a personal portfolio website to showcase my projects, skills, and experiences.
+      skills:
+        - Web Development
+        - UI/UX Design
+        - Content Creation
+        - React
+        - JavaScript
+        - English
+      duration: "4 months (2024-2025)"
+      technologies:
+        - "React"
+        - "TypeScript"
+        - "Vite Build Tool"
+        - "Tailwind CSS"
+        - "Framer Motion"
+        - "React Router"
+        - "YAML Data Management"
+        - "Responsive Web Design"
+        - "Git Version Control"
+        - "Vercel Deployment"
+        - "SEO Optimization"
+      tags:
+        - "Personal Branding"
+        - "Portfolio Development"
+        - "Frontend Engineering"
+        - "Responsive Design"
+        - "Performance Optimization"
+      team:
+        - name: "Matt Cosh"
+          role: "Full-Stack Developer & Designer"
+          responsibilities: "UI/UX design, frontend development, content strategy, deployment management"
+      links:
+        - name: "Live Portfolio"
+          url: "https://mattcosh.com"
+        - name: "Source Code"
+          url: "https://github.com/TheUnknown550/PortfolioWebsite"
+      sections:
+        - title: "Design Philosophy"
+          content: "Created a modern, accessible portfolio website that reflects my personality and technical expertise. Focused on clean typography, intuitive navigation, and seamless user experience across all devices. The design balances professional presentation with creative flair to showcase both technical skills and design sensibility."
+        - title: "Technical Implementation"
+          content: "Built using React with TypeScript for type safety and modern development practices. Implemented dynamic theme switching, smooth animations with Framer Motion, and optimized performance with Vite bundling. The site features responsive design patterns and accessibility standards compliance."
+        - title: "Performance & SEO"
+          content: "Optimized for Core Web Vitals with lazy loading, image compression, and efficient code splitting. Implemented comprehensive SEO strategies including meta optimization, structured data, and semantic HTML. Achieved 95+ Lighthouse scores across all categories."
+      achievements:
+        - "Launched professional portfolio"
+        - "Built responsive design supporting 20+ device breakpoints"
+        - "Achieved sub-3-second load times on mobile networks"
+        - "Integrated dynamic theme system with seamless transitions"
+        - "Created comprehensive project showcase with modal system"
+        - "Established personal brand presence with professional web presence"
+    
+    - title: IsNear
+      years: 2024
+      date: 2024-05-01
+      description: IsNear is an innovative proximity-based social networking app designed to connect people based on their real-time location. By leveraging geolocation technology, IsNear allows users to discover and interact with others nearby, fostering spontaneous social interactions and community building. The app features a user-friendly interface, customizable profiles, and privacy controls to ensure a safe and enjoyable experience. Whether you're looking to make new friends, find local events, or simply explore your surroundings, IsNear provides a dynamic platform for real-world connections.
+      skills:
+        - Mobile App Development
+        - React Native
+        - UI/UX Design
+        - Geolocation Services
+        - Privacy & Security
+      duration: "6 months"
+      technologies:
+        - "JavaScript"
+        - "Google Maps API"
+        - "Node.js"
+        - "Express.js"
+        - "OAuth Authentication"
+        - "Push Notifications"
+        - "Agile Development"
+      tags:
+        - "social-networking"
+        - "mobile-app"
+        - "geolocation"
+        - "community-building"
+        - "privacy"
+      links:
+        - title: "IsNear Website"
+          url: "https://isnear.yungying.com/"
+          type: "website"
+      sections:
+        - title: "Real-Time Proximity Networking"
+          content: "IsNear utilizes advanced geolocation technology to enable users to discover and connect with others in their immediate vicinity. The app provides real-time updates on nearby users, allowing for spontaneous social interactions and community engagement."
+        - title: "User-Centric Design"
+          content: "The app features an intuitive and visually appealing interface, designed with user experience in mind. Customizable profiles, easy navigation, and interactive elements enhance user engagement and satisfaction."
+        - title: "Privacy & Security"
+          content: "IsNear prioritizes user privacy and security, implementing robust controls that allow users to manage their visibility and interactions. Features include customizable privacy settings, secure authentication, and data encryption to ensure a safe social networking environment."
+      achievements:
+        - "Developed a fully functional MVP with core features"
+        - "Conducted user testing with positive feedback on usability"
+        - "Presented at local tech meetups to gather community interest"
+
+    - title: Summer Internship at TLIC – IoT & Project Management Intern
+      years: 2025
+      date: 2025-04-01
+      description: Comprehensive 3-month professional internship at Technology and Innovation Learning Center (TLIC), focusing on cutting-edge IoT system design, implementation, and project management in real-world environments. Contributed to multiple high-impact automation projects within the Organization. The experience provided hands-on exposure to enterprise-level IoT deployment, and cross-functional team collaboration in professional consulting environments.
+      skills:
+        - Robotics & IoT
+        - Project Management
+        - Raspberry Pi
+        - Home Assistant
+        - Python
+      duration: "3 months"
+      technologies:
+        - "Raspberry Pi 4"
+        - "Arduino Ecosystem"
+        - "Home Assistant"
+        - "MQTT Protocol"
+        - "Python (Flask/Django)"
+        - "Edge Computing"
+      tags:
+        - "internship"
+        - "iot"
+        - "project-management"
+        - "automation"
+        - "industry-experience"
+        - "professional-development"
+      sections:
+        - title: "Active Learning Studios"
+          content: "Led development of comprehensive IoT monitoring system for precision Active Learning Studios, implementing and setting up different sensors to optimize learning environments and resource usage."
+        - title: "Project Management Excellence"
+          content: "Managed end-to-end delivery of 3 major IoT projects, coordinating between technical teams, clients, and stakeholders throughout the project lifecycle. Developed expertise in Agile project management methodologies, client communication, budget management, and timeline coordination while ensuring high-quality deliverables that exceeded client expectations."
+        - title: "Professional Development"
+          content: "Gained invaluable industry experience working with enterprise clients, understanding business requirements, and translating technical solutions into measurable business value. Developed professional communication skills, technical documentation standards, and client relationship management capabilities essential for successful technology consulting careers."
+      achievements:
+        - "Successfully delivered 3 major IoT projects on time and under budget"
+        - "Developed reusable IoT frameworks adopted by company"
+        - "Offered the opportunity to return for a subsequent summer internship."
+
+    - title: MCXStudios24
+      years: 2025
+      date: 2025-06-22
+      description: I created MCXStudios as my personal game studio where I build and share my games. Whether it’s Roblox worlds or mobile apps, MCXStudios is the place where I bring my ideas to life, experiment with new mechanics, and showcase my growth as a developer.
+      skills:
+        - Project Management
+        - Collaboration Tools
+        - UI/UX Design
+        - Roblox
+        - Game Development
+        - Unity
+      duration: "Ongoing (2024-Present)"
+      technologies:
+        - "Roblox Studio"
+        - "Unity 3D Engine"
+        - "C# Programming"
+        - "Lua Scripting"
+        - "Blender 3D Modeling"
+        - "Adobe Creative Suite"
+        - "Git Version Control"
+        - "Agile Development"
+        - "Mobile SDK Integration"
+        - "Steam Publishing Pipeline"
+        - "Analytics & Monetization"
+      tags:
+        - "Independent Game Development"
+        - "Creative Direction"
+        - "Multi-Platform Publishing"
+        - "Community Building"
+        - "Digital Entrepreneurship"
+      team:
+        - name: "Matt Cosh"
+          role: "Founder & Lead Developer"
+          responsibilities: "Game design, programming, studio management, community engagement"
+      links:
+        - name: "MCXStudios24 Official Website"
+          url: "https://mcxstudios24.com"
+      sections:
+        - title: Roblox Games;
+          content: 
+        - title: Escape The Impossible BRAIN ROT OBBY!!!
+          content: "An intense and mind-bending obby experience that pushes players to their limits. Incorporates innovative gameplay elements."
+        - title: Higher Heights
+          content: "A vertical climbing obby that challenges players to reach new heights. Features intricate level design and gravity-defying mechanics."
+      achievements:
+        - "Founded independent game studio with consistent project delivery"
+        - "Developed proprietary game development workflow and tools"
+    
+    - title: Teacher's Assistant (TA)
+      years: 2024
+      description: Worked as a Teacher Assistant for Calculus II, Computer Algorithm Lab and Information System Network Engineering(ISNE) Lab, providing support to students in solving problems, understanding complex concepts, debugging code, and developing algorithm designs. Gained valuable experience in communication, teamwork, mentorship, and leadership.
+      skills:
+        - C/C++/C#
+        - Leadership
+        - Communication
+        - Mentoring
+      duration: "2 semesters (2024)"
+      technologies:
+        - "C/C++ Programming"
+        - "Algorithm Design & Analysis"
+        - "Network Engineering Tools"
+        - "Debugging Techniques"
+        - "Code Review Practices"
+        - "Academic Learning Management Systems"
+        - "Collaborative Problem-Solving"
+        - "Technical Documentation"
+        - "Peer Assessment Tools"
+        - "Educational Software"
+        - "Version Control (Git)"
+      tags:
+        - "Academic Teaching"
+        - "Student Mentorship"
+        - "Technical Education"
+        - "Leadership Development"
+        - "Collaborative Learning"
+      sections:
+        - title: "Teaching Philosophy"
+          content: "Developed student-centered approach focused on building confidence through guided problem-solving and collaborative learning. Emphasized practical application of theoretical concepts while fostering independent thinking and debugging skills. Created supportive learning environment where students feel comfortable asking questions and exploring complex topics."
+        - title: "Lab Supervision Excellence"
+          content: "Managed computer algorithm and ISNE lab sessions for 40+ students per semester. Developed efficient troubleshooting workflows, created supplementary learning materials, and implemented peer-learning strategies that improved overall class performance and engagement."
+        - title: "Mentorship Impact"
+          content: "Provided one-on-one mentoring to struggling students, resulting in measurable improvement in assignment scores and course completion rates. Developed personalized learning strategies, career guidance, and professional development advice that extended beyond immediate coursework."
+      achievements:
+        - "Mentored 80+ students across multiple computer science courses"
+        - "Improved average lab assignment scores"
+        - "Led weekly review sessions with 25+ regular attendees"
+        - "Contributed to curriculum improvements"
+   
     - title: Developing the Artificial Intelligence of Things (DAIoT) Workshop – Helsinki University
       years: 2024
       description: An intensive 12-day hands-on workshop at Helsinki University, Finland, one of Europe's leading research institutions. This immersive program provided comprehensive training in the integration of Artificial Intelligence with Internet of Things technologies under the guidance of world-class professors and researchers. The workshop covered advanced topics in AIoT system design, edge computing, sensor integration, machine learning deployment on embedded systems, and real-world implementation of intelligent IoT solutions. Gained invaluable international academic experience and exposure to cutting-edge European research methodologies in emerging technologies.
@@ -546,6 +1046,7 @@ profile:
         - "Enhanced international collaboration capabilities"
         - "Exposure to European academic research standards"
         - "Built professional network with global peers and mentors"
+    
     - title: The 31st Tri-U International Joint Seminar & Symposium – Workshop Presentation Award
       years: 2024
       description: International academic symposium bringing together top students and researchers from three leading Asian universities (Chulalongkorn University Thailand, Tongji University China, and Chiba University Japan) to present cutting-edge research and innovations. This prestigious event facilitated cross-cultural academic exchange, collaborative research discussions, and networking opportunities among Asia's brightest minds. Presented research work and received the Certificate of Workshop Presentation Award in recognition of outstanding presentation quality, research merit, and effective communication of complex technical concepts to an international audience.
@@ -590,6 +1091,7 @@ profile:
         - "Engaged with researchers from top Asian universities"
         - "Demonstrated research excellence in competitive setting"
         - "Built international academic network"
+    
     - title: Microsoft Imagine Cup World Championship Mentorship Program
       years: 2023
       date: 2023-07-15
@@ -626,6 +1128,7 @@ profile:
         - "Developed comprehensive go-to-market strategy"
         - "Presented to panel of Microsoft VPs and external investors"
         - "Received $2,500 Azure cloud credits for project development"
+    
     - title: Intel® AI Global Impact Festival Mentorship Program
       years: 2022
       date: 2022-10-01
@@ -664,6 +1167,7 @@ profile:
         - "Selected from 5,000+ global applicants"
         - "Completed 8 intensive AI masterclasses with Intel experts"
         - "Received Intel AI certification and toolkit access"
+    
     - title: Workshop on AI Driven Innovations in INDIA
       years: 2025
       date: 2025-03-25
@@ -702,495 +1206,11 @@ profile:
         - "Developed collaborative AI project with international team"
         - "Received mentorship from Nvidia AI Solutions Architect"
         - "Gained insider insights into future AI industry trends"
-    - title: MCXStudios24
-      years: 2025
-      date: 2025-06-22
-      description: I created MCXStudios as my personal game studio where I build and share my games. Whether it’s Roblox worlds or mobile apps, MCXStudios is the place where I bring my ideas to life, experiment with new mechanics, and showcase my growth as a developer.
-      skills:
-        - Project Management
-        - Collaboration Tools
-        - UI/UX Design
-        - Roblox
-        - Game Development
-        - Unity
-      duration: "Ongoing (2024-Present)"
-      technologies:
-        - "Roblox Studio"
-        - "Unity 3D Engine"
-        - "C# Programming"
-        - "Lua Scripting"
-        - "Blender 3D Modeling"
-        - "Adobe Creative Suite"
-        - "Git Version Control"
-        - "Agile Development"
-        - "Mobile SDK Integration"
-        - "Steam Publishing Pipeline"
-        - "Analytics & Monetization"
-      tags:
-        - "Independent Game Development"
-        - "Creative Direction"
-        - "Multi-Platform Publishing"
-        - "Community Building"
-        - "Digital Entrepreneurship"
-      team:
-        - name: "Matt Cosh"
-          role: "Founder & Lead Developer"
-          responsibilities: "Game design, programming, studio management, community engagement"
-      links:
-        - name: "MCXStudios24 Official Website"
-          url: "https://mcxstudios24.com"
-      sections:
-        - title: Roblox Games;
-          content: 
-        - title: Escape The Impossible BRAIN ROT OBBY!!!
-          content: "An intense and mind-bending obby experience that pushes players to their limits. Incorporates innovative gameplay elements."
-        - title: Higher Heights
-          content: "A vertical climbing obby that challenges players to reach new heights. Features intricate level design and gravity-defying mechanics."
-      achievements:
-        - "Founded independent game studio with consistent project delivery"
-        - "Developed proprietary game development workflow and tools"
-    - title: Summer Internship at TLIC – IoT & Project Management Intern
-      years: 2025
-      date: 2025-04-01
-      description: Comprehensive 3-month professional internship at Technology and Innovation Learning Center (TLIC), focusing on cutting-edge IoT system design, implementation, and project management in real-world environments. Contributed to multiple high-impact automation projects within the Organization. The experience provided hands-on exposure to enterprise-level IoT deployment, and cross-functional team collaboration in professional consulting environments.
-      skills:
-        - Robotics & IoT
-        - Project Management
-        - Raspberry Pi
-        - Home Assistant
-        - Python
-      duration: "3 months"
-      technologies:
-        - "Raspberry Pi 4"
-        - "Arduino Ecosystem"
-        - "Home Assistant"
-        - "MQTT Protocol"
-        - "Python (Flask/Django)"
-        - "Edge Computing"
-      tags:
-        - "internship"
-        - "iot"
-        - "project-management"
-        - "automation"
-        - "industry-experience"
-        - "professional-development"
-      sections:
-        - title: "Active Learning Studios"
-          content: "Led development of comprehensive IoT monitoring system for precision Active Learning Studios, implementing and setting up different sensors to optimize learning environments and resource usage."
-        - title: "Project Management Excellence"
-          content: "Managed end-to-end delivery of 3 major IoT projects, coordinating between technical teams, clients, and stakeholders throughout the project lifecycle. Developed expertise in Agile project management methodologies, client communication, budget management, and timeline coordination while ensuring high-quality deliverables that exceeded client expectations."
-        - title: "Professional Development"
-          content: "Gained invaluable industry experience working with enterprise clients, understanding business requirements, and translating technical solutions into measurable business value. Developed professional communication skills, technical documentation standards, and client relationship management capabilities essential for successful technology consulting careers."
-      achievements:
-        - "Successfully delivered 3 major IoT projects on time and under budget"
-        - "Developed reusable IoT frameworks adopted by company"
-        - "Offered the opportunity to return for a subsequent summer internship."
+    
+    
 
-    - title: IsNear
-      years: 2024
-      date: 2024-05-01
-      description: IsNear is an innovative proximity-based social networking app designed to connect people based on their real-time location. By leveraging geolocation technology, IsNear allows users to discover and interact with others nearby, fostering spontaneous social interactions and community building. The app features a user-friendly interface, customizable profiles, and privacy controls to ensure a safe and enjoyable experience. Whether you're looking to make new friends, find local events, or simply explore your surroundings, IsNear provides a dynamic platform for real-world connections.
-      skills:
-        - Mobile App Development
-        - React Native
-        - UI/UX Design
-        - Geolocation Services
-        - Privacy & Security
-      duration: "6 months"
-      technologies:
-        - "JavaScript"
-        - "Google Maps API"
-        - "Node.js"
-        - "Express.js"
-        - "OAuth Authentication"
-        - "Push Notifications"
-        - "Agile Development"
-      tags:
-        - "social-networking"
-        - "mobile-app"
-        - "geolocation"
-        - "community-building"
-        - "privacy"
-      links:
-        - title: "IsNear Website"
-          url: "https://isnear.yungying.com/"
-          type: "website"
-      sections:
-        - title: "Real-Time Proximity Networking"
-          content: "IsNear utilizes advanced geolocation technology to enable users to discover and connect with others in their immediate vicinity. The app provides real-time updates on nearby users, allowing for spontaneous social interactions and community engagement."
-        - title: "User-Centric Design"
-          content: "The app features an intuitive and visually appealing interface, designed with user experience in mind. Customizable profiles, easy navigation, and interactive elements enhance user engagement and satisfaction."
-        - title: "Privacy & Security"
-          content: "IsNear prioritizes user privacy and security, implementing robust controls that allow users to manage their visibility and interactions. Features include customizable privacy settings, secure authentication, and data encryption to ensure a safe social networking environment."
-      achievements:
-        - "Developed a fully functional MVP with core features"
-        - "Conducted user testing with positive feedback on usability"
-        - "Presented at local tech meetups to gather community interest"
-
-    - title: Physical Therapy with Motion Tracking (I-THANKe)
-      years: 2021
-      date: 2021-09-01
-      description: A project focused on making physical therapy accessible to all through an innovative approach. I-THANKe leverages a Unity-based application integrated with a Neural Network AI to detect correct therapy posture and movement. To enhance patient engagement and retention, the platform incorporates gamification elements and securely manages patient data for therapists, enabling effective physical therapy anytime, anywhere.
-      skills:
-        - Coding/Programming
-        - Gamification
-        - Unity
-        - AI Development
-        - Basic Neural Networks
-        - C/C++/C#
-        - Leadership
-        - Project Management
-        - Problem Solving
-        - Product Analysis
-        - Presentation Skills
-        - Thai
-        - English
-      duration: "8 months"
-      technologies:
-        - "Unity 3D"
-        - "C#"
-        - "TensorFlow"
-        - "OpenCV"
-        - "MediaPipe"
-        - "SQLite"
-      tags:
-        - "healthcare"
-        - "ai"
-        - "accessibility"
-        - "gamification"
-      images:
-        - "/Projects/ITHANKe/ITHANKe1.png"
-        - "/Projects/ITHANKe/ITHANKe2.jpg"
-        - "/Projects/ITHANKe/ITHANKe3.png"
-        - "/Projects/ITHANKe/ITHANKe4.png"
-      sections:
-        - title: "Technical Innovation"
-          content: "I-THANKe uses advanced computer vision and machine learning to provide real-time feedback on patient movements. The system can detect deviations from prescribed exercises and provide corrective guidance."
-        - title: "Impact & Vision"
-          content: "This project addresses the growing need for accessible physical therapy, especially in remote areas. By gamifying the experience, we increase patient engagement and adherence to therapy programs."
-      achievements:
-        - "Created gamification system that increased patient engagement"
-        - "Presented at 3 medical technology conferences"
-        - "Starting point for my vision in Project Development"
-    - title: FIRST Tech Challenge - FTC, Team Astraeus
-      years: 2023
-      date: 2023-03-01
-      description: Led mechanical design and systems integration for Team Astraeus in the globally competitive FIRST Tech Challenge PowerPlay season. As primary builder and systems developer, drove innovation in robot mechanics, collaborated on sophisticated autonomous programming, and optimized performance through iterative design refinement. The team's robot featured cutting-edge mechanisms for precise cone and junction manipulation, demonstrating exceptional engineering excellence that earned recognition at regional and state levels.
-      skills:
-        - Robotics & IoT
-        - REV Control HUB
-        - EV3 Hub
-        - C/C++/C#
-      duration: "6 months"
-      technologies:
-        - "REV Robotics Control Hub"
-        - "REV Expansion Hub"
-        - "Android Studio"
-        - "Java/Kotlin"
-        - "Computer Vision (OpenCV)"
-        - "Sensor Fusion"
-        - "PID Control Systems"
-        - "CAD Design (OnShape)"
-        - "3D Printing"
-        - "CNC Machining"
-      tags:
-        - "robotics"
-        - "competition"
-        - "engineering"
-        - "teamwork"
-        - "innovation"
-        - "automation"
-      sections:
-        - title: "Engineering Excellence"
-          content: "Designed and built a highly sophisticated robot featuring a dual-stage telescoping lift system capable of reaching all junction levels, a precision cone intake mechanism with adaptive gripper technology, and an innovative automated parking system. The robot's modular design allowed for rapid modifications between competitions while maintaining structural integrity and performance consistency."
-        - title: "Technical Innovation"
-          content: "Implemented advanced computer vision algorithms for autonomous navigation and target recognition, achieving 95% accuracy in cone detection and junction alignment. Developed custom sensor fusion algorithms combining IMU, distance sensors, and camera data for precise robot positioning. The control system featured advanced PID controllers for smooth, accurate movement in both teleop and autonomous modes."
-        - title: "Leadership Development"
-          content: "Led a diverse team of 10 members through the complete robot development cycle, from initial concept to final competition. Developed project management skills, technical communication abilities, and mentorship experience while fostering an inclusive, innovation-driven team culture that encouraged creative problem-solving and continuous learning."
-      achievements:
-        - "Best Engineering Design Award - Regional Championship"
-        - "Designed most innovative lift mechanism in regional competition"
-        - "Mentored 3 rookie teams in engineering design process"
-    - title: FIRST Tech Challenge - FTC, Team Medusa
-      years: 2022
-      date: 2022-02-01
-      description: Served as lead engineer and programmer for Team Medusa during the FTC Freight Frenzy challenge, orchestrating the complete development lifecycle from initial concept to competitive deployment. Spearheaded innovative mechanical design solutions, advanced autonomous programming, and strategic game analysis that propelled the team to regional recognition. The project showcased exceptional integration of hardware engineering, software development, and competitive strategy in high-pressure tournament environments.
-      skills:
-        - Robotics & IoT
-        - REV Control HUB
-        - EV3 Hub
-        - C/C++/C#
-      duration: "5 months"
-      technologies:
-        - "REV Robotics Control Hub"
-        - "Android Studio"
-        - "Java Programming"
-        - "Computer Vision (EasyOpenCV)"
-        - "IMU Sensor Integration"
-        - "Servo Motor Control"
-        - "DC Motor Controllers"
-        - "CAD Design (Fusion 360)"
-        - "3D Printing (PLA/PETG)"
-        - "Aluminum Fabrication"
-      tags:
-        - "robotics"
-        - "programming"
-        - "mechanical-design"
-        - "competition"
-        - "leadership"
-        - "innovation"
-      sections:
-        - title: "Strategic Engineering"
-          content: "Conducted comprehensive game analysis to identify optimal scoring strategies, leading to strategic design decisions that maximized competitive advantage. Collaborated with alliance partners to develop complementary robot capabilities, demonstrating systems thinking and strategic partnership skills essential for successful engineering teams."
-        - title: "Technical Leadership"
-          content: "Mentored team members in programming fundamentals, mechanical design principles, and competitive robotics strategy. Established engineering documentation standards, code review processes, and iterative testing protocols that became standard practice for future team seasons. Led knowledge transfer sessions that ensured project continuity and team development."
-      achievements:
-        - "Best Engineering Design Award - Regional Competition"
-        - "Developed industry-standard documentation practices"
-    - title: mattcosh.com
-      years: 2025
-      description: Developed a personal portfolio website to showcase my projects, skills, and experiences.
-      skills:
-        - Web Development
-        - UI/UX Design
-        - Content Creation
-        - React
-        - JavaScript
-        - English
-      duration: "4 months (2024-2025)"
-      technologies:
-        - "React"
-        - "TypeScript"
-        - "Vite Build Tool"
-        - "Tailwind CSS"
-        - "Framer Motion"
-        - "React Router"
-        - "YAML Data Management"
-        - "Responsive Web Design"
-        - "Git Version Control"
-        - "Vercel Deployment"
-        - "SEO Optimization"
-      tags:
-        - "Personal Branding"
-        - "Portfolio Development"
-        - "Frontend Engineering"
-        - "Responsive Design"
-        - "Performance Optimization"
-      team:
-        - name: "Matt Cosh"
-          role: "Full-Stack Developer & Designer"
-          responsibilities: "UI/UX design, frontend development, content strategy, deployment management"
-      links:
-        - name: "Live Portfolio"
-          url: "https://mattcosh.com"
-        - name: "Source Code"
-          url: "https://github.com/TheUnknown550/PortfolioWebsite"
-      sections:
-        - title: "Design Philosophy"
-          content: "Created a modern, accessible portfolio website that reflects my personality and technical expertise. Focused on clean typography, intuitive navigation, and seamless user experience across all devices. The design balances professional presentation with creative flair to showcase both technical skills and design sensibility."
-        - title: "Technical Implementation"
-          content: "Built using React with TypeScript for type safety and modern development practices. Implemented dynamic theme switching, smooth animations with Framer Motion, and optimized performance with Vite bundling. The site features responsive design patterns and accessibility standards compliance."
-        - title: "Performance & SEO"
-          content: "Optimized for Core Web Vitals with lazy loading, image compression, and efficient code splitting. Implemented comprehensive SEO strategies including meta optimization, structured data, and semantic HTML. Achieved 95+ Lighthouse scores across all categories."
-      achievements:
-        - "Launched professional portfolio"
-        - "Built responsive design supporting 20+ device breakpoints"
-        - "Achieved sub-3-second load times on mobile networks"
-        - "Integrated dynamic theme system with seamless transitions"
-        - "Created comprehensive project showcase with modal system"
-        - "Established personal brand presence with professional web presence"
-    - title: Teacher's Assistant (TA)
-      years: 2024
-      description: Worked as a Teacher Assistant for Calculus II, Computer Algorithm Lab and Information System Network Engineering(ISNE) Lab, providing support to students in solving problems, understanding complex concepts, debugging code, and developing algorithm designs. Gained valuable experience in communication, teamwork, mentorship, and leadership.
-      skills:
-        - C/C++/C#
-        - Leadership
-        - Communication
-        - Mentoring
-      duration: "2 semesters (2024)"
-      technologies:
-        - "C/C++ Programming"
-        - "Algorithm Design & Analysis"
-        - "Network Engineering Tools"
-        - "Debugging Techniques"
-        - "Code Review Practices"
-        - "Academic Learning Management Systems"
-        - "Collaborative Problem-Solving"
-        - "Technical Documentation"
-        - "Peer Assessment Tools"
-        - "Educational Software"
-        - "Version Control (Git)"
-      tags:
-        - "Academic Teaching"
-        - "Student Mentorship"
-        - "Technical Education"
-        - "Leadership Development"
-        - "Collaborative Learning"
-      sections:
-        - title: "Teaching Philosophy"
-          content: "Developed student-centered approach focused on building confidence through guided problem-solving and collaborative learning. Emphasized practical application of theoretical concepts while fostering independent thinking and debugging skills. Created supportive learning environment where students feel comfortable asking questions and exploring complex topics."
-        - title: "Lab Supervision Excellence"
-          content: "Managed computer algorithm and ISNE lab sessions for 40+ students per semester. Developed efficient troubleshooting workflows, created supplementary learning materials, and implemented peer-learning strategies that improved overall class performance and engagement."
-        - title: "Mentorship Impact"
-          content: "Provided one-on-one mentoring to struggling students, resulting in measurable improvement in assignment scores and course completion rates. Developed personalized learning strategies, career guidance, and professional development advice that extended beyond immediate coursework."
-      achievements:
-        - "Mentored 80+ students across multiple computer science courses"
-        - "Improved average lab assignment scores"
-        - "Led weekly review sessions with 25+ regular attendees"
-        - "Contributed to curriculum improvements"
-
-    - title: GC-Fit
-      years: 2025
-      date: 2025-01-15
-      description: GC-Fit is an innovative fitness tracking application that leverages computer vision and AI to provide real-time exercise form correction and personalized workout guidance. Using OpenCV and MediaPipe, the app analyzes body movements during workouts, detects improper form, and provides instant feedback to prevent injuries and optimize training effectiveness. The application features pose estimation, exercise recognition, and progress tracking with detailed analytics.
-      skills:
-        - Computer Vision
-        - AI/ML Development
-        - Python Programming
-        - OpenCV
-        - MediaPipe
-        - Pose Estimation
-        - Real-time Processing
-        - UI/UX Design
-        - Data Analysis
-      duration: "3 months"
-      technologies:
-        - "Python 3.8+"
-        - "OpenCV"
-        - "MediaPipe"
-        - "NumPy"
-        - "TensorFlow/Keras"
-        - "Flask/FastAPI"
-        - "SQLite"
-        - "Matplotlib"
-        - "Real-time Video Processing"
-        - "Computer Vision Algorithms"
-      tags:
-        - "fitness-tech"
-        - "computer-vision"
-        - "ai-ml"
-        - "healthcare"
-        - "real-time-processing"
-      links:
-        - title: "GitHub Repository"
-          url: "https://github.com/TheUnknown550/GC-Fit"
-          type: "github"
-      sections:
-        - title: "AI-Powered Form Analysis"
-          content: "Implemented advanced computer vision algorithms using MediaPipe's pose estimation to track 33 body keypoints in real-time. The system analyzes exercise form by measuring joint angles, movement patterns, and posture alignment, providing instant corrective feedback to users during workouts."
-        - title: "Exercise Recognition Engine"
-          content: "Developed a machine learning model that can recognize and classify different exercises (squats, push-ups, deadlifts, etc.) with high accuracy. The system adapts to individual user variations and provides personalized recommendations based on performance data."
-        - title: "Real-Time Feedback System"
-          content: "Created a responsive feedback mechanism that provides audio and visual cues when improper form is detected. The system includes customizable sensitivity settings and progress tracking to help users improve their technique over time."
-      achievements:
-        - "Achieved 95% accuracy in pose estimation and exercise recognition"
-        - "Processed video streams at 30 FPS with minimal latency"
-        - "Developed comprehensive exercise library with 50+ supported movements"
-        - "Implemented personalized workout recommendations based on user progress"
-
-    - title: Habit-Tracker-Web-App
-      years: 2025
-      date: 2025-02-01
-      description: A comprehensive habit tracking web application built with React and TypeScript that helps users build and maintain positive habits through gamification, data visualization, and intelligent insights. The app features streak tracking, habit categories, progress analytics, and motivational elements to keep users engaged in their personal development journey.
-      skills:
-        - React Development
-        - TypeScript
-        - Web Development
-        - UI/UX Design
-        - Data Visualization
-        - Local Storage Management
-        - Responsive Design
-        - Gamification
-        - User Experience Design
-      duration: "2 months"
-      technologies:
-        - "React 18"
-        - "TypeScript"
-        - "Vite"
-        - "Tailwind CSS"
-        - "Framer Motion"
-        - "Chart.js/D3.js"
-        - "Local Storage API"
-        - "React Router"
-        - "Date-fns"
-        - "Responsive Web Design"
-      tags:
-        - "productivity"
-        - "habit-tracking"
-        - "gamification"
-        - "data-visualization"
-        - "personal-development"
-      links:
-        - title: "Live Demo"
-          url: "https://habit-tracker-demo.vercel.app"
-          type: "website"
-        - title: "GitHub Repository"
-          url: "https://github.com/TheUnknown550/Habit-Tracker-Web-App"
-          type: "github"
-      sections:
-        - title: "Gamified Habit Building"
-          content: "Implemented a comprehensive gamification system with streaks, achievements, points, and levels to motivate users. The app includes habit challenges, milestone celebrations, and social sharing features to create accountability and engagement."
-        - title: "Advanced Analytics Dashboard"
-          content: "Built interactive data visualizations showing habit completion rates, trend analysis, and progress insights. Users can view their habits by category, time period, and success metrics with detailed charts and statistics."
-        - title: "Smart Habit Reminders"
-          content: "Developed intelligent reminder system that adapts to user behavior patterns. The app learns optimal reminder times based on completion history and provides contextual notifications to help users stay on track."
-      achievements:
-        - "Built responsive web app supporting 15+ habit categories"
-        - "Implemented 10+ gamification features increasing user engagement"
-        - "Created comprehensive analytics dashboard with 20+ data visualizations"
-        - "Achieved 98% user retention rate through UX optimization"
-
-    - title: Resume Generator
-      years: 2025
-      date: 2025-03-01
-      description: A modern, user-friendly resume builder web application that allows users to create professional resumes through an intuitive drag-and-drop interface. The app supports multiple templates, real-time preview, PDF export, and data import/export in JSON and YAML formats. Built with React and TypeScript for a robust, scalable solution.
-      skills:
-        - React Development
-        - TypeScript
-        - Web Development
-        - UI/UX Design
-        - PDF Generation
-        - Data Management
-        - Template Design
-        - Responsive Design
-        - Drag & Drop Interfaces
-      duration: "2 months"
-      technologies:
-        - "React 18"
-        - "TypeScript"
-        - "Vite"
-        - "Tailwind CSS"
-        - "React DnD"
-        - "jsPDF"
-        - "React PDF"
-        - "File Saver"
-        - "JSON/YAML Parsing"
-        - "Local Storage"
-      tags:
-        - "resume-builder"
-        - "pdf-generation"
-        - "template-design"
-        - "data-management"
-        - "professional-tools"
-      links:
-        - title: "Live Application"
-          url: "https://resume-generator-demo.vercel.app"
-          type: "website"
-        - title: "GitHub Repository"
-          url: "https://github.com/TheUnknown550/Resume-Generator"
-          type: "github"
-      sections:
-        - title: "Dynamic Template System"
-          content: "Created a flexible template engine supporting 8+ professional resume designs with customizable layouts, color schemes, and typography. Users can switch between templates instantly while preserving their content."
-        - title: "Advanced PDF Export"
-          content: "Implemented high-quality PDF generation with proper formatting, font embedding, and print optimization. The export system maintains design integrity across different devices and ensures professional presentation."
-        - title: "Data Import/Export Features"
-          content: "Built comprehensive data management with JSON and YAML import/export capabilities. Users can backup their resumes, migrate between devices, and integrate with other career management tools."
-      achievements:
-        - "Developed 8 professional resume templates with modern designs"
-        - "Achieved pixel-perfect PDF export with 100% layout accuracy"
-        - "Implemented drag-and-drop interface reducing resume creation time by 60%"
-        - "Built responsive design supporting mobile resume editing"
+    
+    
 
 roadmap:
   - title: FlashVideoBot
@@ -1236,7 +1256,7 @@ roadmap:
       - Internship Development
     experience: Developed a sophisticated multi-user management system for OBS Studio during internship at TLIC. This system enables isolated user environments in shared streaming facilities, particularly useful in EZMedia rooms where multiple organizations require access to OBS with distinct configurations. The project demonstrates advanced system architecture and real-world problem-solving in professional environments.
   - title: Resume Generator
-    date: 2025-03-01
+    date: 2025-09-27
     category: project
     skills:
       - React Development
@@ -1250,7 +1270,7 @@ roadmap:
       - Drag & Drop Interfaces
     experience: Created a modern resume builder web application with React and TypeScript, featuring 8 professional templates, drag-and-drop editing, and high-quality PDF export. The app supports JSON/YAML data import/export and provides an intuitive interface for creating polished resumes quickly and efficiently.
   - title: Habit-Tracker-Web-App
-    date: 2025-02-01
+    date: 2025-10-14
     category: project
     skills:
       - React Development
@@ -1264,7 +1284,7 @@ roadmap:
       - User Experience Design
     experience: Built a comprehensive habit tracking web application with gamification features, advanced analytics dashboard, and intelligent reminder system. The app helps users build positive habits through streak tracking, progress visualization, and motivational elements, achieving 98% user retention through optimized UX design.
   - title: GC-Fit
-    date: 2025-01-15
+    date: 2022-10-12
     category: project
     skills:
       - Computer Vision
