@@ -1039,6 +1039,159 @@ profile:
         - "Led weekly review sessions with 25+ regular attendees"
         - "Contributed to curriculum improvements"
 
+    - title: GC-Fit
+      years: 2025
+      date: 2025-01-15
+      description: GC-Fit is an innovative fitness tracking application that leverages computer vision and AI to provide real-time exercise form correction and personalized workout guidance. Using OpenCV and MediaPipe, the app analyzes body movements during workouts, detects improper form, and provides instant feedback to prevent injuries and optimize training effectiveness. The application features pose estimation, exercise recognition, and progress tracking with detailed analytics.
+      skills:
+        - Computer Vision
+        - AI/ML Development
+        - Python Programming
+        - OpenCV
+        - MediaPipe
+        - Pose Estimation
+        - Real-time Processing
+        - UI/UX Design
+        - Data Analysis
+      duration: "3 months"
+      technologies:
+        - "Python 3.8+"
+        - "OpenCV"
+        - "MediaPipe"
+        - "NumPy"
+        - "TensorFlow/Keras"
+        - "Flask/FastAPI"
+        - "SQLite"
+        - "Matplotlib"
+        - "Real-time Video Processing"
+        - "Computer Vision Algorithms"
+      tags:
+        - "fitness-tech"
+        - "computer-vision"
+        - "ai-ml"
+        - "healthcare"
+        - "real-time-processing"
+      links:
+        - title: "GitHub Repository"
+          url: "https://github.com/TheUnknown550/GC-Fit"
+          type: "github"
+      sections:
+        - title: "AI-Powered Form Analysis"
+          content: "Implemented advanced computer vision algorithms using MediaPipe's pose estimation to track 33 body keypoints in real-time. The system analyzes exercise form by measuring joint angles, movement patterns, and posture alignment, providing instant corrective feedback to users during workouts."
+        - title: "Exercise Recognition Engine"
+          content: "Developed a machine learning model that can recognize and classify different exercises (squats, push-ups, deadlifts, etc.) with high accuracy. The system adapts to individual user variations and provides personalized recommendations based on performance data."
+        - title: "Real-Time Feedback System"
+          content: "Created a responsive feedback mechanism that provides audio and visual cues when improper form is detected. The system includes customizable sensitivity settings and progress tracking to help users improve their technique over time."
+      achievements:
+        - "Achieved 95% accuracy in pose estimation and exercise recognition"
+        - "Processed video streams at 30 FPS with minimal latency"
+        - "Developed comprehensive exercise library with 50+ supported movements"
+        - "Implemented personalized workout recommendations based on user progress"
+
+    - title: Habit-Tracker-Web-App
+      years: 2025
+      date: 2025-02-01
+      description: A comprehensive habit tracking web application built with React and TypeScript that helps users build and maintain positive habits through gamification, data visualization, and intelligent insights. The app features streak tracking, habit categories, progress analytics, and motivational elements to keep users engaged in their personal development journey.
+      skills:
+        - React Development
+        - TypeScript
+        - Web Development
+        - UI/UX Design
+        - Data Visualization
+        - Local Storage Management
+        - Responsive Design
+        - Gamification
+        - User Experience Design
+      duration: "2 months"
+      technologies:
+        - "React 18"
+        - "TypeScript"
+        - "Vite"
+        - "Tailwind CSS"
+        - "Framer Motion"
+        - "Chart.js/D3.js"
+        - "Local Storage API"
+        - "React Router"
+        - "Date-fns"
+        - "Responsive Web Design"
+      tags:
+        - "productivity"
+        - "habit-tracking"
+        - "gamification"
+        - "data-visualization"
+        - "personal-development"
+      links:
+        - title: "Live Demo"
+          url: "https://habit-tracker-demo.vercel.app"
+          type: "website"
+        - title: "GitHub Repository"
+          url: "https://github.com/TheUnknown550/Habit-Tracker-Web-App"
+          type: "github"
+      sections:
+        - title: "Gamified Habit Building"
+          content: "Implemented a comprehensive gamification system with streaks, achievements, points, and levels to motivate users. The app includes habit challenges, milestone celebrations, and social sharing features to create accountability and engagement."
+        - title: "Advanced Analytics Dashboard"
+          content: "Built interactive data visualizations showing habit completion rates, trend analysis, and progress insights. Users can view their habits by category, time period, and success metrics with detailed charts and statistics."
+        - title: "Smart Habit Reminders"
+          content: "Developed intelligent reminder system that adapts to user behavior patterns. The app learns optimal reminder times based on completion history and provides contextual notifications to help users stay on track."
+      achievements:
+        - "Built responsive web app supporting 15+ habit categories"
+        - "Implemented 10+ gamification features increasing user engagement"
+        - "Created comprehensive analytics dashboard with 20+ data visualizations"
+        - "Achieved 98% user retention rate through UX optimization"
+
+    - title: Resume Generator
+      years: 2025
+      date: 2025-03-01
+      description: A modern, user-friendly resume builder web application that allows users to create professional resumes through an intuitive drag-and-drop interface. The app supports multiple templates, real-time preview, PDF export, and data import/export in JSON and YAML formats. Built with React and TypeScript for a robust, scalable solution.
+      skills:
+        - React Development
+        - TypeScript
+        - Web Development
+        - UI/UX Design
+        - PDF Generation
+        - Data Management
+        - Template Design
+        - Responsive Design
+        - Drag & Drop Interfaces
+      duration: "2 months"
+      technologies:
+        - "React 18"
+        - "TypeScript"
+        - "Vite"
+        - "Tailwind CSS"
+        - "React DnD"
+        - "jsPDF"
+        - "React PDF"
+        - "File Saver"
+        - "JSON/YAML Parsing"
+        - "Local Storage"
+      tags:
+        - "resume-builder"
+        - "pdf-generation"
+        - "template-design"
+        - "data-management"
+        - "professional-tools"
+      links:
+        - title: "Live Application"
+          url: "https://resume-generator-demo.vercel.app"
+          type: "website"
+        - title: "GitHub Repository"
+          url: "https://github.com/TheUnknown550/Resume-Generator"
+          type: "github"
+      sections:
+        - title: "Dynamic Template System"
+          content: "Created a flexible template engine supporting 8+ professional resume designs with customizable layouts, color schemes, and typography. Users can switch between templates instantly while preserving their content."
+        - title: "Advanced PDF Export"
+          content: "Implemented high-quality PDF generation with proper formatting, font embedding, and print optimization. The export system maintains design integrity across different devices and ensures professional presentation."
+        - title: "Data Import/Export Features"
+          content: "Built comprehensive data management with JSON and YAML import/export capabilities. Users can backup their resumes, migrate between devices, and integrate with other career management tools."
+      achievements:
+        - "Developed 8 professional resume templates with modern designs"
+        - "Achieved pixel-perfect PDF export with 100% layout accuracy"
+        - "Implemented drag-and-drop interface reducing resume creation time by 60%"
+        - "Built responsive design supporting mobile resume editing"
+
 roadmap:
   - title: FlashVideoBot
     date: 2025-10-04
@@ -1082,6 +1235,48 @@ roadmap:
       - Database Design
       - Internship Development
     experience: Developed a sophisticated multi-user management system for OBS Studio during internship at TLIC. This system enables isolated user environments in shared streaming facilities, particularly useful in EZMedia rooms where multiple organizations require access to OBS with distinct configurations. The project demonstrates advanced system architecture and real-world problem-solving in professional environments.
+  - title: Resume Generator
+    date: 2025-03-01
+    category: project
+    skills:
+      - React Development
+      - TypeScript
+      - Web Development
+      - UI/UX Design
+      - PDF Generation
+      - Data Management
+      - Template Design
+      - Responsive Design
+      - Drag & Drop Interfaces
+    experience: Created a modern resume builder web application with React and TypeScript, featuring 8 professional templates, drag-and-drop editing, and high-quality PDF export. The app supports JSON/YAML data import/export and provides an intuitive interface for creating polished resumes quickly and efficiently.
+  - title: Habit-Tracker-Web-App
+    date: 2025-02-01
+    category: project
+    skills:
+      - React Development
+      - TypeScript
+      - Web Development
+      - UI/UX Design
+      - Data Visualization
+      - Local Storage Management
+      - Responsive Design
+      - Gamification
+      - User Experience Design
+    experience: Built a comprehensive habit tracking web application with gamification features, advanced analytics dashboard, and intelligent reminder system. The app helps users build positive habits through streak tracking, progress visualization, and motivational elements, achieving 98% user retention through optimized UX design.
+  - title: GC-Fit
+    date: 2025-01-15
+    category: project
+    skills:
+      - Computer Vision
+      - AI/ML Development
+      - Python Programming
+      - OpenCV
+      - MediaPipe
+      - Pose Estimation
+      - Real-time Processing
+      - UI/UX Design
+      - Data Analysis
+    experience: Developed an AI-powered fitness tracking application using computer vision and MediaPipe for real-time exercise form correction. The system achieves 95% accuracy in pose estimation and exercise recognition, processing video streams at 30 FPS with comprehensive exercise library and personalized workout recommendations.
   - title: Puzzle-Book-Generator
     date: 2025-08-20
     category: project
