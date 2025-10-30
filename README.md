@@ -101,20 +101,21 @@ npm run build
 
 ### Deploy to Ubuntu Server
 
-After building, deploy to your Ubuntu server using these commands:
+After building, deploy the updated files with rsync (safer and removes stale files):
 
 ```bash
-# Remove old files
-sudo rm -rf /var/www/mattcosh/*
+# Deploy to mattcosh.com
+sudo rsync -av --delete dist/ /var/www/mattcosh/
 
-# Copy new build files
-sudo cp -r dist/* /var/www/mattcosh/
+# Deploy to mcxstudios24.com (if applicable)
+sudo rsync -av --delete dist/ /var/www/mcxstudios24/
 
-# Restart web server (if needed)
+# Reload Nginx if configs changed (usually not required for static updates)
 sudo systemctl reload nginx
 ```
 
-> **Note**: Replace `/var/www/mattcosh/` with your actual web server directory path.
+- rsync ensures files removed from the build are also removed on the server (`--delete`).
+- Adjust the target paths if your document roots differ.
 
 ### Alternative Deployment Options
 
