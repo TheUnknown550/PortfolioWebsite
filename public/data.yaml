@@ -378,8 +378,8 @@ profile:
         - "Starting point for my vision in Project Development"
   
     - title: GC-Fit
-      years: 2025
-      date: 2025-01-15
+      years: 2022
+      date: 2022-10-12
       description: GC-Fit is an innovative fitness tracking application that leverages computer vision and AI to provide real-time exercise form correction and personalized workout guidance. Using OpenCV and MediaPipe, the app analyzes body movements during workouts, detects improper form, and provides instant feedback to prevent injuries and optimize training effectiveness. The application features pose estimation, exercise recognition, and progress tracking with detailed analytics.
       skills:
         - Computer Vision
@@ -411,7 +411,7 @@ profile:
         - "real-time-processing"
       links:
         - title: "GitHub Repository"
-          url: "https://github.com/TheUnknown550/GC-Fit"
+          url: "https://github.com/TheUnknown550/GC_Fit"
           type: "github"
       sections:
         - title: "AI-Powered Form Analysis"
@@ -422,9 +422,7 @@ profile:
           content: "Created a responsive feedback mechanism that provides audio and visual cues when improper form is detected. The system includes customizable sensitivity settings and progress tracking to help users improve their technique over time."
       achievements:
         - "Achieved 95% accuracy in pose estimation and exercise recognition"
-        - "Processed video streams at 30 FPS with minimal latency"
-        - "Developed comprehensive exercise library with 50+ supported movements"
-        - "Implemented personalized workout recommendations based on user progress"
+        - "Processed video streams at 60 FPS with minimal latency"
 
     - title: FIRST Tech Challenge - FTC, Team Astraeus
       years: 2023
@@ -593,9 +591,6 @@ profile:
         - "data-management"
         - "professional-tools"
       links:
-        - title: "Live Application"
-          url: "https://resume-generator-demo.vercel.app"
-          type: "website"
         - title: "GitHub Repository"
           url: "https://github.com/TheUnknown550/Resume-Generator"
           type: "github"
@@ -645,9 +640,6 @@ profile:
         - "data-visualization"
         - "personal-development"
       links:
-        - title: "Live Demo"
-          url: "https://habit-tracker-demo.vercel.app"
-          type: "website"
         - title: "GitHub Repository"
           url: "https://github.com/TheUnknown550/Habit-Tracker-Web-App"
           type: "github"
